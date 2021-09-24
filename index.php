@@ -11,6 +11,7 @@
 
 <body>
     <h1>Hi</h1>
+    <p> RMB</p>
 
 </body>
 
