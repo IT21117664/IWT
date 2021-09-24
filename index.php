@@ -11,6 +11,9 @@
 
 <body>
     <h1>Hi</h1>
+    <div class="footer">
+        <p>Home</p>
+    </div>
 
 </body>
 
