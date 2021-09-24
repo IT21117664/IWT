@@ -11,6 +11,11 @@
 
 <body>
     <h1>Hi</h1>
+    <div class="input-container center">
+        <input type="text" class="txtSearch">
+        <input type="button" value="Search" class="btn primary">
+    </div>
+
     <div class="footer">
         <p>Home</p>
     </div>
