@@ -24,6 +24,18 @@ body {
     margin-right: 5px;
 }
 
+.txt {
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    border-color: rgb(70, 70, 68);
+    padding: 8px;
+    margin-right: 5px;
+}
+
+.long {
+    width: 80%;
+}
+
 .btn {
     border: none;
     color: white;

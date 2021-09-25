@@ -15,7 +15,7 @@
         <input type="text" class="txtSearch" placeholder="Search...">
         <input type="button" value="Search" class="btn primary">
     </div>
-
+    <input type="text" class="txt long" placeholder="RMB...">
     <div class="footer">
         <p>Home</p>
     </div>
