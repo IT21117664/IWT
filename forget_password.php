@@ -29,7 +29,7 @@
 
     <br><br>
     <div class="footer">
-        <h5> E - book | Reports | Journals | Library Police | Contact Us </h5> <br>
+        <h5> E - book | Reports | Journals | Library Police | Contact Us </h5>
         <h6> Copyright SLIIT 2021 - All right reserved</h6>
     </div>
 
