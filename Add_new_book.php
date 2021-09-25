@@ -8,7 +8,11 @@
 </head>
 <body>
     <center><h2>ADD NEW BOOKS</h2></center>
-    Book Name <input type="text" id="book name" name="book name" >
+    Book Name <input type="text" id="book name" name="book name" class="txt long"><br>
+
+
+    Author <input type="text" id="book name" name="book name" ><br>
+
 
 
 
