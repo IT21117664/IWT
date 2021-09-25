@@ -15,12 +15,12 @@
         <center>SLIIT DIGITAL LIBRARY - Forget Password </center>
     </h3>
     <hr>
-    <img src="./img/logo.png" width="50" height="50">
     <div class="right">
         <button type="submit" p class="alignright">Login</button>
         <input type="password" placeholder="Password" value="" id="myInput" p class="alignright">
         <input type="text" placeholder="Username" id="username" name="username" p class="alignright">
     </div>
+    <img src="./img/logo.png" width="50" height="50">
     <br><br>
 
     <center>
