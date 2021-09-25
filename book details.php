@@ -2,33 +2,6 @@
 <html lang="en">
 
 <head>
-    <style>
-        .alignright {
-            float: right;
-        }
-        
-        .topleft {
-            position: absolute;
-            top: 8px;
-            left: 16px;
-            font-size: 18px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: .25px;
-            background-color: rgb(70, 70, 70);
-            color: white;
-        }
-        
-        header {
-            padding: .60px;
-            text-align: center;
-            background-color: #545555;
-            color: white;
-            font-size: 30px;
-        }
-    </style>
     <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
