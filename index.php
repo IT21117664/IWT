@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-    <h1>Hi</h1>
+<body></body>
+
     <div class="input-container center">
-        <input type="text" class="txtSearch">
+        <input type="text" class="txtSearch" placeholder="Search...">
         <input type="button" value="Search" class="btn primary">
     </div>
 
