@@ -16,9 +16,11 @@
     </h3>
     <hr>
     <img src="C:\Users\MSii\Desktop\logo.png" width="50" height="50">
-    <button type="submit" p class="alignright">Login</button>
-    <input type="password" placeholder="Password" value="" id="myInput" p class="alignright">
-    <input type="text" placeholder="Username" id="username" name="username" p class="alignright">
+    <div class="right">
+        <button type="submit" p class="alignright">Login</button>
+        <input type="password" placeholder="Password" value="" id="myInput" p class="alignright">
+        <input type="text" placeholder="Username" id="username" name="username" p class="alignright">
+    </div>
     <br><br>
 
     <center>
