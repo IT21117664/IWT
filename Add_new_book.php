@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="submit">Reports</button>
+    <center><h2>ADD NEW BOOKS</h2></center>
+    Book Name <input type="text" id="book name" name="book name" >
 
 
 
