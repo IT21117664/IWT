@@ -14,6 +14,7 @@
     <h3>
         <center>SLIIT DIGITAL LIBRARY - Forget Password </center>
     </h3>
+    
     <hr>
     <div class="right">
         <button type="submit" p class="alignright">Login</button>
