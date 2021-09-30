@@ -34,6 +34,17 @@
             <li><a href="#about">About</a></li>
         </ul>
     </div>
+    <div class="row">
+        <div class="right">
+            <button type="button" class="btn primary">Overrides</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="center">
+            <button type="button" class="btn primary">Overrides</button>
+            <button type="button" class="btn primary">Overrides</button>
+        </div>
+    </div>
     <script> carousel();</script>
 </body>
 </html>
