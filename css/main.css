@@ -80,6 +80,10 @@ body {
     font-size: 15px;
 }
 
+.btn-lg {
+    font-size: 25px;
+}
+
 .border {
     background-color: white;
     color: black;
@@ -208,4 +212,9 @@ body {
     position: absolute;
     top: 8px;
     left: 16px;
+}
+
+.row {
+    padding: 20px;
+    text-align: center;
 }
