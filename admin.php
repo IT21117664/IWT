@@ -34,11 +34,13 @@
             <li><a href="#about">About</a></li>
         </ul>
     </div>
+
     <div class="row">
         <div class="right">
             <button type="button" class="btn primary">Overrides</button>
         </div>
     </div>
+    
     <div class="row">
         <div class="center">
             <button type="button" class="btn danger">Lend Book</button>
@@ -47,7 +49,9 @@
     </div>
 
     <div class="row">
-        <p>Member</p>
+        <div class="left">
+            <h3>Member</h3>
+        </div>
     </div>
 
     <div class="footer">
