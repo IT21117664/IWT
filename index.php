@@ -29,6 +29,7 @@
     <input type="button" value="Button" class="btn border colorSuccess">
     <input type="button" value="Button" class="btn border colorInfo">
     <input type="button" value="Button" class="btn border colorDanger">
+    
     <div class="footer">
         <p>Home</p>
     </div>
