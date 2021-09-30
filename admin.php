@@ -46,6 +46,10 @@
         </div>
     </div>
 
+    <div class="row">
+        <p>Member</p>
+    </div>
+
     <div class="footer">
         <p>Home</p>
     </div>
