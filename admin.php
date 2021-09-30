@@ -34,7 +34,6 @@
             <li><a href="#about">About</a></li>
         </ul>
     </div>
-
     <script> carousel();</script>
 </body>
 </html>
