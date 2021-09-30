@@ -51,6 +51,22 @@ body {
     background-color: #1d98eb;
 }
 
+.warning {
+    background-color: #FFCC00;
+}
+
+.success {
+    background-color: #4BB543;
+}
+
+.info {
+    background-color: #5bc0de;
+}
+
+.danger {
+    background-color: #bb2124;
+}
+
 .input-container {
     display: -ms-flexbox;
     display: flex;
@@ -77,10 +93,6 @@ body {
     margin-left: 10px;
 }
 
-
-
-
-
 .bg-model {
     width: 0px;
     height: 0px;
@@ -91,6 +103,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .modal-content {
     width: 500px;
     height: 300px;
@@ -98,7 +111,6 @@ body {
     border-radius: 4px;
     text-align: center;
     padding: 20px;
-
 }
 
 .input {
