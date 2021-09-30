@@ -145,3 +145,35 @@ body {
 .input {
     width: 50%;
 }
+
+.slide {
+    width: 100%;
+    height: 50px;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.mainSlide {
+    display: none;
+    height: 200px;
+    overflow: auto;
+}
+
+.slidecaption {
+    position: relative;
+    text-align: right;
+    color: white;
+}
+
+.topRight {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.topLeft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
