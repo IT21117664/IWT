@@ -51,6 +51,9 @@
     <div class="row">
         <div class="left">
             <h3>Member</h3>
+            <input type="button" value="Button" class="btn border colorprimary">
+            <input type="button" value="Button" class="btn border colorprimary">
+            <input type="button" value="Button" class="btn border colorprimary">
         </div>
     </div>
 
