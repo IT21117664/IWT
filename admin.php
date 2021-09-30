@@ -41,8 +41,8 @@
     </div>
     <div class="row">
         <div class="center">
-            <button type="button" class="btn warning">Lend Book</button>
-            <button type="button" class="btn danger">Retrive Book</button>
+            <button type="button" class="btn danger">Lend Book</button>
+            <button type="button" class="btn warning">Retrive Book</button>
         </div>
     </div>
 
