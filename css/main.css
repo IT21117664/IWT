@@ -47,6 +47,35 @@ body {
     font-size: 15px;
 }
 
+.border {
+    background-color: white;
+    color: black;
+}
+
+.colorprimary {
+    border: 2px solid #1d98eb;
+}
+
+.colorPrimary {
+    border: 2px solid #1d98eb;
+}
+
+.colorWarning {
+    border: 2px solid #FFCC00;
+}
+
+.colorSuccess {
+    border: 2px solid #4BB543;
+}
+
+.colorInfo {
+    border: 2px solid #5bc0de;
+}
+
+.colorDanger {
+    border: 2px solid #bb2124;
+}
+
 .primary {
     background-color: #1d98eb;
 }

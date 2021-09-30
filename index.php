@@ -15,7 +15,20 @@
         <input type="text" class="txtSearch" placeholder="Search...">
         <input type="button" value="Search" class="btn primary">
     </div>
-    <input type="text" class="txt long" placeholder="RMB...">
+
+    <input type="button" value="Button" class="btn primary">
+    <input type="button" value="Button" class="btn warning">
+    <input type="button" value="Button" class="btn success">
+    <input type="button" value="Button" class="btn info">
+    <input type="button" value="Button" class="btn danger">
+    <br>
+    <br>
+
+    <input type="button" value="Button" class="btn border colorprimary">
+    <input type="button" value="Button" class="btn border colorWarning">
+    <input type="button" value="Button" class="btn border colorSuccess">
+    <input type="button" value="Button" class="btn border colorInfo">
+    <input type="button" value="Button" class="btn border colorDanger">
     <div class="footer">
         <p>Home</p>
     </div>
