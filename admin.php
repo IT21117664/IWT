@@ -41,7 +41,7 @@
     </div>
     <div class="row">
         <div class="center">
-            <button type="button" class="btn primary">Overrides</button>
+            <button type="button" class="btn primary">Lend Book</button>
             <button type="button" class="btn primary">Overrides</button>
         </div>
     </div>
