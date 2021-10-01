@@ -82,6 +82,9 @@ body {
 
 .btn-lg {
     font-size: 25px;
+    padding: 20px 30px;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .border {
@@ -89,28 +92,53 @@ body {
     color: black;
 }
 
+.border:hover {
+    border: 2px solid #1d98eb;
+}
+
 .colorprimary {
     border: 2px solid #1d98eb;
 }
 
-.colorPrimary {
-    border: 2px solid #1d98eb;
+.colorprimary:hover {
+    background-color: #1d98eb;
+    color: white;
 }
 
 .colorWarning {
     border: 2px solid #FFCC00;
 }
 
+.colorWarning:hover {
+    background-color: #FFCC00;
+    color: white;
+}
+
 .colorSuccess {
     border: 2px solid #4BB543;
+}
+
+.colorSuccess:hover {
+    background-color: #4BB543;
+    color: white;
 }
 
 .colorInfo {
     border: 2px solid #5bc0de;
 }
 
+.colorInfo:hover {
+    background-color: #5bc0de;
+    color: white;
+}
+
 .colorDanger {
     border: 2px solid #bb2124;
+}
+
+.colorDanger:hover {
+    background-color: #bb2124;
+    color: white;
 }
 
 .primary {

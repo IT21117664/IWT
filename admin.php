@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLIIT ONLINE LIBRARY - ADMIN</title>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/07c9a11431.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
 </head>
 <body>
@@ -38,22 +39,23 @@
     <div class="row">
         <div class="right">
             <button type="button" class="btn primary">Overrides</button>
+            <i class="far fa-envelope fa-2x"></i>
         </div>
     </div>
     
     <div class="row">
         <div class="center">
-            <button type="button" class="btn danger">Lend Book</button>
-            <button type="button" class="btn warning">Retrive Book</button>
+            <button type="button" class="btn danger btn-lg">Lend Book</button>
+            <button type="button" class="btn warning btn-lg">Retrive Book</button>
         </div>
     </div>
 
     <div class="row">
         <div class="left">
-            <h3>Member</h3>
-            <input type="button" value="Button" class="btn border colorprimary">
-            <input type="button" value="Button" class="btn border colorprimary">
-            <input type="button" value="Button" class="btn border colorprimary">
+            <h3 align="left">Member</h3>
+            <input type="button" value="New Member Validation" class="btn border colorprimary">
+            <input type="button" value="Add Memeber" class="btn border colorprimary">
+            <input type="button" value="Member Details" class="btn border colorprimary">
         </div>
     </div>
 
