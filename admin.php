@@ -35,7 +35,7 @@
             <li><a href="#about">Past Papers</a></li>
             <li><a href="#about">Reports</a></li>
             <li><a href="#about">Journals</a></li>
-            <li><a href="#about" class="active">Admin</a></li>
+            <li><a href="#about" >Admin</a></li>
         </ul>
     </div>
 
