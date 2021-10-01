@@ -2,6 +2,7 @@
 
 body {
     margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav ul {
@@ -37,18 +38,6 @@ body {
     background-color: #111;
 }
 
-.footer {
-    background-color: #3b3b3b;
-    text-align: center;
-    color: #fff;
-    margin-top: 0px;
-    padding: 5px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
 .txtSearch {
     border-radius: 50px;
     background-color: #fcfcfc;
@@ -73,7 +62,7 @@ body {
     border: none;
     color: white;
     border-radius: 5px;
-    padding: 10px 30px;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -81,10 +70,9 @@ body {
 }
 
 .btn-lg {
-    font-size: 25px;
-    padding: 20px 30px;
+    font-size: 20px;
+    padding: 15px 20px;
     margin: 10px;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .border {
@@ -169,7 +157,7 @@ body {
 }
 
 
-/* align */
+/* align 
 
 .center {
     margin: auto;
@@ -177,17 +165,7 @@ body {
     padding: 10px;
 }
 
-.right {
-    position: absolute;
-    right: 0px;
-    padding: 0 10px 0 0;
-}
-
-.left {
-    position: absolute;
-    left: 0px;
-    padding: 0 0 0 10px;
-}
+*/
 
 .logo {
     margin-left: 10px;
@@ -248,7 +226,46 @@ body {
     left: 16px;
 }
 
-.row {
-    padding: 20px;
+.right {
+    float: right;
+    padding: 10px;
+}
+
+
+/* Create three unequal columns that floats next to each other */
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+
+/* Left and right column */
+
+.column.side {
+    width: 25%;
+}
+
+
+/* Middle column */
+
+.column.middle {
+    width: 50%;
+    text-align: center;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    background-color: #3b3b3b;
+    padding: 10px;
+    color: #fff;
     text-align: center;
 }
