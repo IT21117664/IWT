@@ -37,6 +37,7 @@
     </div>
 
     <div class="row">
+
         <div class="right">
             <button type="button" class="btn primary">Overrides</button>
             <i class="far fa-envelope fa-2x"></i>
@@ -44,14 +45,33 @@
     </div>
     
     <div class="row">
-        <div class="center">
+        <div class="column side"></div>
+        <div class="column middle">
             <button type="button" class="btn danger btn-lg">Lend Book</button>
             <button type="button" class="btn warning btn-lg">Retrive Book</button>
         </div>
     </div>
 
     <div class="row">
-        <div class="left">
+        <div class="column">
+            <h3 align="left">Member</h3>
+            <input type="button" value="New Member Validation" class="btn border colorprimary">
+            <input type="button" value="Add Memeber" class="btn border colorprimary">
+            <input type="button" value="Member Details" class="btn border colorprimary">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h3 align="left">Member</h3>
+            <input type="button" value="New Member Validation" class="btn border colorprimary">
+            <input type="button" value="Add Memeber" class="btn border colorprimary">
+            <input type="button" value="Member Details" class="btn border colorprimary">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
             <h3 align="left">Member</h3>
             <input type="button" value="New Member Validation" class="btn border colorprimary">
             <input type="button" value="Add Memeber" class="btn border colorprimary">
