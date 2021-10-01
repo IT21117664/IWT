@@ -60,7 +60,7 @@
     </div>
 
     <div class="footer">
-        <p>Home</p>
+        <p>Home | </p>
     </div>
     <script> carousel();</script>
 </body>
