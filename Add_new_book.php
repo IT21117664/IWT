@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>`
     <link rel="stylesheet" href="css/main.css">
     <script src="./js/main.js" type="text/javascript"></script>
 </head>
@@ -28,7 +28,12 @@
             price <input type="text">
             Published <input type="date"><br><br>
 
-            E - Book <a href="" class="button ">Choose file</button>
+            E - Book <button><a href="" class="button ">Choose file</a></button> <h6> No File Chosen </h6><br>
+
+            <button type="submit" p class="alignright">Clear</button>
+            <button type="submit" p class="alignright">Preview</button>
+            <button type="submit" p class="alignright">Save & Print</button>
+
 
         </form>
 
