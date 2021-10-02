@@ -54,6 +54,8 @@
         <div class="row">
             <div class="column side">
                 <img src="./img/book/13.png" class="bookView">
+                <img src="./img/book/14.png" class="bookView">
+                <img src="./img/book/15.png" class="bookView">
             </div>
         </div>
         
