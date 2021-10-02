@@ -41,7 +41,7 @@ body {
 .txtSearch {
     border-radius: 50px;
     background-color: #fcfcfc;
-    padding: 0 0 0 15px;
+    padding: 8px;
     width: 75%;
     margin-right: 5px;
 }
@@ -231,36 +231,29 @@ body {
     padding: 10px;
 }
 
-
-/* Create three unequal columns that floats next to each other */
-
 .column {
     float: left;
     padding: 10px;
 }
 
-
-/* Left and right column */
-
 .column.side {
     width: 25%;
 }
-
-
-/* Middle column */
 
 .column.middle {
     width: 50%;
     text-align: center;
 }
 
-
-/* Clear floats after the columns */
-
 .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.bookView {
+    width: 100%;
+    margin-left: 30px;
 }
 
 .footer {
