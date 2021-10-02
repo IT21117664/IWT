@@ -67,6 +67,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
+    margin-bottom: 5px;
 }
 
 .btn-lg {
@@ -255,6 +256,27 @@ body {
     width: 100%;
     margin-left: 30px;
     display: none;
+}
+
+.bookData {
+    margin-left: 200px;
+    text-align: left;
+}
+
+.bookData .title {
+    font-weight: bold;
+}
+
+.bookData .data {
+    padding-left: 30px;
+}
+
+.bookData td {
+    padding: 10px;
+}
+
+.checked {
+    color: gold;
 }
 
 .footer {

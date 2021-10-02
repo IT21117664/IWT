@@ -57,6 +57,51 @@
                 <img src="./img/book/14.png" class="bookView">
                 <img src="./img/book/15.png" class="bookView">
             </div>
+            <script>bookpreview();</script>
+            <div class="column middle">
+                <div class="bookData">
+                    <table>
+                        <tr>
+                            <td class="title">Language</td>
+                            <td class="data">English</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Author</td>
+                            <td class="data">English</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Publisher</td>
+                            <td class="data">English</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">ISBN</td>
+                            <td class="data">English</td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Ratings</td>
+                            <td class="data">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <input type="button" value="Read" class="btn primary long">
+                    <input type="button" value="Reserve" class="btn info long">
+                    <input type="button" value="Download" class="btn warning long">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+                <p style="margin-left: 30px;">Description</p>
         </div>
         
 
