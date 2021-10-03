@@ -2,6 +2,7 @@
 
 body {
     margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav ul {
@@ -37,22 +38,10 @@ body {
     background-color: #111;
 }
 
-.footer {
-    background-color: #3b3b3b;
-    text-align: center;
-    color: #fff;
-    margin-top: 0px;
-    padding: 5px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
 .txtSearch {
     border-radius: 50px;
     background-color: #fcfcfc;
-    padding: 0 0 0 15px;
+    padding: 8px;
     width: 75%;
     margin-right: 5px;
 }
@@ -60,28 +49,35 @@ body {
 .txt {
     border-radius: 10px;
     background-color: #fcfcfc;
-    border-color: rgb(70, 70, 68);
-    padding: 8px;
-    margin-right: 5px;
+    border-color: #ddd;
+    padding: 5px;
+    margin: 5px;
 }
 
 .long {
     width: 80%;
 }
 
+.formlong {
+    width: 99%;
+}
+
 .btn {
     border: none;
     color: white;
     border-radius: 5px;
-    padding: 10px 30px;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
+    margin-bottom: 5px;
 }
 
 .btn-lg {
-    font-size: 25px;
+    font-size: 20px;
+    padding: 15px 20px;
+    margin: 10px;
 }
 
 .border {
@@ -89,28 +85,53 @@ body {
     color: black;
 }
 
+.border:hover {
+    border: 2px solid #1d98eb;
+}
+
 .colorprimary {
     border: 2px solid #1d98eb;
 }
 
-.colorPrimary {
-    border: 2px solid #1d98eb;
+.colorprimary:hover {
+    background-color: #1d98eb;
+    color: white;
 }
 
 .colorWarning {
     border: 2px solid #FFCC00;
 }
 
+.colorWarning:hover {
+    background-color: #FFCC00;
+    color: white;
+}
+
 .colorSuccess {
     border: 2px solid #4BB543;
+}
+
+.colorSuccess:hover {
+    background-color: #4BB543;
+    color: white;
 }
 
 .colorInfo {
     border: 2px solid #5bc0de;
 }
 
+.colorInfo:hover {
+    background-color: #5bc0de;
+    color: white;
+}
+
 .colorDanger {
     border: 2px solid #bb2124;
+}
+
+.colorDanger:hover {
+    background-color: #bb2124;
+    color: white;
 }
 
 .primary {
@@ -118,7 +139,7 @@ body {
 }
 
 .warning {
-    background-color: #FFCC00;
+    background-color: #D99433;
 }
 
 .success {
@@ -130,7 +151,7 @@ body {
 }
 
 .danger {
-    background-color: #bb2124;
+    background-color: #C92D29;
 }
 
 .input-container {
@@ -141,7 +162,7 @@ body {
 }
 
 
-/* align */
+/* align 
 
 .center {
     margin: auto;
@@ -149,11 +170,7 @@ body {
     padding: 10px;
 }
 
-.right {
-    position: absolute;
-    right: 0px;
-    padding: 10px;
-}
+*/
 
 .logo {
     margin-left: 10px;
@@ -217,8 +234,96 @@ body {
     left: 16px;
 }
 
-.row {
-    padding: 20px;
+.right {
+    float: right;
+    padding: 10px;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column.side {
+    width: 25%;
+}
+
+.column.middle {
+    width: 50%;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bookView {
+    width: 100%;
+    margin-left: 30px;
+    display: none;
+}
+
+.bookData {
+    margin-left: 200px;
+    text-align: left;
+}
+
+.bookData .title {
+    font-weight: bold;
+}
+
+.bookData .data {
+    padding-left: 30px;
+}
+
+.bookData td {
+    padding: 10px;
+}
+
+.checked {
+    color: gold;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardDetails {
+    padding: 10px 16px;
+    text-align: left;
+}
+
+.proImg {
+    vertical-align: middle;
+    padding-top: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a.footLink {
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    background-color: #3b3b3b;
+    padding: 10px;
+    color: #fff;
     text-align: center;
 }
 

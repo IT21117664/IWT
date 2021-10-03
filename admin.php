@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLIIT ONLINE LIBRARY - ADMIN</title>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/07c9a11431.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
 </head>
 <body>
@@ -28,22 +29,60 @@
 
     <div class="nav">
         <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#Library">Library</a></li>
+            <li><a href="#news">Home</a></li>
+            <li><a href="#contact">Articles</a></li>
+            <li><a href="#about">Past Papers</a></li>
+            <li><a href="#about">Reports</a></li>
+            <li><a href="#about">Journals</a></li>
+            <li><a href="#about" >Admin</a></li>
         </ul>
     </div>
+
     <div class="row">
+
         <div class="right">
             <button type="button" class="btn primary">Overrides</button>
+            <i class="far fa-envelope fa-2x"></i>
         </div>
     </div>
+    
     <div class="row">
-        <div class="center">
-            <button type="button" class="btn warning">Lend Book</button>
-            <button type="button" class="btn danger">Retrive Book</button>
+        <div class="column side"></div>
+        <div class="column middle">
+            <button type="button" class="btn danger btn-lg">Lend Book</button>
+            <button type="button" class="btn warning btn-lg">Retrive Book</button>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h3 align="left">Member</h3>
+            <input type="button" value="New Member Validation" class="btn border colorprimary">
+            <input type="button" value="Add Memeber" class="btn border colorprimary">
+            <input type="button" value="Member Details" class="btn border colorprimary">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h3 align="left">Books</h3>
+            <input type="button" value="Add New Books" class="btn border colorprimary">
+            <input type="button" value="Book Detail" class="btn border colorprimary">
+            <input type="button" value="Request New Books" class="btn border colorprimary">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h3 align="left">IT Technician</h3>
+            <input type="button" value="Error Submission" class="btn border colorprimary">
+            <input type="button" value="Contact Detail" class="btn border colorprimary">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>E - book | Reports | Journals | Library Police | Contact Us<br>Copyright SLIIT &copy; 2021 - All right reserved</p>
     </div>
     <script> carousel();</script>
 </body>
