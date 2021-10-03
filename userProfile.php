@@ -42,7 +42,7 @@
         <div class="column side"></div>
         <div class="column middle">
             <div class="card">
-                <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar">
+                <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator">
                 <div class="cardDetails">
                     <div class="row">
                             <label for="fname">First Name</label>
@@ -51,8 +51,20 @@
                             <label for="lname">Last Name</label>
                             <input type="text" id="lname" name="lname" class="txt formlong" readonly>
 
+                            <label for="nwi">Name With Initial</label>
+                            <input type="text" id="nwi" name="nwi" class="txt formlong" readonly>
+
                             <label for="mob">Mobile Number</label>
                             <input type="text" id="mob" name="mob" class="txt formlong">
+
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" class="txt formlong">
+
+                            <label for="mail">E - mail</label>
+                            <input type="email" id="mail" name="mail" class="txt formlong" readonly>
+
+                            <label for="dob">Date Of Birth</label>
+                            <input type="date" id="dob" name="dob" class="txt formlong" readonly>
                     </div>
                 </div>
             </div>
