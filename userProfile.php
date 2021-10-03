@@ -44,8 +44,13 @@
             <div class="card">
                 <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar">
                 <div class="cardDetails">
-                    <h4><b>John Doe</b></h4> 
-                    <p>Architect & Engineer</p> 
+                    <div class="row">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="fname" class="txt formlong" readonly>
+                            
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lname" class="txt formlong" readonly>
+                    </div>
                 </div>
             </div>
         </div>

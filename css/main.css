@@ -49,13 +49,17 @@ body {
 .txt {
     border-radius: 10px;
     background-color: #fcfcfc;
-    border-color: rgb(70, 70, 68);
-    padding: 8px;
-    margin-right: 5px;
+    border-color: #ddd;
+    padding: 5px;
+    margin: 5px;
 }
 
 .long {
     width: 80%;
+}
+
+.formlong {
+    width: 99%;
 }
 
 .btn {
@@ -291,7 +295,8 @@ body {
 }
 
 .cardDetails {
-    padding: 2px 16px;
+    padding: 10px 16px;
+    text-align: left;
 }
 
 .proImg {
@@ -300,6 +305,11 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .footer {
