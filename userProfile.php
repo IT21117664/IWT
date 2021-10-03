@@ -36,19 +36,17 @@
             <li><a href="#about">Reports</a></li>
             <li><a href="#about">Journals</a></li>
         </ul>
-    </div>
+    </div><br>
 
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-            <div class="profile">
             <div class="card">
-                <img src="img_avatar.png" alt="Avatar" style="width:100%">
-                <div class="container">
+                <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar">
+                <div class="cardDetails">
                     <h4><b>John Doe</b></h4> 
                     <p>Architect & Engineer</p> 
                 </div>
-            </div>
             </div>
         </div>
     </div>

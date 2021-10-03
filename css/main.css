@@ -279,14 +279,27 @@ body {
     color: gold;
 }
 
-.profile {
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     transition: 0.3s;
-    width: 40%;
+    width: 100%;
 }
 
-.profile:hover {
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardDetails {
+    padding: 2px 16px;
+}
+
+.proImg {
+    vertical-align: middle;
+    padding-top: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 .footer {
