@@ -42,7 +42,7 @@
         <div class="column side"></div>
         <div class="column middle">
             <div class="card">
-                <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator">
+                <img src="./img/avatar/1.jpg" class="proImg" onmouseover="showbtn()" alt="Avatar" id="avator">
                 <div class="cardDetails">
                     <div class="row">
                             <label for="fname">First Name</label>
