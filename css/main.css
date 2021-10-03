@@ -206,8 +206,6 @@ body {
 }
 
 .slide {
-    filter: brightness(75%);
-    position: absolute;
     width: 100%;
     height: 400px;
     right: 0;

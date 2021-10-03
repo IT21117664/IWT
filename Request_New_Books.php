@@ -7,8 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <center><h2>REQUEST NEW BOOKS</h2></center>
+    <center><h2><b>REQUEST NEW BOOKS</b></h2></center>
 
+    Book Name <input type="text"><br><br>
+    Author <input type="text"><br><br>
+    publisher <input type="text"><br><br>
+
+    E-Book <input type="radio" name="yes" checked>Yes</input> <input type="radio" name="no">No</input><br><br>
+
+    <input type="submit" placeholder="Clear"> <input type="submit" placeholder="Request">
 
 </body>
 </html>
