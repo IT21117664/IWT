@@ -312,6 +312,11 @@ label {
     font-size: 18px;
 }
 
+a.footLink {
+    text-decoration: none;
+    color: white;
+}
+
 .footer {
     background-color: #3b3b3b;
     padding: 10px;
