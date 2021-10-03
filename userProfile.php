@@ -29,7 +29,7 @@
 
     <div class="nav">
         <ul>
-            <li><a href="#Library">Library</a></li>
+            <li><a class="logoL">Library</a></li>
             <li><a href="#news">Home</a></li>
             <li><a href="#contact">Articles</a></li>
             <li><a href="#about">Past Papers</a></li>
@@ -42,29 +42,37 @@
         <div class="column side"></div>
         <div class="column middle">
             <div class="card">
-                <img src="./img/avatar/1.jpg" class="proImg" onmouseover="showbtn()" alt="Avatar" id="avator">
+                <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator"><br>
+                <input type="file" class="btn info" name="changeImg">
                 <div class="cardDetails">
                     <div class="row">
+                        <form action="#" method="post">
                             <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="fname" class="txt formlong" readonly>
+                            <input type="text" id="fname" name="fname" value="Ranush" class="txt formlong" readonly>
                             
                             <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lname" class="txt formlong" readonly>
+                            <input type="text" id="lname" name="lname" value="Mithila" class="txt formlong" readonly>
 
                             <label for="nwi">Name With Initial</label>
-                            <input type="text" id="nwi" name="nwi" class="txt formlong" readonly>
+                            <input type="text" id="nwi" name="nwi" value="M. M. P. R. M. Bandara" class="txt formlong" readonly>
 
                             <label for="mob">Mobile Number</label>
-                            <input type="text" id="mob" name="mob" class="txt formlong">
+                            <input type="text" id="mob" name="mob" value="0713501969" class="txt formlong">
 
                             <label for="address">Address</label>
-                            <input type="text" id="address" name="address" class="txt formlong">
+                            <input type="text" id="address" name="address" value="No 22, Isipathana mawatha, Polonnaruwa" class="txt formlong">
 
                             <label for="mail">E - mail</label>
-                            <input type="email" id="mail" name="mail" class="txt formlong" readonly>
+                            <input type="email" id="mail" name="mail" value="it21117664@my.sliit.lk" class="txt formlong" readonly>
 
                             <label for="dob">Date Of Birth</label>
-                            <input type="date" id="dob" name="dob" class="txt formlong" readonly>
+                            <input type="text" id="dob" name="dob" value="11/12/2000" class="txt formlong" readonly>
+
+                            <div class="right">
+                                <button type="reset" class="btn danger">Clear</button>
+                                <button type="submit" class="btn success">Update</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

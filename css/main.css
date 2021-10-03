@@ -181,6 +181,13 @@ body {
     margin-left: 10px;
 }
 
+.logoL {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .bg-model {
     width: 0px;
     height: 0px;
