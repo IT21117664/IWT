@@ -50,6 +50,9 @@
                             
                             <label for="lname">Last Name</label>
                             <input type="text" id="lname" name="lname" class="txt formlong" readonly>
+
+                            <label for="mob">Mobile Number</label>
+                            <input type="text" id="mob" name="mob" class="txt formlong">
                     </div>
                 </div>
             </div>
