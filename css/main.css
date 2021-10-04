@@ -102,7 +102,7 @@ body {
     border: 2px solid #FFCC00;
 }
 
-.colorWarning:hover {
+.colorWarning: hover {
     background-color: #FFCC00;
     color: white;
 }

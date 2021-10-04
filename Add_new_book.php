@@ -23,16 +23,115 @@
                 <option value="Dropdown">Dropdown</option>
              </select>
             copies <input type="text"><br>
-            publisher <input type="text">
+            publisher <input type="text">      
             Date <input type="date"><br>
             price <input type="text">
             Published <input type="date"><br><br>
 
-            E - Book <button><a href="" class="button ">Choose file</a></button> <h6> No File Chosen </h6><br>
+            <!--E - Book <button><a href="" class="button ">Choose file</a></button> <h6> No File Chosen </h6><br>-->
+            E - Book <input type="file"><br><br>
 
             <button type="submit" p class="alignright">Clear</button>
             <button type="submit" p class="alignright">Preview</button>
             <button type="submit" p class="alignright">Save & Print</button>
+
+    <div class="Add_new_book_table">  
+    <table style="width: 100%">
+            <tr>
+                <td valign="top">
+					<table>
+                        <tr>
+							<td>
+								<label>Book Name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="book name" name="book name" class="txt long">
+                            </td>
+                        </tr>
+                        <tr>
+							<td>
+								<label>Auther</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Author">  
+                            </td>
+                        </tr>
+                        <tr>
+							<td>
+								<label> Catagory</label>
+                            </td>
+                            <td>
+                               <select name="book" id="book">
+									<option value="Dropdown">Dropdown</option>
+								</select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Publisher</label> 
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Publisher">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Price</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Price">
+                            </td>
+                        </tr>
+                    </table>
+				</td>
+
+                <td>
+                    <table style="float: right" 
+                        class="RightAlignedInputs">
+                        <tr>
+                            <td>
+                                <label>ISBN</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="ISBN">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label> Copies </label>
+                            </td>
+                            <td>
+                              <input type="text" placeholder="Copies">  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Date</label>
+                            </td>
+                            <td>
+								<input type="date"> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Published</label>
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>	
+		</table>
+    </div>      
+
+
+        
+
+
+
+
 
 
         </form>
