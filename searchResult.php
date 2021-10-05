@@ -29,19 +29,18 @@
 
     <div class="nav">
         <ul>
-            <li><a href="#Library">Library</a></li>
+            <li><a class="logoL">Library</a></li>
             <li><a href="#news">Home</a></li>
             <li><a href="#contact">Articles</a></li>
             <li><a href="#about">Past Papers</a></li>
             <li><a href="#about">Reports</a></li>
             <li><a href="#about">Journals</a></li>
-            <li><a href="#about" >Admin</a></li>
         </ul>
     </div>
 
     <div class="row">
         <div class="column mini">
-        <div class="card">
+            <div class="card">
                 <img src="./img/avatar/1.jpg" class="searchimg" alt="Avatar" id="avator">
                 <div class="cardDetails">
                     <div class="row">
@@ -54,7 +53,8 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="column mini">
+            <div class="card">
                 <img src="./img/avatar/1.jpg" class="searchimg" alt="Avatar" id="avator">
                 <div class="cardDetails">
                     <div class="row">
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
     <div class="footer">

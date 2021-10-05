@@ -29,7 +29,7 @@
 
     <div class="nav">
         <ul>
-            <li><a href="#Library">Library</a></li>
+            <li><a class="logoL">Library</a></li>
             <li><a href="#news">Home</a></li>
             <li><a href="#contact">Articles</a></li>
             <li><a href="#about">Past Papers</a></li>
