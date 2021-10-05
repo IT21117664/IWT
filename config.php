@@ -1,8 +1,6 @@
 <?php
-$con = new mysqli("localhost", "root", "", "lims");
-
-if ($con -> connect_error){
-    die("Error" . $con -> connect_error);
-    //Connectionr
-}
+    $con=mysqli_connect("localhost", "root", "", "lims");
+    if(mysqli_connect_errno()){
+    header("Location: error.php");
+    }
 ?>
