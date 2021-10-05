@@ -40,45 +40,33 @@
     </div>
 
     <div class="row">
+        <div class="column mini">
+        <div class="card">
+                <img src="./img/avatar/1.jpg" class="searchimg" alt="Avatar" id="avator">
+                <div class="cardDetails">
+                    <div class="row">
+                        <p class="searchResult">
+                            Book Name<br>
 
-        <div class="right">
-            <button type="button" class="btn primary">Overrides</button>
-            <i class="far fa-envelope fa-2x"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="column side"></div>
-        <div class="column middle">
-            <button type="button" class="btn danger btn-lg">Lend Book</button>
-            <button type="button" class="btn warning btn-lg">Retrive Book</button>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="column">
-            <h3 align="left">Member</h3>
-            <input type="button" value="New Member Validation" class="btn border colorprimary">
-            <input type="button" value="Add Memeber" class="btn border colorprimary">
-            <input type="button" value="Member Details" class="btn border colorprimary">
-        </div>
-    </div>
+        <div class="card">
+                <img src="./img/avatar/1.jpg" class="searchimg" alt="Avatar" id="avator">
+                <div class="cardDetails">
+                    <div class="row">
+                        <p class="searchResult">
+                            Book Name<br>
 
-    <div class="row">
-        <div class="column">
-            <h3 align="left">Books</h3>
-            <input type="button" value="Add New Books" class="btn border colorprimary">
-            <input type="button" value="Book Detail" class="btn border colorprimary">
-            <input type="button" value="Request New Books" class="btn border colorprimary">
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="column">
-            <h3 align="left">IT Technician</h3>
-            <input type="button" value="Error Submission" class="btn border colorprimary">
-            <input type="button" value="Contact Detail" class="btn border colorprimary">
-        </div>
+        
     </div>
 
     <div class="footer">
