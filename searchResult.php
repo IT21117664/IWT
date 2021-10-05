@@ -23,6 +23,7 @@
         header("Location: ./index.php?error=search");
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
