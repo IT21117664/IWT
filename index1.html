@@ -14,41 +14,107 @@
 </head>
 
 <body>
+    <header>
+        <div class="slide">
+            <div class="slidecaption">
+                <img class="mainSlide" src="./img/Slide/1.jpg" style="width:100%">
+                <div class="topRight">
+                    <form method="POST" action="index.php">
+                        <input type="email" placeholder="E-mail" id="index_pg_mail" name="index_pg_mail">
+                        <input type="password" placeholder="Password" id="index_pg_pwd" name="index_pg_pwd">
+                        <button type="submit">Login</button> </br>
+                        <a id="forget_pwd_link" class="right" href="forget_password.php">forget password</a>
+                    </form>
+                </div>
 
+                <div class="topLeft">
+                    <h3>Time</h3>
+                </div>
 
+            </div>
 
-    <div class="slide">
-        <div class="slidecaption">
-            <img class="mainSlide" src="./img/Slide/1.jpg" style="width:100%">
+            <img class="mainSlide" src="./img/Slide/2.jpg" style="width:100%">
+            <img class="mainSlide" src="./img/Slide/3.jpg" style="width:100%">
         </div>
 
-        <div class="topRight">
-            <form method="POST" action="index.php">
-                <input type="email" placeholder="E-mail" id="index_pg_mail" name="index_pg_mail">
-                <input type="password" placeholder="Password" id="index_pg_pwd" name="index_pg_pwd">
-                <button type="submit">Login</button> </br>
-                <a ID="forget_pwd_link" class="right" href="forget_password.php">forget password</a>
-            </form>
         </div>
 
-        <div class="topLeft">
-            <h3>Time</h3>
+        <div class="page_center">
+            <a class="btn reg_btn success" href="C:\xampp\htdocs\LMS\new.php">Register</a>
         </div>
 
-        <img class="mainSlide" src="./img/Slide/2.jpg" style="width:100%">
-        <img class="mainSlide" src="./img/Slide/3.jpg" style="width:100%">
+
+        <script>
+            carousel();
+        </script>
+
+    </header>
+
+    <div class="row column.middle">
+        <div class="column side"></div>
+        <div class="column middle">
+            <input type="text" class="txtSearch" placeholder="Search...">
+            <input type="button" value="Search" class="btn primary">
+        </div>
     </div>
 
+
+    <div class="card_row">
+        <div class="card_column">
+            <div id="book1" class="card book_card">
+                <img src="./img/logo.png" alt="book img">
+                <div><label>Book Name</label></div>
+                <div><label>Authot</label></div>
+                <div><label>ISBN</label></div>
+            </div>
+        </div>
+
+        <div class="card_column">
+            <div id="book2" class="card book_card">
+                <img src="./img/logo.png" alt="book img">
+                <div><label>Book Name</label></div>
+                <div><label>Authot</label></div>
+                <div><label>ISBN</label></div>
+            </div>
+        </div>
+
+        <div class="card_column">
+            <div id="book3" class="card book_card">
+                <img src="./img/logo.png" alt="book img">
+                <div><label>Book Name</label></div>
+                <div><label>Authot</label></div>
+                <div><label>ISBN</label></div>
+            </div>
+        </div>
+
+        <div class="card_column">
+            <div id="book4" class="card book_card">
+                <img src="./img/logo.png" alt="book img">
+                <div><label>Book Name</label></div>
+                <div><label>Authot</label></div>
+                <div><label>ISBN</label></div>
+            </div>
+
+        </div>
+        <div class="card_column">
+            <div id="book5" class="card book_card">
+                <img src="./img/logo.png" alt="book img">
+                <div><label>Book Name</label></div>
+                <div><label>Authot</label></div>
+                <div><label>ISBN</label></div>
+            </div>
+        </div>
+
+
+
     </div>
 
-    <div class="page_center">
-        <a class="btn reg_btn success" href="C:\xampp\htdocs\LMS\new.php">Register</a>
-    </div>
 
 
-    <script>
-        carousel();
-    </script>
+
 </body>
+
+
+
 
 </html>
