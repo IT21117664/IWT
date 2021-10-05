@@ -3,7 +3,9 @@
     $output = "";
     if (isset($_POST['Search'])){
         $keyWord = $_POST['keyWord'];
-        //
+        
+        $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i , journal AS j , pastpaper AS pp , book AS b , report AS r , author AS a , publisher AS p WHERE p.pubID = i.pubID AND j.IID = i.IID AND pp.IID = i.IID AND b.IID = i.IID AND a.AID = i.A_ID AND r.IID = I.IID AND (i.Name LIKE '%$keyWord%' OR p.publisherName LIKE '%$keyWord%' OR pp.module LIKE '%$keyWord%' OR pp.Semester LIKE '%$keyWord%' OR pp.Year LIKE '%$keyWord%' OR a.authorName LIKE '%$keyWord%');";
+        
     }
 ?>
 <!DOCTYPE html>
