@@ -391,7 +391,6 @@ a.footLink {
 
 .card_column {
     margin: 2%;
-    left: 50%;
     float: center;
-    width: 20%;
+    width: 15%;
 }
