@@ -4,7 +4,7 @@
     if (isset($_POST['keyWord'])){
         $keyWord = $_POST['keyWord'];
         
-        $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i , journal AS j , pastpaper AS pp , book AS b , report AS r , author AS a , publisher AS p WHERE p.pubID = i.pubID OR j.IID = i.IID OR pp.IID = i.IID OR b.IID = i.IID OR a.AID = i.A_ID OR r.IID = I.IID OR (i.Name LIKE '%$keyWord%' OR p.publisherName LIKE '%$keyWord%' OR pp.module LIKE '%$keyWord%' OR pp.Semester LIKE '%$keyWord%' OR pp.Year LIKE '%$keyWord%' OR a.authorName LIKE '%$keyWord%') ORDER BY i.IID ASC LIMIT 20;";
+        $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i , journal AS j , pastpaper AS pp , book AS b , report AS r , author AS a , publisher AS p WHERE i.Name LIKE '%$keyWord%' OR p.publisherName LIKE '%$keyWord%' OR pp.module LIKE '%$keyWord%' OR pp.Semester LIKE '%$keyWord%' OR pp.Year LIKE '%$keyWord%' OR a.authorName LIKE '%$keyWord%' GROUP BY i.Name ORDER BY i.IID ASC LIMIT 20;";
         $resultSearch = mysqli_query($con, $sqlSearch);
         $resultSearchCheck = mysqli_num_rows($resultSearch);
         if ($resultSearchCheck > 0){
