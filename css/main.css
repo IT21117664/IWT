@@ -354,3 +354,30 @@ a.footLink {
     left: 45%;
     right: 45%;
 }
+
+.book_card {
+    padding: 15px 0px 15px 15px;
+}
+
+.card_column label {}
+
+.card_column img {
+    max-width: 100px;
+}
+
+.card_row {
+    margin: 0 -5px;
+}
+
+.card_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card_column {
+    margin: 2%;
+    left: 50%;
+    float: left;
+    width: 20%;
+}
