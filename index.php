@@ -12,8 +12,10 @@
 <body></body>
 
     <div class="input-container center">
-        <input type="text" class="txtSearch" placeholder="Search...">
-        <input type="button" value="Search" class="btn primary">
+        <form action="searchResult.php" method="post">
+            <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
+            <input type="button" name="Search" value="Search" class="btn primary">
+        </form>
     </div>
 
     <input type="button" value="Button" class="btn primary">

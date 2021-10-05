@@ -1,5 +1,10 @@
 <?php
-    if (isset($_POST['']))
+    require('config.php');
+    $output = "";
+    if (isset($_POST['Search'])){
+        $keyWord = $_POST['keyWord'];
+        //
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
