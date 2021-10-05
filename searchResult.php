@@ -1,11 +1,26 @@
 <?php
     require('config.php');
     $output = "";
-    if (isset($_POST['Search'])){
+    if (isset($_POST['keyWord'])){
         $keyWord = $_POST['keyWord'];
         
-        $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i , journal AS j , pastpaper AS pp , book AS b , report AS r , author AS a , publisher AS p WHERE p.pubID = i.pubID AND j.IID = i.IID AND pp.IID = i.IID AND b.IID = i.IID AND a.AID = i.A_ID AND r.IID = I.IID AND (i.Name LIKE '%$keyWord%' OR p.publisherName LIKE '%$keyWord%' OR pp.module LIKE '%$keyWord%' OR pp.Semester LIKE '%$keyWord%' OR pp.Year LIKE '%$keyWord%' OR a.authorName LIKE '%$keyWord%');";
-        
+        $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i , journal AS j , pastpaper AS pp , book AS b , report AS r , author AS a , publisher AS p WHERE p.pubID = i.pubID OR j.IID = i.IID OR pp.IID = i.IID OR b.IID = i.IID OR a.AID = i.A_ID OR r.IID = I.IID OR (i.Name LIKE '%$keyWord%' OR p.publisherName LIKE '%$keyWord%' OR pp.module LIKE '%$keyWord%' OR pp.Semester LIKE '%$keyWord%' OR pp.Year LIKE '%$keyWord%' OR a.authorName LIKE '%$keyWord%') ORDER BY i.IID ASC LIMIT 20;";
+        $resultSearch = mysqli_query($con, $sqlSearch);
+        $resultSearchCheck = mysqli_num_rows($resultSearch);
+        if ($resultSearchCheck > 0){
+            while ($rowSearch = mysqli_fetch_assoc($resultSearch)){
+                $bookName = $rowSearch['Name'];
+                $bookFree = $rowSearch['free'];
+                $bookImg = $rowSearch['itemImgLoc'];
+                $bookID = $rowSearch['IID'];
+
+                $output .= "<div class=\"column mini\"><div class=\"card\"><img src=\"$bookImg\" class=\"searchimg\" alt=\"$bookName\" id=\"$bookName\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">$bookName<br></p></div></div></div></div>";
+            }
+        }else{
+            $output .= "<div class=\"column side\"></div><div class=\"column middle\"><div class=\"card\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">No any result found</p></div></div></div></div>";
+        }
+    }else{
+        header("Location: ./index.php?error=search");
     }
 ?>
 <!DOCTYPE html>
@@ -49,34 +64,7 @@
     </div>
 
     <div class="row">
-        <div class="column mini">
-            <div class="card">
-                <img src="./img/avatar/1.jpg" class="searchimg" alt="Avatar" id="avator">
-                <div class="cardDetails">
-                    <div class="row">
-                        <p class="searchResult">
-                            Book Name<br>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column mini">
-            <div class="card">
-                <img src="./img/avatar/1.jpg" class="searchimg" alt="Avatar" id="avator">
-                <div class="cardDetails">
-                    <div class="row">
-                        <p class="searchResult">
-                            Book Name<br>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <?php echo $output; ?>
     </div>
 
     <div class="footer">

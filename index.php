@@ -9,14 +9,11 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body></body>
-
-    <div class="input-container center">
-        <form action="searchResult.php" method="post">
-            <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
-            <input type="button" name="Search" value="Search" class="btn primary">
-        </form>
-    </div>
+<body>
+    <form action="searchResult.php" class="input-container center" method="post">
+                <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
+                <input type="button" name="Search" value="Search" class="btn primary">
+    </form>
 
     <input type="button" value="Button" class="btn primary">
     <input type="button" value="Button" class="btn warning">
