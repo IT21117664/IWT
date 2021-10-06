@@ -16,6 +16,8 @@ function carousel() {
 //------------------------------ /Slider ---------------------------------------------
 
 //------------------------------ Books preview----------------------------------------
+
+/*
 var bookIMG = 0;
 
 function bookpreview() {
@@ -29,5 +31,5 @@ function bookpreview() {
     x[bookIMG - 1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
-
+*/
 //------------------------------ /Books preview----------------------------------------
