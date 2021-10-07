@@ -51,9 +51,9 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-            <form action="profileUpdate.php" method="post">
+            <form action="profileUp.php" enctype="multipart/form-data" method="post">
                 <div class="card">
-                    <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator"><br>
+                    <img src="./img/avatar/1.jpg" class="proImg" name="avator" alt="Avatar" id="avator"><br>
                     <input type="file" class="btn info" name="changeImg">
                     <div class="cardDetails">
                         <div class="row">
@@ -83,7 +83,6 @@
                                     <button type="reset" class="btn danger">Clear</button>
                                     <button type="submit" name="update" value="update" class="btn success">Update</button>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
