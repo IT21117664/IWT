@@ -1,3 +1,28 @@
+<?php
+    require('config.php');
+
+    $userID = 123;
+    //$userType = "Genaral";
+
+    if (isset($_REQUEST['IID'])){
+        $IID = $_REQUEST['IID'];
+
+        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
+        $resultSelectBook = mysqli_query($con, $sqlSelectBook);
+        $resultSelectBookCheck = mysqli_num_rows($resultSelectBook);
+        if ($resultSelectBookCheck > 0){
+            while ($rowSelectBook = mysqli_fetch_assoc($resultSelectBook)){
+                $Name = $rowSelectBook['Name'];
+                $free = $rowSelectBook['free'];
+                $pdfPath = $rowSelectBook['pdfPath'];
+                $description = $rowSelectBook['Description'];
+                $itemImgLoc = $rowSelectBook['itemImgLoc'];
+            }
+        }
+    }else{
+        header("Location: ./index.php?error=bookView");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,18 +71,15 @@
         </div>
 
         <div class="row">
-            <div class="column side">
-                <h2>Book Name</h2>
+            <div class="column middle">
+                <h2 align="left"><?php echo $Name; ?></h2>
             </div>
         </div>
 
         <div class="row">
             <div class="column side">
-                <img src="./img/book/13.png" class="bookView">
-                <img src="./img/book/14.png" class="bookView">
-                <img src="./img/book/15.png" class="bookView">
+                <img src="<?php echo $itemImgLoc; ?>" alt="<?php echo $Name; ?>" class="bookView">
             </div>
-            <script>bookpreview();</script>
             <div class="column middle">
                 <div class="bookData">
                     <table>
@@ -92,16 +114,29 @@
                             </td>
                         </tr>
                     </table>
-
-                    <input type="button" value="Read" class="btn primary long">
-                    <input type="button" value="Reserve" class="btn info long">
-                    <input type="button" value="Download" class="btn warning long">
+                    <?php
+                        $show = 0;
+                        if ($free == 1 && (!isset($userType))){
+                            $show = 1;
+                        }else if (isset($userType)){
+                            $show = 1;
+                        }
+                        if ($show == 1){
+                            echo "<a href=\"$pdfPath\" class=\"btn primary\">Read</a>
+                            <a href=\"$pdfPath\" class=\"btn info\">Reserve</a>
+                            <a href=\"$pdfPath\" class=\"btn warning\">Download</a>";
+                        }else{
+                            echo "<a href=\"#\" class=\"btn primary\" disabled>Read</a>
+                            <a href=\"#\" class=\"btn info\" disabled>Reserve</a>
+                            <a href=\"#\" class=\"btn warning\" disabled>Download</a>";
+                        }
+                    ?>
                 </div>
             </div>
         </div>
 
         <div class="row">
-                <p style="margin-left: 30px;">Description</p>
+                <p style="margin-left: 30px;"><?php echo $description; ?></p>
         </div>
         
 
