@@ -4,14 +4,23 @@
 //--------------------------------------------------------------------------
     $userID = 1;
 
-    $sqlLoadUser = "SELECT * FROM `user` WHERE `user`.userID =  '1'";
+    $sqlLoadUser = "SELECT * FROM `user` WHERE `user`.userID =  '$userID'";
 
     $resultLoadUser = mysqli_query($con, $sqlLoadUser);
         $resultLoadUserCheck = mysqli_num_rows($resultLoadUser);
         if ($resultLoadUserCheck > 0){
             while ($rowLoadUser = mysqli_fetch_assoc($resultLoadUser)){
-                
-            }}
+                $userID = $rowLoadUser['userID'];
+                $phoneNumber = $rowLoadUser['phoneNumber'];
+                $email = $rowLoadUser['email'];
+                $FName = $rowLoadUser['FName'];
+                $LName = $rowLoadUser['LName'];
+                $NameWithInitial = $rowLoadUser['NameWithInitial'];
+                $profileImg = $rowLoadUser['profileImg'];
+                $DateOfBirth = $rowLoadUser['DateOfBirth'];
+                $Address = $rowLoadUser['Address'];
+            }
+        }
 //--------------------------------------------------------------------------
 ?>
 <!DOCTYPE html>
@@ -42,41 +51,43 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-            <div class="card">
-                <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator"><br>
-                <input type="file" class="btn info" name="changeImg">
-                <div class="cardDetails">
-                    <div class="row">
-                        <form action="#" method="post">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="fname" value="Ranush" class="txt formlong" readonly>
-                            
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lname" value="Mithila" class="txt formlong" readonly>
+            <form action="profileUpdate.php" method="post">
+                <div class="card">
+                    <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator"><br>
+                    <input type="file" class="btn info" name="changeImg">
+                    <div class="cardDetails">
+                        <div class="row">
+                            <form action="profileUp.php" enctype="multipart/form-data" method="post">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="fname" value="<?php echo $FName; ?>" class="txt formlong" disabled>
+                                
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lname" value="<?php echo $LName; ?>" class="txt formlong" disabled>
 
-                            <label for="nwi">Name With Initial</label>
-                            <input type="text" id="nwi" name="nwi" value="M. M. P. R. M. Bandara" class="txt formlong" readonly>
+                                <label for="nwi">Name With Initial</label>
+                                <input type="text" id="nwi" name="nwi" value="<?php echo $NameWithInitial; ?>" class="txt formlong" disabled>
 
-                            <label for="mob">Mobile Number</label>
-                            <input type="text" id="mob" name="mob" value="0713501969" class="txt formlong">
+                                <label for="mob">Mobile Number</label>
+                                <input type="text" id="mob" name="mob" value="<?php echo $phoneNumber; ?>" class="txt formlong">
 
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="address" value="No 22, Isipathana mawatha, Polonnaruwa" class="txt formlong">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" value="<?php echo $Address; ?>" class="txt formlong">
 
-                            <label for="mail">E - mail</label>
-                            <input type="email" id="mail" name="mail" value="it21117664@my.sliit.lk" class="txt formlong" readonly>
+                                <label for="mail">E - mail</label>
+                                <input type="email" id="mail" name="mail" value="<?php echo $email; ?>" class="txt formlong" disabled>
 
-                            <label for="dob">Date Of Birth</label>
-                            <input type="text" id="dob" name="dob" value="11/12/2000" class="txt formlong" readonly>
+                                <label for="dob">Date Of Birth</label>
+                                <input type="text" id="dob" name="dob" value="<?php echo $DateOfBirth; ?>" class="txt formlong" disabled>
 
-                            <div class="right">
-                                <button type="reset" class="btn danger">Clear</button>
-                                <button type="submit" class="btn success">Update</button>
-                            </div>
-                        </form>
+                                <div class="right">
+                                    <button type="reset" class="btn danger">Clear</button>
+                                    <button type="submit" name="update" value="update" class="btn success">Update</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
