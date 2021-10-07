@@ -14,7 +14,7 @@
 <body>
 
     <?php include "Header.php"?>
-    <?php logIn();?>
+    <d?php logIn();?>
 
     <div class="wrapper">
         <div class="column side"></div>
