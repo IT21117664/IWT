@@ -12,8 +12,10 @@
 </head>
 
 <body>
-    <?php include "Header.php"?>
-     <?php logIn(); ?>
+    <?php
+        include "Header.php";
+        logIn();
+    ?>
 
     <div class="wrapper">
         <div class="column mini"></div>
