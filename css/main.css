@@ -266,8 +266,8 @@ a {
     width: 15%;
 }
 
-.column.side1 {
-    width: 15%;
+.column.micro {
+    width: 10%;
 }
 
 .column.side {
@@ -280,8 +280,7 @@ a {
 }
 
 .column.large {
-    left: 15%;
-    width: 60%;
+    width: 80%;
     text-align: center;
 }
 
@@ -389,9 +388,9 @@ a.footLink {
 }
 
 .card_column {
-    margin: 5px;
+    margin: 0.5%;
     float: left;
-    max-width: 15%;
+    width: 15%;
     padding: 15px;
 }
 
@@ -663,9 +662,14 @@ th {
 
 .column_list {
     float: left;
-    width: 30%;
+    width: 25%;
+    padding: 3.66%;
 }
 
 .list_box {
     width: 100%;
+}
+
+.column_list li {
+    padding-bottom: 10px;
 }
