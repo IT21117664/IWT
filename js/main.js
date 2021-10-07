@@ -31,3 +31,11 @@ function bookpreview() {
 }
 
 //------------------------------ /Books preview----------------------------------------
+
+//------------------------------Time---------------------------------------------------
+
+var date_time = new Date();
+var Current_date = date_time.getDay() + "-" + date_time.getMonth() +
+    "-" + date_time.getFullYear();
+var Current_time = date_time.getHours() + ":" + date_time.getMinutes() + ":" + date_time.getSeconds();
+document.getElementById("date_time").innerHTML = "Hello World";
