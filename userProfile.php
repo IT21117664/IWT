@@ -51,41 +51,43 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-            <div class="card">
-                <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator"><br>
-                <input type="file" class="btn info" name="changeImg">
-                <div class="cardDetails">
-                    <div class="row">
-                        <form action="#" method="post">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="fname" value="<?php echo $FName; ?>" class="txt formlong" readonly>
-                            
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lname" value="<?php echo $LName; ?>" class="txt formlong" readonly>
+            <form action="profileUpdate.php" method="post">
+                <div class="card">
+                    <img src="./img/avatar/1.jpg" class="proImg" alt="Avatar" id="avator"><br>
+                    <input type="file" class="btn info" name="changeImg">
+                    <div class="cardDetails">
+                        <div class="row">
+                            <form action="profileUp.php" enctype="multipart/form-data" method="post">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="fname" value="<?php echo $FName; ?>" class="txt formlong" disabled>
+                                
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lname" value="<?php echo $LName; ?>" class="txt formlong" disabled>
 
-                            <label for="nwi">Name With Initial</label>
-                            <input type="text" id="nwi" name="nwi" value="<?php echo $NameWithInitial; ?>" class="txt formlong" readonly>
+                                <label for="nwi">Name With Initial</label>
+                                <input type="text" id="nwi" name="nwi" value="<?php echo $NameWithInitial; ?>" class="txt formlong" disabled>
 
-                            <label for="mob">Mobile Number</label>
-                            <input type="text" id="mob" name="mob" value="<?php echo $phoneNumber; ?>" class="txt formlong">
+                                <label for="mob">Mobile Number</label>
+                                <input type="text" id="mob" name="mob" value="<?php echo $phoneNumber; ?>" class="txt formlong">
 
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="address" value="<?php echo $Address; ?>" class="txt formlong">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" value="<?php echo $Address; ?>" class="txt formlong">
 
-                            <label for="mail">E - mail</label>
-                            <input type="email" id="mail" name="mail" value="<?php echo $email; ?>" class="txt formlong" readonly>
+                                <label for="mail">E - mail</label>
+                                <input type="email" id="mail" name="mail" value="<?php echo $email; ?>" class="txt formlong" disabled>
 
-                            <label for="dob">Date Of Birth</label>
-                            <input type="text" id="dob" name="dob" value="<?php echo $DateOfBirth; ?>" class="txt formlong" readonly>
+                                <label for="dob">Date Of Birth</label>
+                                <input type="text" id="dob" name="dob" value="<?php echo $DateOfBirth; ?>" class="txt formlong" disabled>
 
-                            <div class="right">
-                                <button type="reset" class="btn danger">Clear</button>
-                                <button type="submit" class="btn success">Update</button>
-                            </div>
-                        </form>
+                                <div class="right">
+                                    <button type="reset" class="btn danger">Clear</button>
+                                    <button type="submit" name="update" value="update" class="btn success">Update</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
