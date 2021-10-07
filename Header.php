@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <header>
     <div class="slide">
         <div class="slidecaption">
