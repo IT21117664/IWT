@@ -10,22 +10,7 @@
     <script src="./js/main.js"></script>
 </head>
 <body>
-    <div class="slide">
-        <div class="slidecaption">
-            <img class="mainSlide" src="./img/Slide/1.jpg" style="width:100%">
-            <div class="topRight">
-                <h3>RMB
-                <input type="button" value="Button" class="btn primary"></h3>
-            </div>
-
-            <div class="topLeft">
-                <h3>Time</h3>
-            </div>
-
-        </div>
-        <img class="mainSlide" src="./img/Slide/2.jpg" style="width:100%">
-        <img class="mainSlide" src="./img/Slide/3.jpg" style="width:100%">
-    </div>
+    <?php require('Header.php'); ?>
 
     <div class="nav">
         <ul>
@@ -79,9 +64,7 @@
         </div>
     </div>
 
-    <div class="footer">
-        <p><a href="#" class="footLink">E - book</a> | <a href="#" class="footLink">Reports</a> | <a href="#" class="footLink">Journals</a> | <a href="#" class="footLink">Library</a>Police</a> | <a href="#" class="footLink">Contact Us</a><br>Copyright SLIIT &copy; 2021 - All right reserved</p>
-    </div>
+    <?php require('Footer.php'); ?>
     <script> carousel();</script>
 </body>
 </html>
