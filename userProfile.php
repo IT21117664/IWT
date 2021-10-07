@@ -1,3 +1,19 @@
+<?php
+
+    require('config.php');
+//--------------------------------------------------------------------------
+    $userID = 1;
+
+    $sqlLoadUser = "SELECT * FROM `user` WHERE `user`.userID =  '1'";
+
+    $resultLoadUser = mysqli_query($con, $sqlLoadUser);
+        $resultLoadUserCheck = mysqli_num_rows($resultLoadUser);
+        if ($resultLoadUserCheck > 0){
+            while ($rowLoadUser = mysqli_fetch_assoc($resultLoadUser)){
+                
+            }}
+//--------------------------------------------------------------------------
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
