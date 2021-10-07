@@ -389,8 +389,9 @@ a.footLink {
 }
 
 .card_column {
+    margin: 5px;
     float: left;
-    width: 15%;
+    max-width: 15%;
     padding: 15px;
 }
 
@@ -429,4 +430,13 @@ a.footLink {
 
 .form h2 {
     margin-bottom: 20;
+}
+
+.column_list {
+    float: left;
+    width: 30%;
+}
+
+.list_box {
+    width: 100%;
 }
