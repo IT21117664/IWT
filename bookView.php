@@ -1,9 +1,13 @@
 <?php
     require('config.php');
+
+    $userID = 123;
+    //$userType = "Genaral";
+
     if (isset($_REQUEST['IID'])){
         $IID = $_REQUEST['IID'];
 
-        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath FROM inventory AS i WHERE  i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
+        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
         $resultSelectBook = mysqli_query($con, $sqlSelectBook);
         $resultSelectBookCheck = mysqli_num_rows($resultSelectBook);
         if ($resultSelectBookCheck > 0){
@@ -11,6 +15,7 @@
                 $Name = $rowSelectBook['Name'];
                 $free = $rowSelectBook['free'];
                 $pdfPath = $rowSelectBook['pdfPath'];
+                $description = $rowSelectBook['Description'];
                 $itemImgLoc = $rowSelectBook['itemImgLoc'];
             }
         }
@@ -109,16 +114,29 @@
                             </td>
                         </tr>
                     </table>
-
-                    <a href="<?php echo $pdfPath; ?>" class="btn primary">Read</a>
-                    <a href="<?php echo $pdfPath; ?>" class="btn info">Reserve</a>
-                    <a href="<?php echo $pdfPath; ?>" class="btn warning">Download</a>
+                    <?php
+                        $show = 0;
+                        if ($free == 1 && (!isset($userType))){
+                            $show = 1;
+                        }else if (isset($userType)){
+                            $show = 1;
+                        }
+                        if ($show == 1){
+                            echo "<a href=\"$pdfPath\" class=\"btn primary\">Read</a>
+                            <a href=\"$pdfPath\" class=\"btn info\">Reserve</a>
+                            <a href=\"$pdfPath\" class=\"btn warning\">Download</a>";
+                        }else{
+                            echo "<a href=\"#\" class=\"btn primary\" disabled>Read</a>
+                            <a href=\"#\" class=\"btn info\" disabled>Reserve</a>
+                            <a href=\"#\" class=\"btn warning\" disabled>Download</a>";
+                        }
+                    ?>
                 </div>
             </div>
         </div>
 
         <div class="row">
-                <p style="margin-left: 30px;">Description</p>
+                <p style="margin-left: 30px;"><?php echo $description; ?></p>
         </div>
         
 
