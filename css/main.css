@@ -415,3 +415,7 @@ a.footLink {
 .form h2 {
     margin-bottom: 20;
 }
+
+#date_time {
+    width: 20%;
+}
