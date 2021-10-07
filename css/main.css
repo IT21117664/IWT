@@ -667,7 +667,7 @@ th {
 }
 
 .list_box {
-    width: 100%;
+    max-width: 100%;
 }
 
 .column_list li {
