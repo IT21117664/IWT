@@ -1,13 +1,17 @@
 <?php
+
+    require('config.php');
 //--------------------------------------------------------------------------
     $userID = 1;
 
     $sqlLoadUser = "SELECT * FROM `user` WHERE `user`.userID =  '1'";
 
-    $resultSelectBook = mysqli_query($con, $sqlSelectBook);
-        $resultSelectBookCheck = mysqli_num_rows($resultSelectBook);
-        if ($resultSelectBookCheck > 0){
-            while ($rowSelectBook = mysqli_fetch_assoc($resultSelectBook)){}}
+    $resultLoadUser = mysqli_query($con, $sqlLoadUser);
+        $resultLoadUserCheck = mysqli_num_rows($resultLoadUser);
+        if ($resultLoadUserCheck > 0){
+            while ($rowLoadUser = mysqli_fetch_assoc($resultLoadUser)){
+                
+            }}
 //--------------------------------------------------------------------------
 ?>
 <!DOCTYPE html>
