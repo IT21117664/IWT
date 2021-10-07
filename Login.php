@@ -1,56 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    require('config.php');
+    if (isset($_POST['index_pg_mail'])){
+        $MAIL=$_POST['index_pg_mail'];
+        $PW=$_POST['index_pg_pwd'];
+        $SQL_LOGIN="SELECT * FROM User WHERE email = '$MAIL'";
+        $result_login = mysqli_query($con, $SQL_LOGIN);
+		$resultCheck_login = mysqli_num_rows($result_login);
+		if ($resultCheck_login > 0) {
+			while ($row_login = mysqli_fetch_assoc($result_login)){
+                $RPW=$row_login['Password'];
+                $U_ID=$row_login['userID'];
+                if ($PW==$RPW){
+                    session_start();
+                    $_SESSION['userID']=$U_ID;
+                    $_SESSION['FName']=$row_login['FIRST_NAME'];
+                    $_SESSION['LName']=$row_login['LAST_NAME'];
+                    $_SESSION['mail']=$row_login['EMAIL'];
+                    $_SESSION['Mobile']=$row_login['MOBILE'];
+                    $_SESSION['NWI']=$row_login['NameWithInitial'];
+                    $_SESSION['Address']=$row_login['Address'];
+                    $_SESSION['DOB']=$row_login['DateOfBirth'];
+                    $_SESSION['ProfileImg']=$row_login['ProfileImg'];
+                    header("Location: ./index.php?msg=success"); //uba page name eka daganin
+                            
+                }else{
+                    header("Location: ./index.php?msg=error");
+                }
+			}
+		}else{
+            header("Location: ./login.php?msg=error");
+        }
+    }
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <script src="https://kit.fontawesome.com/07c9a11431.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-    <title>Document</title>
-</head>
-
-<body>
-
-<?php include "Header.php"?>
-
-    <div class="wrapper ">
-        <div class="column side "></div>
-        <div class="column middle ">
-            <div class="card ">
-                <div class="cardDetails ">
-                    <div class="row ">
-                        <form action="# " method="post " class="form ">
-
-
-                            <div class="login">
-                                <div>
-                                    <h2>Login</h2>
-                                </div>
-
-                                <div class="input_item">
-                                    <label for="SLIITmail">SLIIT mail</label>
-                                    <input type="email" id="SLIITmail" name="SLIITmail" required class="txt input_box"></div>
-
-                                <div class="input_item">
-                                    <label for="pwd">Password</label>
-                                    <input type="password" name="pwd" id="pwd" required class="txt input_box"></div>
-                            </div>
-
-                            <div class="right">
-                                <button type="reset" class="btn danger">Clear</button>
-                                <button type="submit" class="btn success">Sign Up</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <?php include "Footer.php" ?>
-
-</body>
-
-</html>
+?>

@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <?php require('header.php');
+    logIn(); ?>
 
 
     <div class="row">
