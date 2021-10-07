@@ -20,7 +20,7 @@
     
     <div class="topLeft">
          <div>
-            <h2 id = "date_time"></h2>
+            <h2 id="date_time"></h2>
         </div>
     </div>
 
