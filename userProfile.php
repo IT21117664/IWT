@@ -1,3 +1,15 @@
+<?php
+//--------------------------------------------------------------------------
+    $userID = 1;
+
+    $sqlLoadUser = "SELECT * FROM `user` WHERE `user`.userID =  '1'";
+
+    $resultSelectBook = mysqli_query($con, $sqlSelectBook);
+        $resultSelectBookCheck = mysqli_num_rows($resultSelectBook);
+        if ($resultSelectBookCheck > 0){
+            while ($rowSelectBook = mysqli_fetch_assoc($resultSelectBook)){}}
+//--------------------------------------------------------------------------
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
