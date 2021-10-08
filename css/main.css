@@ -443,7 +443,7 @@ a.footLink {
     position: fixed;
     justify-content: center;
     align-items: center;
-    display: none;
+    display: flex;
     top: 0px;
     left: 0;
     overflow: auto;
