@@ -738,13 +738,17 @@ th {
     font-weight: bold;
 }
 
-.card .set {
-    margin: 5%;
+.card.set {
+    margin-left: 5%;
     width: 90%;
+    padding-top: 0;
+    padding-left: 0;
+    margin-bottom: 30px;
 }
 
-.card .title {
+.card.title {
     background-color: #fff;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
+    padding-right: 0px;
 }
