@@ -437,11 +437,15 @@ a.footLink {
     max-width: 100px;
 }
 
-.input_item {
+.wrapper tr {
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 15px;
+}
+
+.wrapper td {
+    width: 100%;
 }
 
 .input_item label {
@@ -450,11 +454,6 @@ a.footLink {
 
 .input_box {
     margin-right: 10px;
-    width: 100%;
-}
-
-.wrapper {
-    max-width: 100opx;
     width: 100%;
 }
 
