@@ -105,7 +105,13 @@ function logout() {
 }
 
 
-function x() {
-    document.getElementById("email").value;
-    document.getElementById("email").value;
-}
+
+
+// function() {
+//     document.getElementById("email").value;
+//     document.getElementById("email").value;
+
+//     function mail_auto(ev) {
+//         ev.target.value = ev.target.value.toUpperCase();
+//         document.getElementById('sliitMail').target.value = ev.target.value;
+//     }
