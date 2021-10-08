@@ -430,6 +430,7 @@ a.footLink {
     float: left;
     width: 15%;
     padding: 15px;
+    cursor: pointer;
 }
 
 .card_column img {
