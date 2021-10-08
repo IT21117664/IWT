@@ -87,7 +87,7 @@
 
                 <td>
                     <table style="float: right" 
-                        class="RightAlignedInputs">
+                        class="RightAlignedInputs" vz>
                         <tr>
                             <td>
                                 <label>ISBN</label>
