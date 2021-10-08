@@ -1,8 +1,16 @@
 <?php
+    require('Header.php');
     require('config.php');
+
 //-----------------------------------------------------------------------------
-    $userID = 123;
-    $userType = 0;
+
+    if (isset($_SESSION['userID'])){
+        $userID = $_SESSION['userID'];
+        $userType = $_SESSION['userType'];
+    }else{
+        //echo $_SESSION['userID'];
+        header("Location: ./index.php");
+    }
 //---------------------------------------------------------------------------------
 
     if (isset($_REQUEST['IID'])){
@@ -22,35 +30,8 @@
     }else{
         header("Location: ./index.php?error=bookView");
     }
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLIIT ONLINE LIBRARY - ADMIN</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="https://kit.fontawesome.com/07c9a11431.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-</head>
-<body>
-    <div class="slide">
-        <div class="slidecaption">
-            <img class="mainSlide" src="./img/Slide/1.jpg" style="width:100%">
-            <div class="topRight">
-                <h3>RMB
-                <input type="button" value="Button" class="btn primary"></h3>
-            </div>
-
-            <div class="topLeft">
-                <h3>Time</h3>
-            </div>
-
-        </div>
-        <img class="mainSlide" src="./img/Slide/2.jpg" style="width:100%">
-        <img class="mainSlide" src="./img/Slide/3.jpg" style="width:100%">
-    </div>
 
     <div class="nav">
         <ul>

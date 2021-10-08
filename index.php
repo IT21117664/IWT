@@ -1,5 +1,7 @@
-    <?php require('header.php');
-    logIn(); ?>
+    <?php
+    require('header.php');
+    logIn();
+    ?>
 
 
     <div class="row">
