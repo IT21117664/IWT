@@ -147,7 +147,7 @@
                     </div>
                 </div>
             </div>
-                    </div>
+     </div>
 
                         
                         <div class="card set">
@@ -157,43 +157,41 @@
                                 
                             <div class="row">
                                 <div class="column micro"></div>
-                                <div class="column large">
-                                    <div class="card_column">
-                                        <div id="book1" class="card">
-                                            <img src="./img/logo.png" alt="book img">
-                                            <div><label>Book Name</label></div>
+                                    <div class="column large">
+                                        <div class="card_column">
+                                           <div id="book1" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>
+                                            </div>
                                         </div>
-                                    </div>
 
 
-                                    <div class="card_column">
-                                        <div id="book2" class="card">
-                                            <img src="./img/logo.png" alt="book img">
-                                            <div><label>Book Name</label></div>
-                                            
+                                        <div class="card_column">
+                                            <div id="book2" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>                    
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="card_column">
-                                        <div id="book3" class="card">
-                                            <img src="./img/logo.png" alt="book img">
-                                            <div><label>Book Name</label></div>
-                                            
+                                        <div class="card_column">
+                                            <div id="book3" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>                                           
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="card_column">
-                                        <div id="book4" class="card">
-                                            <img src="./img/logo.png" alt="book img">
-                                            <div><label>Book Name</label></div>
-                                        
+                                        <div class="card_column">
+                                            <div id="book4" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>                                  
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="card_column">
-                                        <div id="book5" class="card">
-                                            <img src="./img/logo.png" alt="book img">
-                                            <div><label>Book Name</label></div>
+                                        <div class="card_column">
+                                            <div id="book5" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -201,58 +199,53 @@
                         </div>
                     
                         
-                    <div class="row">
-                            <div class="">
-                                <div class="card">
+                        <div class="card set">
+                                <div class="card title">
                                     <h1>Suggestions</h1>
                                 </div>
-                            </div>
+                                
+                            <div class="row">
+                                <div class="column micro"></div>
+                                    <div class="column large">
+                                        <div class="card_column">
+                                           <div id="book1" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>
+                                            </div>
+                                        </div>
 
-                            <div class="column micro"></div>
-                            <div class="column large">
-                                <div class="card_column">
-                                    <div id="book1" class="card">
-                                        <img src="./img/logo.png" alt="book img">
-                                        <div><label>Book Name</label></div>
-                                    
-                                    </div>
-                                </div>
 
+                                        <div class="card_column">
+                                            <div id="book2" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>                    
+                                            </div>
+                                        </div>
 
-                                <div class="card_column">
-                                    <div id="book2" class="card">
-                                        <img src="./img/logo.png" alt="book img">
-                                        <div><label>Book Name</label></div>
-                                    
-                                    </div>
-                                </div>
+                                        <div class="card_column">
+                                            <div id="book3" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>                                           
+                                            </div>
+                                        </div>
 
-                                <div class="card_column">
-                                    <div id="book3" class="card">
-                                        <img src="./img/logo.png" alt="book img">
-                                        <div><label>Book Name</label></div>
-                                        
-                                    </div>
-                                </div>
+                                        <div class="card_column">
+                                            <div id="book4" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>                                  
+                                            </div>
+                                        </div>
 
-                                <div class="card_column">
-                                    <div id="book4" class="card">
-                                        <img src="./img/logo.png" alt="book img">
-                                        <div><label>Book Name</label></div>
-                                        
-                                    </div>
-                                </div>
-
-                                <div class="card_column">
-                                    <div id="book5" class="card">
-                                        <img src="./img/logo.png" alt="book img">
-                                        <div><label>Book Name</label></div>
-                                        
+                                        <div class="card_column">
+                                            <div id="book5" class="card">
+                                                <img src="./img/logo.png" alt="book img">
+                                                <div><label>Book Name</label></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
            
 <?php require "Footer.php"; ?>
 
