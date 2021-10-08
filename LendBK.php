@@ -5,7 +5,7 @@ include 'header.php';
 
 <div class="pop-lend">
         <div class="pop-content">
-         <div class="pop-close1"><b>+</b></div>
+         <div class="pop-close1"><b onclick="closeWindow()">+</b></div>
             <!---------------------------LEND_BOOK_HTML_START------------------------------------------------------------------------------------------------->
             <div>
                 <div>
@@ -136,6 +136,6 @@ include 'header.php';
             <!---------------------------LEND_BOOK_HTML_END------------------------------------------------------------------------------------------------->
         </div>
 </div>
-
+<script src="./js/main.js"></script>
 </body>
 </html>
