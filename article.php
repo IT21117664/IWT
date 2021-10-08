@@ -141,7 +141,7 @@
                 </div>
             </div>
                     </div>
-
+                    <div class="card set">
                     <div class="row">
                        
                             <div class="card">
@@ -195,6 +195,8 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+
 
                     <div class="row">
                         
