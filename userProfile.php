@@ -1,5 +1,5 @@
-<?php require('config.php'); ?>
-    <?php
+<?php
+    require('config.php');
     require('Header.php');
 //--------------------------------------------------------------------------
 
@@ -13,6 +13,8 @@
         $profileImg = $_SESSION['ProfileImg'];
         $DateOfBirth = $_SESSION['DOB'];
         $Address = $_SESSION['Address'];
+    }else{
+        header("Location: ./index.php");
     }
 //--------------------------------------------------------------------------
     ?>
