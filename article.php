@@ -1,12 +1,28 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Article</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
+
+</head>
+
+<body>
+
+    <?php
+
     require('header.php');
     logIn();
 
     ?>
 
-    <header>
-
-    <div class="nav">
+<div class="nav">
         <ul>
             <li><a class="logoL">Library</a></li>
             <li><a href="#news">Home</a></li>
@@ -17,50 +33,16 @@
         </ul>
     </div><br>
 
-    </header>
 
-
+    
     <form id="form">
-        <input type="search" id="query" name="q" class="input_search">
+        <input type="search" id="query" name="q" img src="C:\Users\MSii\Desktop\search.jpg">
         <button>Search</button>
-        <a href="#">Advanced Search</a>
     </form>
 
-    <div class="main_div">
-        <div class="row">
-            <div class="column_card">
-                <div class="card">
-                    <img class="image_card" src="img/card/business-article-3914492.jpg" alt="image">
-                </div>
-            </div>
-            <div class="column_card">
-                <div class="card">
-                <img class="image_card"  src="img/card/business-article-3914492.jpg" alt="image">
-                </div>
-            </div>
-            <div class="column_card">
-                <div class="card">
-                <img class="image_card"  src="img/card/business-article-3914492.jpg" alt="image">
-                </div>
-            </div>
-            <div class="column_card">
-                <div class="card">
-                <img  class="image_card" src="img/card/business-article-3914492.jpg" alt="image">
-                </div>
-            </div>
-            <div class="column_card">
-            <div class="card">
-                <img  class="image_card" src="img/card/business-article-3914492.jpg" alt="image">
-                </div>
-            </div>
-            <div class="column_card">
-            <div class="card">
-                <img  class="image_card" src="img/card/business-article-3914492.jpg" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
+    <a href="#" style="text-align: left;">Advanced Search</a>
 
+ 
     <div class="row">
         <div class="column micro"></div>
         <div class="column large">
@@ -110,7 +92,6 @@
                 </div>
             </div>
         </div>
-        
     </div>
 
 
