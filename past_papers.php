@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Articles</title>
+    <title>Past Papers</title>
 
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/main.js"></script>
@@ -16,7 +16,10 @@
 <body>
 
     <?php
-        require('header1.php');
+
+    require('header.php');
+
+
     ?>
 
     <div class="nav">
@@ -38,39 +41,43 @@
             <input type="text" class="txtSearch" placeholder="Search...">
             <input type="button" value="Search" class="btn primary">
             <a href="#" class="topRighta">Advanced Search</a>
-            <div style="width: 100%;"></div>
+            <div style="width: 100%;">
+
+            </div>
         </div>
+
     </div>
 
 
 
     <div class="row">
-        
+        <div class="">
             <div class="card">
                 <h1>New Arrivals</h1>
             </div>
-        
+        </div>
 
         <?php
         require('config.php');
 
+
         // if (isset($_REQUEST['IID'])) {
-            $IID = $_REQUEST['IID'];
+        $IID = $_REQUEST['IID'];
 
-            $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '" . $IID . "' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET 0;";
-            $resultSelectBook = $con->query($sqlSelectBook);
-            if ($resultSelectBook->num_rows > 0) {
-                $numberofrows = $resultSelectBook->num_rows;
-                for ($i = 0; $i < $numberofrows; $i++) {
+        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '" . $IID . "' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET 0;";
+        $resultSelectBook = $con->query($sqlSelectBook);
+        if ($resultSelectBook->num_rows > 0) {
+            $numberofrows = $resultSelectBook->num_rows;
+            for ($i = 0; $i < $numberofrows; $i++) {
 
-                    while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
+                while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
 
-                        $Name = $rowSelectBook['Name'];
-                        $itemImgLoc = $rowSelectBook['itemImgLoc'];
-                        $free = $rowSelectBook['free'];
+                    $Name = $rowSelectBook['Name'];
+                    $itemImgLoc = $rowSelectBook['itemImgLoc'];
+                    $free = $rowSelectBook['free'];
 
-                        $sqlSelectaouter = "SELECT * FROM author WHERE  AID  = '" . $rowSelectBook["A_ID"] . "';";
-                        $resulsetauther = $con->query($sqlSelectcatery);
+                    $sqlSelectaouter = "SELECT * FROM author WHERE  AID  = '" . $rowSelectBook["A_ID"] . "';";
+                    $resulsetauther = $con->query($sqlSelectcatery);
 
                     while ($rowSelectarther = $resulsetauther->fetch_assoc()) {
                         $aouthername =  $rowSelectarther["catName"];
@@ -141,13 +148,13 @@
                 </div>
             </div>
                     </div>
-                    <div class="card set">
+
                     <div class="row">
-                       
-                            <div class="card title">
+                        <div class="">
+                            <div class="card">
                                 <h1>Trending</h1>
                             </div>
-                        
+                        </div>
 
 
 
@@ -195,11 +202,9 @@
                             </div>
                         </div>
                     </div>
-                    </div>
-
 
                     <div class="row">
-                        
+                        <div class="">
                             <div class="card">
                                 <h1>Suggestions</h1>
                             </div>
@@ -254,7 +259,8 @@
 
 
                     <?php
-                        require "Footer.php";
+
+                    require "Footer.php";
                     ?>
 
 
