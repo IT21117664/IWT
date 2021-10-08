@@ -13,10 +13,10 @@
                 if ($PW==$RPW){
                     session_start();
                     $_SESSION['userID']=$U_ID;
-                    $_SESSION['FName']=$row_login['FIRST_NAME'];
-                    $_SESSION['LName']=$row_login['LAST_NAME'];
-                    $_SESSION['mail']=$row_login['EMAIL'];
-                    $_SESSION['Mobile']=$row_login['MOBILE'];
+                    $_SESSION['FName']=$row_login['FName'];
+                    $_SESSION['LName']=$row_login['LName'];
+                    $_SESSION['mail']=$row_login['email'];
+                    $_SESSION['Mobile']=$row_login['phoneNumber'];
                     $_SESSION['NWI']=$row_login['NameWithInitial'];
                     $_SESSION['Address']=$row_login['Address'];
                     $_SESSION['DOB']=$row_login['DateOfBirth'];
