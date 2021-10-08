@@ -13,7 +13,7 @@ include 'header.php';
                     <div class="pop-topic">
                         <h3><u>Book Details</u></h3>
                         <center>
-                            <form action="index.php" method="post">
+                            <form  method="post">
                                 <input type="text" class="pop-search" name="Lend_Book_Book_Find_Id" placeholder="Search by Code No" size="50" required>
                                 <input type="submit" id="Lend_Book_Book_Find_Submit" name="Lend_Book_Book_Find_Submit" class="btn-search" value="Search">
                             </form>

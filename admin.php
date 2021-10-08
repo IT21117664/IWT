@@ -24,16 +24,16 @@
         <div class="column side"></div>
         <div class="column middle">
             <a href="LendBK.php" target="blank" id="lendBk" class="btn danger btn-lg">Lend Book</a>
-            <button type="button" id="retriveBk" class="btn warning btn-lg">Retrive Book</button>
+            <a href="RetrieveBK.php" target="blank" id="retriveBk" class="btn warning btn-lg">Retrive Book</a>
         </div>
     </div>
 
     <div class="row">
         <div class="column">
             <h3 align="left">Member</h3>
-            <input type="button" id="nmVal" value="New Member Validation" class="btn border colorprimary">
-            <input type="button" id="" value="Add Memeber" class="btn border colorprimary">
-            <input type="button" id="memDel" value="Member Details" class="btn border colorprimary">
+            <a href="MemberVal.php" target="blank" id="nmVal" value="New Member Validation" class="btn border colorprimary">New Member Validation</a>
+            <a href="register.php" target="blank" id="" value="Add Memeber" class="btn border colorprimary">Add Memeber</a>
+            <a href="MemberDel.php" target="blank" id="memDel" value="Member Details" class="btn border colorprimary">Member Details</a>
         </div>
     </div>
 
