@@ -737,21 +737,3 @@ th {
     margin-right: 20px;
     font-weight: bold;
 }
-
-.card.set {
-    margin-left: 5%;
-    width: 90%;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.card .title {
-    background-color: #fff;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-    width: 100%;
-    padding: 15px 0 15px 0;
-}
-
-.card .title h1 {
-    margin-left: 20px;
-}
