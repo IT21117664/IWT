@@ -17,7 +17,7 @@
         header("Location: ./index.php");
     }
 
-    echo $profileImg;
+    //echo $profileImg;
 //--------------------------------------------------------------------------
     ?>
 
