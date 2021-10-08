@@ -5,7 +5,7 @@ include 'Header.php'
 
 <div class="pop-memberDel">
     <div class="pop-content memContent">
-      <div class="pop-close3"><b>+</b></div>
+      <div class="pop-close3"><b onclick="closeWindow()">+</b></div>
             <!----------------------------------Member_Details_HTML_START------------------------------------------------------------------------------------------>
 
             <div>
@@ -102,6 +102,6 @@ include 'Header.php'
 
     </div>
 </div>
-
+<script src="./js/main.js"></script>
 </body>
 </html>

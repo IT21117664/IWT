@@ -4,7 +4,7 @@ include 'Header.php'
 
 <div class="pop-retrive">
     <div class="pop-content">
-            <div class="pop-close2"><b>+</b></div>
+            <div class="pop-close2"><b onclick="closeWindow()">+</b></div>
             <!----------------------------------RETRIEVE_BOOK_HTML_START------------------------------------------------------------------------------------------>
 
             <div>
@@ -104,6 +104,5 @@ include 'Header.php'
             <!----------------------------------RETRIEVE_BOOK_HTML_END------------------------------------------------------------------------------------------>
     </div>
 </div>
-
 </body>
 </html>

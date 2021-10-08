@@ -4,7 +4,7 @@ include 'Header.php'
 
 <div class="pop-memberVal">
     <div class="pop-content memvalContent">
-        <div class="pop-close4"><b>+</b></div>
+        <div class="pop-close4"><b onclick="closeWindow()">+</b></div>
             <div>
                 <h2 class="pop-titel">New Member Validation</h2>
                     <div>
@@ -39,6 +39,5 @@ include 'Header.php'
         </div>
     </div>
 </div>
-
 </body>
 </html>

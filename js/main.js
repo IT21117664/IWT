@@ -44,22 +44,6 @@ function bookpreview() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //------------------------------Time---------------------------------------------------
 function time() {
     var date_time = new Date();
@@ -70,100 +54,32 @@ function time() {
 
 //-------------------------------------
 
-function popup() {
-    document.getElementById('retriveBk').addEventListener('click',
-        function() {
 
-            document.querySelector('.pop-retrive').style.display = 'flex';
-
-        });
-
-
-    document.getElementById('lendBk').addEventListener('click',
-        function() {
-
-            document.querySelector('.pop-lend').style.display = 'flex';
-
-        });
-
-    document.getElementById('memDel').addEventListener('click',
-        function() {
-
-            document.querySelector('.pop-memberDel').style.display = 'flex';
-
-        });
-    document.getElementById('nmVal').addEventListener('click',
-        function() {
-
-            document.querySelector('.pop-memberVal').style.display = 'flex';
-
-        });
-
-    //---------------------------------------
-
-
-    document.querySelector('.pop-close1').addEventListener('click',
-        function() {
-
-            document.querySelector('.pop-retrive').style.display = 'none';
-            document.querySelector('.pop-lend').style.display = 'none';
-            document.querySelector('.pop-memberDel').style.display = 'none';
-
-
-        });
-    document.querySelector('.pop-close2').addEventListener('click',
-        function() {
-
-            document.querySelector('.pop-retrive').style.display = 'none';
-            document.querySelector('.pop-lend').style.display = 'none';
-            document.querySelector('.pop-memberDel').style.display = 'none';
-
-
-        });
-    document.querySelector('.pop-close3').addEventListener('click',
-        function() {
-
-            document.querySelector('.pop-retrive').style.display = 'none';
-            document.querySelector('.pop-lend').style.display = 'none';
-            document.querySelector('.pop-memberDel').style.display = 'none';
-
-
-        });
-
-    document.querySelector('.pop-close4').addEventListener('click',
-        function() {
-
-            document.querySelector('.pop-retrive').style.display = 'none';
-            document.querySelector('.pop-lend').style.display = 'none';
-            document.querySelector('.pop-memberDel').style.display = 'none';
-            document.querySelector('.pop-memberVal').style.display = 'none';
-
-
-        });
+//--------------------------------------------
 
 
 
-    //--------------------------------------------
+//--------------------------------------------
 
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
 
+if (dd < 10) {
+    dd = '0' + dd;
+}
 
-    //--------------------------------------------
+if (mm < 10) {
+    mm = '0' + mm;
+}
 
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0!
-    var yyyy = today.getFullYear();
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("Lend_Book_Member_Table_DueDate").setAttribute("min", today);
+document.getElementById("Lend_Book_Member_Table_LendDate").setAttribute("value", today);
+document.getElementById("Retrieve_Book_Table_DueDate").setAttribute("value", today);
 
-    if (dd < 10) {
-        dd = '0' + dd;
-    }
-
-    if (mm < 10) {
-        mm = '0' + mm;
-    }
-
-    today = yyyy + '-' + mm + '-' + dd;
-    document.getElementById("Lend_Book_Member_Table_DueDate").setAttribute("min", today);
-    document.getElementById("Lend_Book_Member_Table_LendDate").setAttribute("value", today);
-    document.getElementById("Retrieve_Book_Table_DueDate").setAttribute("value", today);
+function closeWindow() {
+    window.opener;
+    window.close();
 }
