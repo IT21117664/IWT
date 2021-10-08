@@ -9,9 +9,8 @@
         $IID = $_REQUEST['IID'];
 
         $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
-        $resultSelectBook = mysqli_query($con, $sqlSelectBook);
-        $resultSelectBookCheck = mysqli_num_rows($resultSelectBook);
-        if ($resultSelectBookCheck > 0){
+        $resultSelectBook = $con -> query($sqlSelectBook);
+        if ($resultSelectBookCheck -> num_rows > 0){
             while ($rowSelectBook = mysqli_fetch_assoc($resultSelectBook)){
                 $Name = $rowSelectBook['Name'];
                 $free = $rowSelectBook['free'];
