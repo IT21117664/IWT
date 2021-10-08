@@ -1,5 +1,44 @@
 <?php
 include 'header.php';
+require 'config.php';
+
+//function blackF(){
+
+    $inpuID="";
+
+    $bkCode="";
+    $isbn="";
+    $authname="";
+    $bkname="";
+    
+    $memFname="";
+    $memLname="";
+    $memEmail="";
+    $memID="";
+//}
+
+//blackF();
+
+if (isset($_POST['Lend_Book_Book_Find_Id'])){
+
+    $inpuID=$_POST['Lend_Book_Book_Find_Id'];
+
+    $sql_lend = "SELECT inve.IID,inve.Name,auth.authorName,bk.ISBN
+    FROM inventory inve, author auth, book bk
+    WHERE inve.CID=bk.IID AND inve.A_ID=auth.AID AND inve.IID=$inutID";
+
+    $resultBK= $con->query($sql_lend);
+
+    if ($resultBK->num_rows>0){
+        while($row=$resultBK->fetch_assoc()){
+            $bkname=$row["Name"];
+            $isbn=$row["ISBN"];
+            $authName=$row["authorName"];
+            $bkCode=$row["IID"];
+        }
+    }
+}
+
 
 ?>
 
@@ -30,7 +69,7 @@ include 'header.php';
                                                 <label>Book Name</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_Name" class="pop-retbar lendbar" placeholder="Book Name" size="30" readonly>
+                                                <input type="text"  class="Lend_Book_Tabel_Name" class="pop-retbar lendbar" placeholder="Book Name" size="30" value="<?php echo $bkname ?>"  readonly>
                                             </td>
                                         </tr>
                                         <tr>
@@ -38,7 +77,7 @@ include 'header.php';
                                                 <label>Author</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_Author" class="pop-retbar lendbar" placeholder="Book's Author" size="30" readonly>
+                                                <input type="text"  class="Lend_Book_Tabel_Author" class="pop-retbar lendbar" placeholder="Book's Author" size="30" value="<?php echo $authName ?>"  readonly>
                                             </td>
                                         </tr>
                                         <tr>
@@ -46,7 +85,7 @@ include 'header.php';
                                                 <label>ISBN No</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_ISBN" class="pop-retbar lendbar" placeholder="Book's ISBN" size="30" readonly>
+                                                <input type="text"  class="Lend_Book_Tabel_ISBN" class="pop-retbar lendbar" placeholder="Book's ISBN" size="30" value="<?php echo $isbn ?>"  readonly>
                                             </td>
                                         </tr>
                                         <tr>
@@ -54,7 +93,7 @@ include 'header.php';
                                                 <label>Code No</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_Code" class="pop-retbar lendbar" placeholder="Book's Code" size="30" readonly>
+                                                <input type="text"  class="Lend_Book_Tabel_Code" class="pop-retbar lendbar" placeholder="Book's Code" size="30" value="<?php echo $bkCode ?>"  readonly>
                                             </td>
                                         </tr>
                                     </form>

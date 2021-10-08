@@ -63,7 +63,7 @@
                                             <td>
                                                 <div class="input_item">
                                                     <label for="mail">E-mail</label>
-                                                    <input type="email" id="mail" name="mail" required class="txt input_box" />
+                                                    <input type="email" id="email" name="email" required class="txt input_box" />
                                                 </div>
                                             </td>
                                         </tr>
@@ -110,8 +110,8 @@
                                         <tr>
                                             <td colspan="2">
                                                 <div class="input_item">
-                                                    <label for="SLIITmail">SLIIT mail</label>
-                                                    <input type="email" id="SLIITmail" name="SLIITmail" required class="txt input_box" />
+                                                    <label for="sliitMail">SLIIT mail</label>
+                                                    <input type="email" id="sliitMail" name="sliitMail" required class="txt input_box" />
                                                 </div>
                                             </td>
                                         </tr>
@@ -143,6 +143,10 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            email.addEventListener("keypress", mail_auto);
+        </script>
 
         <?php include "Footer.php" ?>
 </body>
