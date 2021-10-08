@@ -19,6 +19,47 @@
 
     //echo $profileImg;
 //--------------------------------------------------------------------------
+
+
+    $outputHistory = "";
+    $date = date("Y-m-d");
+    $sqlLoadHistory = "SELECT br.submitedDate, br.status, br.issuedDate, br.dueDate, i.Name FROM barrowreturns AS br , inventory AS i WHERE br.IID = i.IID AND br.userID =  '$userID';";
+    $resultHistory = $con -> query($sqlLoadHistory);
+    if ($resultHistory -> num_rows > 0){
+        while ($rowHistory = $resultHistory -> fetch_assoc()){
+            $submitedDate = $rowHistory['submitedDate'];
+            $status = $rowHistory['status'];
+            $issuedDate = $rowHistory['issuedDate'];
+            $dueDate = $rowHistory['dueDate'];
+            $Name = $rowHistory['Name'];
+
+            if ($status == 0 && $dueDate <= $date){
+                $class =  'dataWarning';
+                $value = 'Open';
+            }else if ($status == 0 && $dueDate >= $date){
+                $class =  'dataDanger';
+                $value = 'Open';
+            }
+
+            if ($status == 1 && $dueDate <= $submitedDate){
+                $class =  'dataSuccess';
+                $value = 'Completed';
+            }else if($status == 1 && $dueDate >= $submitedDate){
+                $class =  'dataDanger';
+                $value = 'Completed';
+            }
+
+            $outputHistory .= "<td>$issuedDate</td>
+                            <td>$submitedDate</td>
+                            <td>ABC</td>
+                            <td class=\"$class\">$value</td>";
+
+        }
+    }else{
+        $outputHistory .= "<td colspan=\"4\">No any recode found</td>";
+    }
+
+//--------------------------------------------------------------------------
     ?>
 
     <div class="nav">
@@ -67,6 +108,33 @@
                                     <button type="reset" class="btn danger">Clear</button>
                                     <button type="submit" name="update" value="update" class="btn success">Update</button>
                                 </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column side"></div>
+        <div class="column middle">
+            <form action="profileUp.php" enctype="multipart/form-data" method="post">
+                <div class="card">
+                    <div class="cardDetails">
+                        <div class="row">
+                                <h2 align="center">History</h2>
+                                <table border="1" class="history">
+                                    <tr>
+                                        <th>Lend Date</th>
+                                        <th>Retrive Date</th>
+                                        <th>Item Name</th>
+                                        <th>Status</th>
+                                    </tr>
+
+                                    <tr>
+                                        <?php echo $outputHistory; ?>
+                                    </tr>
+                                </table>
                         </div>
                     </div>
                 </div>

@@ -31,6 +31,44 @@ a {
     text-decoration: none;
 }
 
+table.history {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table.history td,
+table.history th {
+    border: 1px solid #ddd;
+}
+
+table.history tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.history tr:hover {
+    background-color: #ddd;
+}
+
+table.history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #0491aa;
+    color: white;
+}
+
+td.dataSuccess {
+    color: #04AA6D;
+}
+
+td.dataWarning {
+    color: #e4c935;
+}
+
+td.dataDanger {
+    color: #f83939;
+}
+
 .nav li a.active {
     display: block;
     color: white;

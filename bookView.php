@@ -16,14 +16,17 @@
     if (isset($_REQUEST['IID'])){
         $IID = $_REQUEST['IID'];
 
-        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
+        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description, p.publisherName, a.authorName, c.catName FROM inventory AS i , publisher AS p ,author AS a, category AS c WHERE i.pubID = p.pubID AND i.A_ID = a.AID AND i.CID = c.CID AND i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
         $resultSelectBook = $con -> query($sqlSelectBook);
         if ($resultSelectBook -> num_rows > 0){
             while ($rowSelectBook = $resultSelectBook -> fetch_assoc()){
                 $Name = $rowSelectBook['Name'];
                 $free = $rowSelectBook['free'];
+                $publisherName = $rowSelectBook['publisherName'];
+                $authorName = $rowSelectBook['authorName'];
                 $pdfPath = $rowSelectBook['pdfPath'];
                 $description = $rowSelectBook['Description'];
+                $catName = $rowSelectBook['catName'];
                 $itemImgLoc = $rowSelectBook['itemImgLoc'];
             }
         }
@@ -65,23 +68,18 @@
                 <div class="bookData">
                     <table>
                         <tr>
-                            <td class="title">Language</td>
-                            <td class="data">English</td>
-                        </tr>
-
-                        <tr>
                             <td class="title">Author</td>
-                            <td class="data">English</td>
+                            <td class="data"><?php echo $authorName; ?></td>
                         </tr>
 
                         <tr>
                             <td class="title">Publisher</td>
-                            <td class="data">English</td>
+                            <td class="data"><?php echo $publisherName; ?></td>
                         </tr>
 
                         <tr>
-                            <td class="title">ISBN</td>
-                            <td class="data">English</td>
+                            <td class="title">Category</td>
+                            <td class="data"><?php echo $catName; ?></td>
                         </tr>
 
                         <tr>
