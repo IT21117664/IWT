@@ -12,7 +12,7 @@ $mob="";
 
 if(isset($_POST['Member_Details_Find_Id'])){
 $memberdel=$_POST['Member_Details_Find_Id'];
-echo $memberdel;
+
 
 $sql="SELECT  i.FName,i.LName,i.Address,i.userID,i.email,i.NIC,i.phoneNumber
 FROM client i
@@ -32,11 +32,32 @@ $mob=$row['phoneNumber'];
 }
 }
 
+}
 else{
 echo "Null";
 }
 
+echo $regno;
+
+
+
+if(isset($_POST['Member_Details_Button_Remove'])){
+    $delID=$_POST['Member_Details_Table_RegNo'];
+    $sql_Delete="DELETE FROM client 
+    WHERE userID=$delID";
+    $deleCon=$con->query($sql_Delete);
+    if ($deleCon===TRUE){
+    $msg_del = "REMOVED USER ! ID : ";
+    $deleteok = "<script>alert(\"REMOVED USER ! \");</script>";
+    echo $deleteok;
+    }
+    else{
+    $errode="Not DELETED";
+    echo "<script>consol.log($errode);</script>";
+    }   
 }
+
+
 
 
 ?>
@@ -124,12 +145,12 @@ echo "Null";
                 </div>
 
                 <!----------------------------------Member_Details_HTML_Buttons------------------------------------------------------------------------------------------>
-
+             
                 <div class="Member_Details_Button">
-    
-                        <input type="reset" id="Member_Details_Button_Clear" name="Member_Details_Button_Clear"  class="btn-pop mem btn-clear" value="Clear">
-                        <input type="submit" id="Member_Details_Button_Update" name="Member_Details_Button_Clear"  class="btn-pop mem btn-update" value="Update">
-                        <input type="submit" id="Member_Details_Button_Remove" name="Member_Details_Button_Clear"  class="btn-pop mem btn-remove" value="Remove">
+                
+                        <input type="submit" id="Member_Details_Button_Clear" name="Member_Details_Button_Clear"  class="btn-pop mem btn-clear" value="Clear">
+                        <input type="submit" id="Member_Details_Button_Update" name="Member_Details_Button_Update"  class="btn-pop mem btn-update" value="Update">
+                        <input type="submit" id="Member_Details_Button_Remove" name="Member_Details_Button_Remove"  class="btn-pop mem btn-remove" value="Remove">
                     </form>
 
                 </div>
