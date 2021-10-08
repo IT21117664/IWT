@@ -53,7 +53,7 @@
     <div class="row">
         <div class="">
             <div class="card">
-                <h1>New Arrivals</h1>
+                <h1>2020</h1>
             </div>
         </div>
 
@@ -152,7 +152,7 @@
                     <div class="row">
                         <div class="">
                             <div class="card">
-                                <h1>Trending</h1>
+                                <h1>2019</h1>
                             </div>
                         </div>
 
@@ -206,7 +206,7 @@
                     <div class="row">
                         <div class="">
                             <div class="card">
-                                <h1>Suggestions</h1>
+                                <h1>2018</h1>
                             </div>
                         </div>
 
