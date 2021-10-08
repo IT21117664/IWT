@@ -1,8 +1,12 @@
 <?php
-$con = new mysqli("localhost", "root", "", "lims");
+    $con=new mysqli("localhost", "root", "", "lims");
 
-if ($con -> connect_error){
-    die("Error" . $con -> connect_error);
-    //Connectionr
-}
+    if ($con->connect_error) { 
+        header("Location: ./error.php");
+    }
+
+    else{
+        $displayCon ="<script>console.log('Connected Successfully')</script>";
+        echo $displayCon;
+    }
 ?>

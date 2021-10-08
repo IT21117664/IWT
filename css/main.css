@@ -1,6 +1,7 @@
 /* RMB */
 
 body {
+    background-color: whitesmoke;
     margin: 0px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -11,6 +12,7 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: sticky;
 }
 
 a {
@@ -27,6 +29,44 @@ a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+table.history {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table.history td,
+table.history th {
+    border: 1px solid #ddd;
+}
+
+table.history tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.history tr:hover {
+    background-color: #ddd;
+}
+
+table.history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #0491aa;
+    color: white;
+}
+
+td.dataSuccess {
+    color: #04AA6D;
+}
+
+td.dataWarning {
+    color: #e4c935;
+}
+
+td.dataDanger {
+    color: #f83939;
 }
 
 .nav li a.active {
@@ -64,6 +104,7 @@ a {
 
 .formlong {
     width: 99%;
+    margin-bottom: 10px;
 }
 
 .btn {
@@ -76,17 +117,20 @@ a {
     display: inline-block;
     font-size: 15px;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .btn-lg {
-    font-size: 20px;
-    padding: 15px 20px;
+    font-size: 25px;
+    padding: 18px 25px;
     margin: 10px;
+    font-family: 'Times New Roman', Times, serif
 }
 
 .reg_btn {
+    width: 10%;
     font-size: 40px;
-    padding: 10px 50px;
+    padding: 10px;
 }
 
 .border {
@@ -111,7 +155,7 @@ a {
     border: 2px solid #FFCC00;
 }
 
-.colorWarning: hover {
+.colorWarning:hover {
     background-color: #FFCC00;
     color: white;
 }
@@ -221,17 +265,16 @@ a {
     height: 400px;
     right: 0;
     top: 0;
-    z-index: -1;
 }
 
 .mainSlide {
+    width: 100%;
     display: none;
     height: 400px;
     overflow: auto;
 }
 
 .slidecaption {
-    position: relative;
     text-align: right;
     color: white;
 }
@@ -258,12 +301,25 @@ a {
     padding: 10px;
 }
 
+.column.mini {
+    width: 15%;
+}
+
+.column.micro {
+    width: 10%;
+}
+
 .column.side {
     width: 25%;
 }
 
 .column.middle {
     width: 50%;
+    text-align: center;
+}
+
+.column.large {
+    width: 80%;
     text-align: center;
 }
 
@@ -276,7 +332,16 @@ a {
 .bookView {
     width: 100%;
     margin-left: 30px;
-    display: none;
+}
+
+.searchimg {
+    padding: 5px 7px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.searchResult {
+    font-weight: bold;
 }
 
 .bookData {
@@ -301,14 +366,15 @@ a {
 }
 
 .card {
+    background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     transition: 0.3s;
     width: 100%;
+    padding: 15px;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2);
 }
 
 .cardDetails {
@@ -335,9 +401,13 @@ a.footLink {
 }
 
 .footer {
+    float: left;
+    width: 100%;
+    bottom: 100%;
     background-color: #3b3b3b;
     padding: 10px;
     color: #fff;
+    padding: 0%;
     text-align: center;
 }
 
@@ -348,9 +418,306 @@ a.footLink {
 }
 
 .page_center {
+    width: 100%;
     margin: 0;
     position: absolute;
     top: 285px;
     left: 45%;
-    right: 45%;
+}
+
+.card_column {
+    margin: 0.5%;
+    float: left;
+    width: 15%;
+    padding: 15px;
+}
+
+.card_column img {
+    max-width: 100px;
+}
+
+.input_item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input_item label {
+    width: 200px;
+}
+
+.input_box {
+    margin-right: 10px;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 100opx;
+    width: 100%;
+}
+
+.form {
+    width: 100%;
+}
+
+.personal {
+    margin-bottom: 50px;
+}
+
+.form h2 {
+    margin-bottom: 20;
+}
+
+
+/*--------------------------------------*/
+
+.pop-lend,
+.pop-retrive,
+.pop-memberDel,
+.pop-memberVal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 0px;
+    left: 0;
+    overflow: auto;
+}
+
+.pop-content {
+    width: 1000px;
+    height: 660px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.memContent {
+    width: 900px;
+    height: 450px;
+}
+
+.pop-close1,
+.pop-close2,
+.pop-close3,
+.pop-close4 {
+    right: 15px;
+    font-size: 40px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.pop-titel {
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 5px;
+    top: 0px;
+}
+
+.pop-topic {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 50px;
+    margin-top: -15px;
+}
+
+.pop-search {
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn-search {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin-left: 10px;
+    background-color: white;
+    border: 3px solid rgb(31, 91, 221);
+    cursor: pointer;
+}
+
+
+/*----------------------------------------------*/
+
+.Container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-top: -2px;
+}
+
+.imgDB {
+    border: 2px solid black;
+    margin-left: 20%;
+    flex-basis: 50px;
+    margin-top: 10px;
+}
+
+
+/*----------------------------------------------*/
+
+.pop-table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+}
+
+.LendBK {
+    padding-left: 50px;
+    margin-top: 30px;
+}
+
+.LendBK tr {
+    border: 2px solid black;
+}
+
+.LendBK td {
+    padding: 8px 5px;
+}
+
+.LendMem td {
+    padding: 5px 8px;
+}
+
+.RetrieveMem td {
+    padding: 5px 8px;
+}
+
+.RetrieveBK table {
+    margin-left: 700px;
+}
+
+.RetrieveBK td,
+.RetrieveBK th {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.Memdel table {
+    margin-top: 10px;
+}
+
+.Memdel td {
+    padding: 8px 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.memberVal table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+}
+
+.memberVal table,
+tr,
+td,
+th {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+
+/*----------------------------------------------*/
+
+.lendbar {
+    padding: 4px 5px;
+    border: none;
+    text-align: center;
+}
+
+.membar {
+    border-radius: 10px;
+    padding: 4px 5px;
+    margin: 6px 6px;
+}
+
+
+/*----------------------------------------------*/
+
+.btn-pop {
+    padding: 10px 25px;
+    color: rgb(235, 62, 62);
+    font-size: 18px;
+    background-color: white;
+    border: 2px solid rgb(235, 62, 62);
+    border-radius: 10px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.mem {
+    padding: 10px 20px;
+    margin-right: 7px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    float: left;
+    margin-top: -5px;
+}
+
+.btn-clear {
+    background-color: #D99433;
+    margin-left: 67%;
+}
+
+.btn-update {
+    background-color: #3f3cd6;
+}
+
+.btn-remove {
+    background-color: #C92D29;
+}
+
+.btn-reject {
+    color: rgb(221, 66, 66);
+    background-color: white;
+    border: 3px solid rgb(221, 66, 66);
+}
+
+.btn-confirm {
+    color: rgb(106, 228, 50);
+    background-color: white;
+    border: 3px solid rgb(106, 228, 50);
+}
+
+
+/*----------------------------------------------*/
+
+.column_list {
+    float: left;
+    width: 25%;
+    padding: 3.66%;
+}
+
+.list_box {
+    max-width: 100%;
+}
+
+.column_list li {
+    padding-bottom: 10px;
+}
+
+
+/* pasiya */
+
+.username {
+    color: white;
+    font-size: large;
+    margin-right: 20px;
+    font-weight: bold;
 }
