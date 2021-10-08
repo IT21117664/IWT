@@ -2,15 +2,18 @@
     <?php
     require('Header.php');
 //--------------------------------------------------------------------------
-    $userID = $_SESSION['userID'];
-    $phoneNumber = $rowLoadUser['phoneNumber'];
-    $email = $rowLoadUser['email'];
-    $FName = $rowLoadUser['FName'];
-    $LName = $rowLoadUser['LName'];
-    $NameWithInitial = $rowLoadUser['NameWithInitial'];
-    $profileImg = $rowLoadUser['profileImg'];
-    $DateOfBirth = $rowLoadUser['DateOfBirth'];
-    $Address = $rowLoadUser['Address'];
+
+    if (isset($_SESSION['userID'])){
+        $userID = $_SESSION['userID'];
+        $phoneNumber = $_SESSION['Mobile'];
+        $email = $_SESSION['mail'];
+        $FName = $_SESSION['FName'];
+        $LName = $_SESSION['LName'];
+        $NameWithInitial = $_SESSION['NWI'];
+        $profileImg = $_SESSION['ProfileImg'];
+        $DateOfBirth = $_SESSION['DOB'];
+        $Address = $_SESSION['Address'];
+    }
 //--------------------------------------------------------------------------
     ?>
 

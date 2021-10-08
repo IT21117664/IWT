@@ -21,6 +21,7 @@
                     $_SESSION['Address']=$row_login['Address'];
                     $_SESSION['DOB']=$row_login['DateOfBirth'];
                     $_SESSION['ProfileImg']=$row_login['ProfileImg'];
+                    $_SESSION['userType'] = $row_login['userType'];
                     header("Location: ./index.php?msg=success"); //uba page name eka daganin
                             
                 }else{
