@@ -1,4 +1,3 @@
-/*5259459549*/
 <?php
     require('header.php');
     logIn();
