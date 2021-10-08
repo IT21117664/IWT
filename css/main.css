@@ -672,3 +672,13 @@ th {
 .column_list li {
     padding-bottom: 10px;
 }
+
+
+/* pasiya */
+
+.username {
+    color: white;
+    font-size: large;
+    margin-right: 20px;
+    font-weight: bold;
+}
