@@ -1,6 +1,7 @@
 <?php
-    $con=mysqli_connect("localhost", "root", "", "lims");
-    if(mysqli_connect_errno()){
-    header("Location: error.php");
+    $con=new mysqli("localhost", "root", "", "lims");
+
+    if ($conn->connect_error) { 
+        header("Location: error.php");
     }
 ?>
