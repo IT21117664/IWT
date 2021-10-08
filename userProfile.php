@@ -17,7 +17,7 @@
         header("Location: ./index.php");
     }
 
-    echo $email;
+    echo $profileImg;
 //--------------------------------------------------------------------------
     ?>
 
@@ -37,11 +37,10 @@
         <div class="column middle">
             <form action="profileUp.php" enctype="multipart/form-data" method="post">
                 <div class="card">
-                    <img src="./img/avatar/1.jpg" class="proImg"  alt="Avatar" id="avator"><br>
+                    <img src="<?php echo $profileImg; ?>" class="proImg"  alt="Avatar" id="avator"><br>
                     <input type="file" class="btn info" name="avatar">
                     <div class="cardDetails">
                         <div class="row">
-                            <form action="profileUp.php" enctype="multipart/form-data" method="post">
                                 <label for="fname">First Name</label>
                                 <input type="text" id="fname" name="fname" value="<?php echo $FName; ?>" class="txt formlong" disabled>
                                 
