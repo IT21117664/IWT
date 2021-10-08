@@ -83,3 +83,23 @@ function closeWindow() {
     window.opener;
     window.close();
 }
+
+
+/*----------pasiya----------------*/
+
+function logout() {
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var text = r.responseText;
+            alert(text);
+            window.location = "index.php";
+        }
+    };
+
+    r.open("GET", "logout.php?php=", true);
+    r.send();
+
+
+}
