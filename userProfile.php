@@ -1,41 +1,18 @@
-<?php
-
-    require('config.php');
+<?php require('config.php'); ?>
+    <?php
+    require('Header.php');
 //--------------------------------------------------------------------------
-    $userID = 1;
-
-    $sqlLoadUser = "SELECT * FROM `user` WHERE `user`.userID =  '$userID'";
-
-    $resultLoadUser = mysqli_query($con, $sqlLoadUser);
-        $resultLoadUserCheck = mysqli_num_rows($resultLoadUser);
-        if ($resultLoadUserCheck > 0){
-            while ($rowLoadUser = mysqli_fetch_assoc($resultLoadUser)){
-                $userID = $rowLoadUser['userID'];
-                $phoneNumber = $rowLoadUser['phoneNumber'];
-                $email = $rowLoadUser['email'];
-                $FName = $rowLoadUser['FName'];
-                $LName = $rowLoadUser['LName'];
-                $NameWithInitial = $rowLoadUser['NameWithInitial'];
-                $profileImg = $rowLoadUser['profileImg'];
-                $DateOfBirth = $rowLoadUser['DateOfBirth'];
-                $Address = $rowLoadUser['Address'];
-            }
-        }
+    $userID = $_SESSION['userID'];
+    $phoneNumber = $rowLoadUser['phoneNumber'];
+    $email = $rowLoadUser['email'];
+    $FName = $rowLoadUser['FName'];
+    $LName = $rowLoadUser['LName'];
+    $NameWithInitial = $rowLoadUser['NameWithInitial'];
+    $profileImg = $rowLoadUser['profileImg'];
+    $DateOfBirth = $rowLoadUser['DateOfBirth'];
+    $Address = $rowLoadUser['Address'];
 //--------------------------------------------------------------------------
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLIIT ONLINE LIBRARY - ADMIN</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="https://kit.fontawesome.com/07c9a11431.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-</head>
-<body>
-    <?php require('Header.php'); ?>
+    ?>
 
     <div class="nav">
         <ul>
