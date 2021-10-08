@@ -6,14 +6,16 @@
 
     <header>
 
-        <div class="head_tag">
-            <button class="head_btn" type="submit">Library</button>
-            <button class="head_btn" type="submit">Home</button>
-            <button class="head_btn" type="submit">Articles</button>
-            <button class="head_btn" type="submit">Past papers</button>
-            <button class="head_btn" type="submit">Reports</button>
-            <button class="head_btn" type="submit">Journals</button>
-        </div>
+    <div class="nav">
+        <ul>
+            <li><a class="logoL">Library</a></li>
+            <li><a href="#news">Home</a></li>
+            <li><a href="#contact">Articles</a></li>
+            <li><a href="#about">Past Papers</a></li>
+            <li><a href="#about">Reports</a></li>
+            <li><a href="#about">Journals</a></li>
+        </ul>
+    </div><br>
 
     </header>
 
