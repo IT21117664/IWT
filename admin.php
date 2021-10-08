@@ -23,7 +23,7 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-            <a href="#" target="blank" id="lendBk" class="btn danger btn-lg">Lend Book</a>
+            <a href="LendBK.php" target="blank" id="lendBk" class="btn danger btn-lg">Lend Book</a>
             <button type="button" id="retriveBk" class="btn warning btn-lg">Retrive Book</button>
         </div>
     </div>
