@@ -720,6 +720,17 @@ th {
 
 /* pasiya */
 
+.btn_logout {
+    margin-top: 10px;
+    background-color: blue;
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: medium;
+}
+
 .username {
     color: white;
     font-size: large;
