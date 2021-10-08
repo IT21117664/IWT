@@ -31,15 +31,7 @@ $nic=$row['NIC'];
 $mob=$row['phoneNumber'];
 }
 }
-
 }
-else{
-echo "Null";
-}
-
-echo $regno;
-
-
 
 if(isset($_POST['Member_Details_Button_Remove'])){
     $delID=$_POST['Member_Details_Table_RegNo'];
@@ -53,10 +45,51 @@ if(isset($_POST['Member_Details_Button_Remove'])){
     }
     else{
     $errode="Not DELETED";
-    echo "<script>consol.log($errode);</script>";
+    echo "<script>console.log($errode);</script>";
     }   
 }
 
+if (isset($_POST['Member_Details_Button_Clear'])){
+    $fname="";
+    $lname="";
+    $addr="";
+    $regno="";
+    $memEmail="";
+    $nic="";
+    $mob="";
+}
+
+if(isset($_POST['Member_Details_Button_Update'])){
+    $memberID=$_POST['Member_Details_Table_RegNo'];
+    $memfname=$_POST['Member_Details_Table_Fname'];
+    $memlname=$_POST['Member_Details_Table_Lname'];
+    $memAddr=$_POST['Member_Details_Table_Address'];
+    $memMail=$_POST['Member_Details_Table_Email'];
+    $memNIC=$_POST['Member_Details_Table_NIC'];
+    $memMob=$_POST['Member_Details_Table_MobNo'];
+echo $memberID;
+    $sql_Update="UPDATE client 
+    SET NIC='$memNIC',phoneNumber='$memMob',email='$memMail',FName='$memfname',LName='$memlname',Address='$memAddr'
+    WHERE userID='$memberID'";
+
+    $conUpdate = $con->query($sql_Update);
+    if ($conUpdate===TRUE){
+        
+        $updlok = "<script>alert(\"UPDATED USER INFORMATION! \");</script>";
+        echo $updlok;
+        }
+        else{
+        $errodexy="Not UPDATED";
+        echo "<script>console.log($errodexy);</script>";
+        }   
+    $fname=$memfname;
+    $lname=$memlname;
+    $addr=$memAddr;
+    $regno=$memberID;
+    $memEmail=$memMail;
+    $nic= $memNIC;
+    $mob=$memMob;
+}
 
 
 
@@ -116,13 +149,13 @@ if(isset($_POST['Member_Details_Button_Remove'])){
                                     <label>Reg No</label>
                                 </td>
                                 <td>
-                                    <input type="text" class="pop-retbar membar"  name="Member_Details_Table_RegNo" size="30" value="<?php echo $regno; ?>">
+                                    <input type="text" class="pop-retbar membar"  name="Member_Details_Table_RegNo" size="30" value="<?php echo $regno; ?>" readonly>
                                 </td>
                                 <td>
                                     <label>SLIIT Email</label>
                                 </td>
                                 <td>
-                                    <input type="email" class="pop-retbar membar"  name="Member_Details_Table_Email" size="27" value="<?php echo $memEmail; ?>">
+                                    <input type="email" class="pop-retbar membar"  name="Member_Details_Table_Email" size="27" value="<?php echo $memEmail; ?>" readonly>
                                 </td>
                             </tr>
                             <tr>
