@@ -742,6 +742,7 @@ th {
     margin-left: 5%;
     width: 90%;
     padding: 0;
+    margin-bottom: 30px;
 }
 
 .card .title {
@@ -752,5 +753,5 @@ th {
 }
 
 .card .title h1 {
-    margin-left: 10px;
+    margin-left: 20px;
 }

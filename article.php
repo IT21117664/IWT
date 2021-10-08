@@ -144,7 +144,7 @@
                     <div class="card set">
                     <div class="row">
                        
-                            <div class="card_title">
+                            <div class="card title">
                                 <h1>Trending</h1>
                             </div>
                         
