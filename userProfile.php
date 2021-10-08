@@ -41,6 +41,7 @@
                     <input type="file" class="btn info" name="avatar">
                     <div class="cardDetails">
                         <div class="row">
+                                <input type="hidden" name="userID" value="<?php echo $userID; ?>">
                                 <label for="fname">First Name</label>
                                 <input type="text" id="fname" name="fname" value="<?php echo $FName; ?>" class="txt formlong" disabled>
                                 
