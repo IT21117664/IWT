@@ -50,7 +50,7 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-            <button type="button" id="lendBk" class="btn danger btn-lg">Lend Book</button>
+            <a href="#" target="blank" id="lendBk" class="btn danger btn-lg">Lend Book</a>
             <button type="button" id="retriveBk" class="btn warning btn-lg">Retrive Book</button>
         </div>
     </div>
