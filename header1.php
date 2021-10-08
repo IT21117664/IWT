@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 
 <script src="./js/main.js"></script>
+<link rel="stylesheet" href="./css/main.css">
 
 <header>
     <div class="slide">
