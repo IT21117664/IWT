@@ -150,8 +150,13 @@
                     </div>
 
                     <div class="row">
+<<<<<<< HEAD
                         <div class="">
                             <div class="card">
+=======
+                       
+                            <div class="card title">
+>>>>>>> 4ddec3b64d63dee372c42ee8342a10cc5f568588
                                 <h1>Trending</h1>
                             </div>
                         </div>
