@@ -10,8 +10,8 @@
 
         $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
         $resultSelectBook = $con -> query($sqlSelectBook);
-        if ($resultSelectBookCheck -> num_rows > 0){
-            while ($rowSelectBook = mysqli_fetch_assoc($resultSelectBook)){
+        if ($resultSelectBook -> num_rows > 0){
+            while ($rowSelectBook = $resultSelectBook -> fetch_assoc()){
                 $Name = $rowSelectBook['Name'];
                 $free = $rowSelectBook['free'];
                 $pdfPath = $rowSelectBook['pdfPath'];
