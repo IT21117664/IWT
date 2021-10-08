@@ -1,6 +1,3 @@
-<!-- mn meka passe php karannm, *iwasala hitu* -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
