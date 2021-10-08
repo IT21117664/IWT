@@ -1,5 +1,5 @@
 <?php
-include 'Header.php'
+include 'Header.php';
 ?>
 
 <div class="pop-retrive">
