@@ -436,11 +436,15 @@ a.footLink {
     max-width: 100px;
 }
 
-.input_item {
+.wrapper tr {
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 15px;
+}
+
+.wrapper td {
+    width: 100%;
 }
 
 .input_item label {
@@ -449,11 +453,6 @@ a.footLink {
 
 .input_box {
     margin-right: 10px;
-    width: 100%;
-}
-
-.wrapper {
-    max-width: 100opx;
     width: 100%;
 }
 
@@ -736,4 +735,19 @@ th {
     font-size: large;
     margin-right: 20px;
     font-weight: bold;
+}
+
+.card.set {
+    margin-left: 5%;
+    width: 90%;
+    padding-top: 0;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.card.title {
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding-right: 0px;
 }

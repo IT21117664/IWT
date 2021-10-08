@@ -35,7 +35,7 @@
         
             echo' <div class="topRight">
                     <form method="POST" action="Login.php">
-                    <input type="email" placeholder="E-mail" id="index_pg_mail" name="index_pg_mail">
+                    <input type="email"placeholder="E-mail" id="index_pg_mail" name="index_pg_mail">
                         <input type="password" placeholder="Password" id="index_pg_pwd" name="index_pg_pwd">
                         <button type="submit">Login</button> </br>
                         <a id="fosrget_pwd_link" class="right" href="forget_password.php">forget password</a>
