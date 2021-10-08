@@ -51,35 +51,35 @@
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/journal/j1.jpg" alt="book img">
+                            <img src="./img/journal/j8.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j6.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j2.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j5.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j3.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
@@ -99,35 +99,35 @@
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j1.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j3.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j9.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j8.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j5.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
@@ -147,35 +147,35 @@
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j2.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j3.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j9.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j6.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
 
                     <div class="card_column">
                         <div id="book1" class="card">
-                            <img src="./img/logo.png" alt="book img">
+                            <img src="./img/journal/j4.jpg" alt="book img">
                                 <div><label>Book Name</label></div>
                         </div>
                     </div>
