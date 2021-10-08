@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,12 @@
 <body>
     <?php require('header.php');
     logIn(); ?>
+=======
+    <?php
+    require('header.php');
+    logIn();
+    ?>
+>>>>>>> 1a198e23feaf79ac955a00046559f536896376d3
 
 
 <?php

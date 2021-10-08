@@ -1,57 +1,40 @@
 <?php
+    require('Header.php');
     require('config.php');
+
 //-----------------------------------------------------------------------------
-    $userID = 123;
-    $userType = 0;
+
+    if (isset($_SESSION['userID'])){
+        $userID = $_SESSION['userID'];
+        $userType = $_SESSION['userType'];
+    }else{
+        //echo $_SESSION['userID'];
+        header("Location: ./index.php");
+    }
 //---------------------------------------------------------------------------------
 
     if (isset($_REQUEST['IID'])){
         $IID = $_REQUEST['IID'];
 
-        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description FROM inventory AS i WHERE  i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
-        $resultSelectBook = mysqli_query($con, $sqlSelectBook);
-        $resultSelectBookCheck = mysqli_num_rows($resultSelectBook);
-        if ($resultSelectBookCheck > 0){
-            while ($rowSelectBook = mysqli_fetch_assoc($resultSelectBook)){
+        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description, p.publisherName, a.authorName, c.catName FROM inventory AS i , publisher AS p ,author AS a, category AS c WHERE i.pubID = p.pubID AND i.A_ID = a.AID AND i.CID = c.CID AND i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
+        $resultSelectBook = $con -> query($sqlSelectBook);
+        if ($resultSelectBook -> num_rows > 0){
+            while ($rowSelectBook = $resultSelectBook -> fetch_assoc()){
                 $Name = $rowSelectBook['Name'];
                 $free = $rowSelectBook['free'];
+                $publisherName = $rowSelectBook['publisherName'];
+                $authorName = $rowSelectBook['authorName'];
                 $pdfPath = $rowSelectBook['pdfPath'];
                 $description = $rowSelectBook['Description'];
+                $catName = $rowSelectBook['catName'];
                 $itemImgLoc = $rowSelectBook['itemImgLoc'];
             }
         }
     }else{
         header("Location: ./index.php?error=bookView");
     }
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLIIT ONLINE LIBRARY - ADMIN</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="https://kit.fontawesome.com/07c9a11431.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-</head>
-<body>
-    <div class="slide">
-        <div class="slidecaption">
-            <img class="mainSlide" src="./img/Slide/1.jpg" style="width:100%">
-            <div class="topRight">
-                <h3>RMB
-                <input type="button" value="Button" class="btn primary"></h3>
-            </div>
-
-            <div class="topLeft">
-                <h3>Time</h3>
-            </div>
-
-        </div>
-        <img class="mainSlide" src="./img/Slide/2.jpg" style="width:100%">
-        <img class="mainSlide" src="./img/Slide/3.jpg" style="width:100%">
-    </div>
 
     <div class="nav">
         <ul>
@@ -85,23 +68,18 @@
                 <div class="bookData">
                     <table>
                         <tr>
-                            <td class="title">Language</td>
-                            <td class="data">English</td>
-                        </tr>
-
-                        <tr>
                             <td class="title">Author</td>
-                            <td class="data">English</td>
+                            <td class="data"><?php echo $authorName; ?></td>
                         </tr>
 
                         <tr>
                             <td class="title">Publisher</td>
-                            <td class="data">English</td>
+                            <td class="data"><?php echo $publisherName; ?></td>
                         </tr>
 
                         <tr>
-                            <td class="title">ISBN</td>
-                            <td class="data">English</td>
+                            <td class="title">Category</td>
+                            <td class="data"><?php echo $catName; ?></td>
                         </tr>
 
                         <tr>

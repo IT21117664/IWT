@@ -2,13 +2,12 @@
     require('config.php');
     $output = "";
     if (isset($_POST['keyWord'])){
-        $keyWord = $_POST['keyWord'];
+        $keyWord = $_POST['keyWord']; 
         
         $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i , journal AS j , pastpaper AS pp , book AS b , report AS r , author AS a , publisher AS p WHERE i.Name LIKE '%$keyWord%' OR p.publisherName LIKE '%$keyWord%' OR pp.module LIKE '%$keyWord%' OR pp.Semester LIKE '%$keyWord%' OR pp.Year LIKE '%$keyWord%' OR a.authorName LIKE '%$keyWord%' GROUP BY i.Name ORDER BY i.IID ASC LIMIT 20;";
-        $resultSearch = mysqli_query($con, $sqlSearch);
-        $resultSearchCheck = mysqli_num_rows($resultSearch);
-        if ($resultSearchCheck > 0){
-            while ($rowSearch = mysqli_fetch_assoc($resultSearch)){
+        $resultSearch = $con -> query($sqlSearch);
+        if ($resultSearch -> num_rows > 0){
+            while ($rowSearch = $resultSearch -> fetch_assoc()){
                 $bookName = $rowSearch['Name'];
                 $bookFree = $rowSearch['free'];
                 $bookImg = $rowSearch['itemImgLoc'];
@@ -22,6 +21,8 @@
     }else{
         header("Location: ./index.php?error=search");
     }
+
+    $con -> close();
 ?>
 
 <!DOCTYPE html>

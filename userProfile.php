@@ -1,41 +1,66 @@
 <?php
-
     require('config.php');
+    require('Header.php');
 //--------------------------------------------------------------------------
-    $userID = 1;
 
-    $sqlLoadUser = "SELECT * FROM `user` WHERE `user`.userID =  '$userID'";
+    if (isset($_SESSION['userID'])){
+        $userID = $_SESSION['userID'];
+        $phoneNumber = $_SESSION['Mobile'];
+        $email = $_SESSION['mail'];
+        $FName = $_SESSION['FName'];
+        $LName = $_SESSION['LName'];
+        $NameWithInitial = $_SESSION['NWI'];
+        $profileImg = $_SESSION['ProfileImg'];
+        $DateOfBirth = $_SESSION['DOB'];
+        $Address = $_SESSION['Address'];
+    }else{
+        header("Location: ./index.php");
+    }
 
-    $resultLoadUser = mysqli_query($con, $sqlLoadUser);
-        $resultLoadUserCheck = mysqli_num_rows($resultLoadUser);
-        if ($resultLoadUserCheck > 0){
-            while ($rowLoadUser = mysqli_fetch_assoc($resultLoadUser)){
-                $userID = $rowLoadUser['userID'];
-                $phoneNumber = $rowLoadUser['phoneNumber'];
-                $email = $rowLoadUser['email'];
-                $FName = $rowLoadUser['FName'];
-                $LName = $rowLoadUser['LName'];
-                $NameWithInitial = $rowLoadUser['NameWithInitial'];
-                $profileImg = $rowLoadUser['profileImg'];
-                $DateOfBirth = $rowLoadUser['DateOfBirth'];
-                $Address = $rowLoadUser['Address'];
+    //echo $profileImg;
+//--------------------------------------------------------------------------
+
+
+    $outputHistory = "";
+    $date = date("Y-m-d");
+    $sqlLoadHistory = "SELECT br.submitedDate, br.status, br.issuedDate, br.dueDate, i.Name FROM barrowreturns AS br , inventory AS i WHERE br.IID = i.IID AND br.userID =  '$userID';";
+    $resultHistory = $con -> query($sqlLoadHistory);
+    if ($resultHistory -> num_rows > 0){
+        while ($rowHistory = $resultHistory -> fetch_assoc()){
+            $submitedDate = $rowHistory['submitedDate'];
+            $status = $rowHistory['status'];
+            $issuedDate = $rowHistory['issuedDate'];
+            $dueDate = $rowHistory['dueDate'];
+            $Name = $rowHistory['Name'];
+
+            if ($status == 0 && $dueDate <= $date){
+                $class =  'dataWarning';
+                $value = 'Open';
+            }else if ($status == 0 && $dueDate >= $date){
+                $class =  'dataDanger';
+                $value = 'Open';
             }
+
+            if ($status == 1 && $dueDate <= $submitedDate){
+                $class =  'dataSuccess';
+                $value = 'Completed';
+            }else if($status == 1 && $dueDate >= $submitedDate){
+                $class =  'dataDanger';
+                $value = 'Completed';
+            }
+
+            $outputHistory .= "<td>$issuedDate</td>
+                            <td>$submitedDate</td>
+                            <td>ABC</td>
+                            <td class=\"$class\">$value</td>";
+
         }
+    }else{
+        $outputHistory .= "<td colspan=\"4\">No any recode found</td>";
+    }
+
 //--------------------------------------------------------------------------
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLIIT ONLINE LIBRARY - ADMIN</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="https://kit.fontawesome.com/07c9a11431.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-</head>
-<body>
-    <?php require('Header.php'); ?>
+    ?>
 
     <div class="nav">
         <ul>
@@ -53,11 +78,11 @@
         <div class="column middle">
             <form action="profileUp.php" enctype="multipart/form-data" method="post">
                 <div class="card">
-                    <img src="./img/avatar/1.jpg" class="proImg"  alt="Avatar" id="avator"><br>
+                    <img src="<?php echo $profileImg; ?>" class="proImg"  alt="Avatar" id="avator"><br>
                     <input type="file" class="btn info" name="avatar">
                     <div class="cardDetails">
                         <div class="row">
-                            <form action="profileUp.php" enctype="multipart/form-data" method="post">
+                                <input type="hidden" name="userID" value="<?php echo $userID; ?>">
                                 <label for="fname">First Name</label>
                                 <input type="text" id="fname" name="fname" value="<?php echo $FName; ?>" class="txt formlong" disabled>
                                 
@@ -83,6 +108,33 @@
                                     <button type="reset" class="btn danger">Clear</button>
                                     <button type="submit" name="update" value="update" class="btn success">Update</button>
                                 </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column side"></div>
+        <div class="column middle">
+            <form action="profileUp.php" enctype="multipart/form-data" method="post">
+                <div class="card">
+                    <div class="cardDetails">
+                        <div class="row">
+                                <h2 align="center">History</h2>
+                                <table border="1" class="history">
+                                    <tr>
+                                        <th>Lend Date</th>
+                                        <th>Retrive Date</th>
+                                        <th>Item Name</th>
+                                        <th>Status</th>
+                                    </tr>
+
+                                    <tr>
+                                        <?php echo $outputHistory; ?>
+                                    </tr>
+                                </table>
                         </div>
                     </div>
                 </div>
