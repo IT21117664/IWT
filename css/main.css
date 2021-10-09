@@ -430,22 +430,17 @@ a.footLink {
     float: left;
     width: 15%;
     padding: 15px;
-    cursor: pointer;
 }
 
 .card_column img {
     max-width: 100px;
 }
 
-.wrapper tr {
+.input_item {
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 15px;
-}
-
-.wrapper td {
-    width: 100%;
 }
 
 .input_item label {
@@ -454,6 +449,11 @@ a.footLink {
 
 .input_box {
     margin-right: 10px;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 100opx;
     width: 100%;
 }
 
@@ -677,8 +677,19 @@ th {
 
 .btn-clear {
     background-color: #D99433;
-    margin-left: 67%;
+    margin-left: 65%;
 }
+
+.btn-S_C {
+    background-color: #29a719;
+    
+}
+
+.btn-preview {
+    background-color: #3cb2d6;
+    
+}
+
 
 .btn-update {
     background-color: #3f3cd6;
@@ -738,6 +749,34 @@ th {
     font-weight: bold;
 }
 
+.clearright {
+    float: right;
+    margin: 6px 3px;
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: #d38e0d;; 
+
+}
+
+.Previewright {
+    float: right;
+    padding: 10px 10px;
+    margin: 6px 3px;
+    font-size: 15px;
+    background-color: #36bcdd; 
+
+}
+
+.SPright {
+    float: right;
+    padding: 10px 10px;
+    margin: 6px 3px;
+    font-size: 15px;
+    background-color: #14bb30;
+    
+
+}
+
 .card.set {
     margin-left: 5%;
     width: 90%;
@@ -752,3 +791,4 @@ th {
     width: 100%;
     padding-right: 0px;
 }
+
