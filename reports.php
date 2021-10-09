@@ -30,7 +30,6 @@
         $pageno2 = $_GET["p2"];
     }
 
-
     if (!isset($_GET["p3"])) {
         $pageno3 = 0;
     } else {
@@ -62,6 +61,7 @@
     </div>
 
 
+    <!-- New Arrivals -->
 
     <div class="card set">
         <div class="card title">
@@ -175,10 +175,11 @@
         </div>
     </div>
 
+    <!-- New Arrivals -->
+
+
 
     <!-- trending -->
-
-
 
     <div class="card set">
         <div class="card title">
@@ -281,16 +282,11 @@
         </div>
     </div>
 
-
-
-
     <!-- trending -->
 
 
 
     <!-- Suggestions -->
-
-
 
     <div class="card set">
         <div class="card title">
@@ -398,7 +394,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Suggestions -->
 

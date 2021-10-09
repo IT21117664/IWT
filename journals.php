@@ -30,13 +30,11 @@
         $pageno2 = $_GET["p2"];
     }
 
-
     if (!isset($_GET["p3"])) {
         $pageno3 = 0;
     } else {
         $pageno3 = $_GET["p3"];
     }
-
 
     ?>
 
@@ -62,6 +60,7 @@
     </div>
 
 
+    <!-- New Arrivals -->
 
     <div class="card set">
         <div class="card title">
@@ -158,7 +157,7 @@
                         $max = $number_of_data - 1;
                         if ($pageno1 != $max) {
                         ?>
-                            <a href="journals.php?p1=<?php echo $pageno1 + 1; ?>"  class="page_next"> ❯</a>
+                            <a href="journals.php?p1=<?php echo $pageno1 + 1; ?>" class="page_next"> ❯</a>
                         <?php
                         } else {
                         }
@@ -175,10 +174,11 @@
         </div>
     </div>
 
+    <!-- New Arrivals -->
+
+
 
     <!-- trending -->
-
-
 
     <div class="card set">
         <div class="card title">
@@ -281,16 +281,11 @@
         </div>
     </div>
 
-
-
-
     <!-- trending -->
 
 
 
     <!-- Suggestions -->
-
-
 
     <div class="card set">
         <div class="card title">
@@ -398,7 +393,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Suggestions -->
 
