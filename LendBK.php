@@ -40,6 +40,8 @@ if (isset($_POST['Lend_Book_Book_Find_Submit'])){
 if (isset($_POST['Lend_Book_Member_Find_Submit'])){
 
     $memInput=$_POST['Lend_Book_Member_Find_Id'];
+
+
    
      $sql_mem="SELECT userID, FName, LName, email
      FROM client
@@ -56,11 +58,15 @@ if (isset($_POST['Lend_Book_Member_Find_Submit'])){
 
          }
      }
-}
+
+
+
+} 
 
 if (isset($_POST['lend_button'])){
     $ldte=$_POST['Lend_Book_Member_Table_DueDate'];
     echo $ldte;
+    
 }
 
 
@@ -76,10 +82,10 @@ if (isset($_POST['lend_button'])){
                     <div class="pop-topic">
                         <h3><u>Book Details</u></h3>
                         <center>
-                            <form  method="post">
+                           <form  method="post">
                                 <input type="text" class="pop-search" name="Lend_Book_Book_Find_Id" placeholder="Search by Code No" size="50" required>
                                 <input type="submit" id="Lend_Book_Book_Find_Submit" name="Lend_Book_Book_Find_Submit" class="btn-search" value="Search">
-                            </form>
+                         </form>
                         </center>
                         <div class="Container">
                             <div class="imgDB">
@@ -87,13 +93,13 @@ if (isset($_POST['lend_button'])){
                             </div>
                             <div>
                                 <table class="pop-table LendBK">
-                                    <form method="post">
+                                  <form method="post">
                                         <tr>
                                             <td>
                                                 <label>Book Name</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_Name" class="pop-retbar lendbar" placeholder="Book Name" size="30" value="<?php echo $bkname ?>"  readonly>
+                                                <input type="text"  name="Lend_Book_Tabel_Name" class="pop-retbar lendbar" placeholder="Book Name" size="30" value="<?php echo $bkname ?>"  readonly>
                                             </td>
                                         </tr>
                                         <tr>
@@ -101,7 +107,7 @@ if (isset($_POST['lend_button'])){
                                                 <label>Author</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_Author" class="pop-retbar lendbar" placeholder="Book's Author" size="30" value="<?php echo $authName ?>"  readonly>
+                                                <input type="text"  name="Lend_Book_Tabel_Author" class="pop-retbar lendbar" placeholder="Book's Author" size="30" value="<?php echo $authName ?>"  readonly>
                                             </td>
                                         </tr>
                                         <tr>
@@ -109,7 +115,7 @@ if (isset($_POST['lend_button'])){
                                                 <label>ISBN No</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_ISBN" class="pop-retbar lendbar" placeholder="Book's ISBN" size="30" value="<?php echo $isbn ?>"  readonly>
+                                                <input type="text"  name="Lend_Book_Tabel_ISBN" class="pop-retbar lendbar" placeholder="Book's ISBN" size="30" value="<?php echo $isbn ?>"  readonly>
                                             </td>
                                         </tr>
                                         <tr>
@@ -117,10 +123,10 @@ if (isset($_POST['lend_button'])){
                                                 <label>Code No</label>
                                             </td>
                                             <td>
-                                                <input type="text"  class="Lend_Book_Tabel_Code" class="pop-retbar lendbar" placeholder="Book's Code" size="30" value="<?php echo $bkCode ?>"  readonly>
+                                                <input type="text"  name="Lend_Book_Tabel_Code" class="pop-retbar lendbar" placeholder="Book's Code" size="30" value="<?php echo $bkCode ?>"  readonly>
                                             </td>
                                         </tr>
-                                   </form>
+                                 </form> 
                                 </table>
                             </div>
                         </div>
@@ -134,15 +140,15 @@ if (isset($_POST['lend_button'])){
                     <div class="pop-topic">
                         <h3><u>Member Details</u></h3>
                         <center>
-                            <form method="post">
+                         <form method="post" action="LendBK.php?<?php echo "bkname=$bkname&authName=$authName&isbn=$isbn&bkCode=$bkCode" ?>" > 
                                 <input type="text" class="pop-search" name="Lend_Book_Member_Find_Id" placeholder="Reg No / NIC" size="50" required>
                                 <input type="submit" id="Lend_Book_Member_Find_Submit" name="Lend_Book_Member_Find_Submit" class="btn-search" value="Search">
-                            </form>
+                         </form> 
                         </center>
                     </div>
                     <div>
                         <table class="pop-table LendMem">
-                            <form method="post">
+                     <form method="post"> 
                                 <tr>
                                     <td>
                                         <Label>First Name</Label>
@@ -184,7 +190,7 @@ if (isset($_POST['lend_button'])){
                                     <td><input type="date" id="Lend_Book_Member_Table_DueDate"  name="Lend_Book_Member_Table_DueDate" class="pop-retbar membar" min="Today" required></td>
                                 </tr>
                                 
-                           <!--    </form>-->
+                          </form>
                      </table> 
 
                     </div>
@@ -193,7 +199,7 @@ if (isset($_POST['lend_button'])){
                 <!-----------------------------Lend Button----------------------------------------------------------------------------------------------->
 
                 <div>
-                <!-- <form method="post"> -->
+                <form method="post"> 
                     <input type="submit" name="lend_button" name="lend_button" class="btn-pop popLend" value="Lend">
                     </form>
                     
