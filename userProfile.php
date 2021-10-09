@@ -40,26 +40,28 @@
             $dueDate = $rowHistory['dueDate'];
             $Name = $rowHistory['Name'];
 
-            if ($status == 0 && $dueDate <= $date){
+            if ($status == 0 && $dueDate >= $date){
                 $class =  'dataWarning';
                 $value = 'Open';
-            }else if ($status == 0 && $dueDate >= $date){
+            }else if ($status == 0 && $dueDate <= $date){
                 $class =  'dataDanger';
                 $value = 'Open';
             }
 
-            if ($status == 1 && $dueDate <= $submitedDate){
+            if ($status == 1 && $dueDate >= $submitedDate){
                 $class =  'dataSuccess';
                 $value = 'Completed';
-            }else if($status == 1 && $dueDate >= $submitedDate){
+            }else if($status == 1 && $dueDate <= $submitedDate){
                 $class =  'dataDanger';
                 $value = 'Completed';
             }
 
-            $outputHistory .= "<td>$issuedDate</td>
+            $outputHistory .= "<tr>
+                            <td>$issuedDate</td>
                             <td>$submitedDate</td>
                             <td>ABC</td>
-                            <td class=\"$class\">$value</td>";
+                            <td class=\"$class\">$value</td>
+                            </tr>";
 
         }
     }else{
@@ -137,10 +139,8 @@
                                         <th>Item Name</th>
                                         <th>Status</th>
                                     </tr>
-
-                                    <tr>
-                                        <?php echo $outputHistory; ?>
-                                    </tr>
+                                    <?php echo $outputHistory; ?>
+                                    
                                 </table>
                         </div>
                     </div>
