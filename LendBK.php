@@ -2,17 +2,23 @@
 include 'header.php';
 require 'config.php';
 
-
-
     $bkCode="";
     $isbn="";
     $authName="";
     $bkname="";
-    
+
     $memFname="";
     $memLname="";
     $memEmail="";
     $memID="";
+
+
+    if (isset($_POST['Lend_Book_Member_Find_Id'])){
+        $bkCode= $_REQUEST['bkCode'];
+        $isbn=$_REQUEST['isbn'];
+        $authName=$_REQUEST['authName'];
+        $bkname=$_REQUEST['bkname'];
+    }
 
     //$slk=$_POST['Lend_Book_Member_Find_Id'];
     
