@@ -303,6 +303,7 @@ td.dataDanger {
 
 .column.mini {
     width: 15%;
+    padding-right: 30px;
 }
 
 .column.micro {
@@ -681,19 +682,16 @@ th {
 }
 
 .btn-request {
-    background-color:rgb(146, 25, 3)
+    background-color: rgb(146, 25, 3)
 }
 
 .btn-S_C {
     background-color: #29a719;
-    
 }
 
 .btn-preview {
     background-color: #3cb2d6;
-    
 }
-
 
 .btn-update {
     background-color: #3f3cd6;
@@ -758,8 +756,8 @@ th {
     margin: 6px 3px;
     padding: 10px 10px;
     font-size: 15px;
-    background-color: #d38e0d;; 
-
+    background-color: #d38e0d;
+    ;
 }
 
 .Previewright {
@@ -767,8 +765,7 @@ th {
     padding: 10px 10px;
     margin: 6px 3px;
     font-size: 15px;
-    background-color: #36bcdd; 
-
+    background-color: #36bcdd;
 }
 
 .SPright {
@@ -777,8 +774,6 @@ th {
     margin: 6px 3px;
     font-size: 15px;
     background-color: #14bb30;
-    
-
 }
 
 .card.set {
