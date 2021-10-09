@@ -1,4 +1,4 @@
-        /* RMB */
+    /* RMB */
     
     body {
         background-color: whitesmoke;
@@ -775,7 +775,7 @@
         padding-right: 0px;
     }
     
-    <<<<<<< HEAD .button-card {
+    .button-card {
         width: 20%;
     }
     
@@ -783,16 +783,18 @@
         font-size: 25px;
         font-weight: bold;
         color: black;
-        =======.radio {
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-        }
-        .check {
-            border-color: turquoise;
-            background-color: white;
-            color: turquoise;
-            border-radius: 5px;
-            >>>>>>>28f9a5e029807148f9f589dcaaf5de81e082c518
-        }
+    }
+    
+    .radio {
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    
+    .check {
+        border-color: turquoise;
+        background-color: white;
+        color: turquoise;
+        border-radius: 5px;
+    }
