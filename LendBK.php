@@ -76,9 +76,9 @@ if (isset($_POST['lend_button'])){
     $bkcode=$_POST['bkcd'];
 
     $sql_setLend ="INSERT INTO barrowreturns (status,issuedDate,dueDate,userID,IID,adminUserID)
-    VALUES (0,$lenddate,$duedate,$memcode,$bkcode,2)";
-
-    $setLend=$con->query($sql_lend);
+    VALUES (0,'$lenddate','$duedate','$memcode',$bkcode,2)";
+    
+    $setLend=$con->query($sql_setLend);
 
     if ($setLend===TRUE){
         $lendmsg = "<script>alert(\"BOOK LENDED TO MEMBER ! \");</script>";
