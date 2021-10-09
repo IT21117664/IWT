@@ -1,21 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <center><h2><b>REQUEST NEW BOOKS</b></h2></center>
+<?php require('Header.php'); ?>
 
-    Book Name <input type="text"><br><br>
-    Author <input type="text"><br><br>
-    publisher <input type="text"><br><br>
+    <center><h2 p class="pop-titel">REQUEST NEW BOOKS</h2></center>
 
-    E-Book <input type="radio" name="yes" checked>Yes</input> <input type="radio" name="no">No</input><br><br>
+    <div>  
 
-    <input type="submit" placeholder="Clear"> <input type="submit" placeholder="Request">
+		<table class="pop-table Memdel">
+            <form  method="post">
+                <tr>
+					<td>
+						<label>Book Name</label>
+                    </td>
+                    <td colspan="3">
+                         <input type="text" class="pop-retbar membar"  name="Book_Name" size="93" value="">
+                    </td>
+                </tr>
+                
+                <tr>
+					<td>
+						<label>Auther</label>
+                    </td>
+                    <td>
+                        <input type="text" class="pop-retbar membar"  name="Author" size="30" value="">     
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Publisher</label> 
+                    </td>
+                    <td>
+                        <input type="text" class="pop-retbar membar"  name="Publisher" size="30" value="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        E-Book <input type="radio" class="radio" name="yes" checked>Yes <input type="radio" class="radio" name="no">No
+                    </td>
+                </tr>
+
+        </table>            
+
+                <div class="Request_New_Book_Button">
+                    <input type="reset" id="Request_New_Book_Button" name="Request_New_Book_Button" class="btn-pop mem btn-clear" value="Clear">
+                    <input type="submit" id="Request_New_Book_Button" name="Request_New_Book_Button" class="btn-pop mem btn-request" value="Request">
+            
+                </div>
+
+
+    
+
+     
 
 </body>
 </html>
+
+
+
+
+

@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 
 <script src="./js/main.js"></script>
+<link rel="stylesheet" href="./css/main.css">
 
 <header>
     <div class="slide">
@@ -27,12 +28,10 @@
 
  
    <div class="topRight">
-               
                 <?php
-
                 if(isset($_SESSION["u"])){
-                    ?>
-                    <span class="username"><?php echo $_SESSION["u"]["username"]; ?></span> 
+                ?>
+                <span class="username"><?php echo $_SESSION["u"]["username"]; ?></span> 
                     <?php
                 }else{
                     ?>
@@ -48,7 +47,7 @@
                     <button class="btn_logout" onclick="logout();">Logout</button> </br>
                 
                
-            </div>
+    </div>
   
     <script>
         carousel();
