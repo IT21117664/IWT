@@ -65,13 +65,16 @@ if (isset($_POST['Lend_Book_Member_Find_Submit'])){
          }
      }
 
-
+     //$lendDate=$_POST['Lend_Book_Member_Table_LendDate'];
+     //echo $lendDate;
+   //  $dueDate=$_POST['Lend_Book_Member_Table_DueDate'];
 
 } 
 
 if (isset($_POST['lend_button'])){
     $ldte=$_POST['Lend_Book_Member_Table_DueDate'];
     echo $ldte;
+    
     
 }
 
@@ -195,8 +198,6 @@ if (isset($_POST['lend_button'])){
                                     </td>
                                     <td><input type="date" id="Lend_Book_Member_Table_DueDate"  name="Lend_Book_Member_Table_DueDate" class="pop-retbar membar" min="Today" required></td>
                                 </tr>
-                                
-                          </form>
                      </table> 
 
                     </div>
@@ -205,7 +206,12 @@ if (isset($_POST['lend_button'])){
                 <!-----------------------------Lend Button----------------------------------------------------------------------------------------------->
 
                 <div>
-                <form method="post"> 
+
+                    <input type="text" name="bkcd"  value="<?php echo $bkCode ?>">
+                    <input type="text" name="memcd"  value="<?php echo $memID ?>" >
+                    <input type="text" name="ledate"  value="<?php echo  $lendDate ?>">
+                    <input type="date" name="dudate"  min="Today">
+
                     <input type="submit" name="lend_button" name="lend_button" class="btn-pop popLend" value="Lend">
                     </form>
                     
