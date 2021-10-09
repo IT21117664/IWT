@@ -6,9 +6,9 @@
     
     <hr>
     <div class="right">
-        <button type="submit" p class="alignright">Login</button>
-        <input type="password" placeholder="Password" value="" id="myInput" p class="alignright">
-        <input type="text" placeholder="Username" id="username" name="username" p class="alignright">
+        <input type="text" placeholder="Username" id="username" name="username" class="alignright">
+        <input type="password" placeholder="password" id="myInput" class="alignright">
+        <button type="submit" class="alignright">Login</button>
     </div>
     <img src="./img/logo.png" width="50" height="50" class="logo">
     <br><br>
