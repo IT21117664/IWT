@@ -40,8 +40,8 @@
                         </tr>
 
             <div class="Request_New_Book_Button">
-            <input type="reset" id="Request_New_Book_Button" name="Request_New_Book_Button" p class="btn-pop mem btn-clear" value="Clear">
-            <input type="submit" id="Request_New_Book_Button" name="Request_New_Book_Button" p class="btn-pop mem btn-pop mem" value="Request">
+            <input type="reset" id="Request_New_Book_Button" name="Request_New_Book_Button" class="btn-pop mem btn-clear" value="Clear">
+            <input type="submit" id="Request_New_Book_Button" name="Request_New_Book_Button" class="btn-pop mem btn-clear" value="Request">
             
             </div>
 
