@@ -12,12 +12,14 @@
         $target_dir = "./img/avatar/";
         $target_file = $target_dir . basename($_FILES["avatar"]["name"]);
 
-        if(empty($_FILES["avatar"])) {
+
+        if($avatar['size'] > 0) {
             if (move_uploaded_file($_FILES["avatar"]["tmp_name"],$target_file)){
                 $sqlUpdateProfile = "UPDATE `user` SET `phoneNumber`='$mob',`profileImg`='$target_file',`Address`='$address' WHERE `userID` = $userID;";
                 //echo "The file ". basename( $_FILES["avatar"]["name"]). " is uploaded.";
             } 
             else {
+                exit();
                 echo "Error while uploading your file."; 
             }
         }else{
