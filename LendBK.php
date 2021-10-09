@@ -198,8 +198,6 @@ if (isset($_POST['lend_button'])){
                                     </td>
                                     <td><input type="date" id="Lend_Book_Member_Table_DueDate"  name="Lend_Book_Member_Table_DueDate" class="pop-retbar membar" min="Today" required></td>
                                 </tr>
-                                
-                          </form>
                      </table> 
 
                     </div>
@@ -208,7 +206,6 @@ if (isset($_POST['lend_button'])){
                 <!-----------------------------Lend Button----------------------------------------------------------------------------------------------->
 
                 <div>
-                <form method="post"> 
 
                     <input type="text" name="bkcd"  value="<?php echo $bkCode ?>">
                     <input type="text" name="memcd"  value="<?php echo $memID ?>" >
