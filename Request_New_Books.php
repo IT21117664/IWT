@@ -87,9 +87,9 @@
                             </td>
                         </tr>
 
-            <div>
-            <input type="reset" id="Add_new_book_Button" name="Add_new_book_Button" p class="btn-pop mem btn-clear" value="Clear">
-            
+            <div class="Request_New_Book_Button">
+            <input type="reset" id="Request_New_Book_Button" name="Request_New_Book_Button" p class="btn-pop mem btn-clear" value="Clear">
+            <input type="submit" id="Request_New_Book_Button" name="Request_New_Book_Button" p class="btn-pop mem btn-pop mem" value="Request">
             
             </div>
 
@@ -97,7 +97,7 @@
 
     
 
-     <input type="submit" placeholder="Request">
+     
 
 </body>
 </html>
