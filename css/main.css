@@ -146,7 +146,7 @@ td.dataDanger {
     border: 2px solid #1d98eb;
 }
 
-.colorprimary:h over {
+.colorprimary:hover {
     background-color: #1d98eb;
     color: white;
 }
