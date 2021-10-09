@@ -32,12 +32,14 @@
 
     <div class="row">
         <div class="column side"></div>
-            <div class="column middle">
-                <input type="text" class="txtSearch" placeholder="Search...">
-                <input type="button" value="Search" class="btn primary">
-                <a href="#" class="topRighta">Advanced Search</a>
-            <div style="width: 100%;"></div>
-        </div>
+            <form action="searchResult.php" method="post">
+                <div class="column middle">
+                    <input type="text" class="txtSearch" placeholder="Search...">
+                    <input type="button" value="Search" class="btn primary">
+                    <a href="#" class="topRighta">Advanced Search</a>
+                <div style="width: 100%;"></div>
+                </div>
+            </form>
     </div>
 
     <div class="card set">
