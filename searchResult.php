@@ -25,6 +25,15 @@
     $con -> close();
 
     require('Header.php');
+
+//---------------------------------------------------------------------------------
+$adminShow = "";
+if (isset($_SESSION['userID'])){
+    if ($_SESSION['userType'] == 1){
+        $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
+    }
+}
+//---------------------------------------------------------------------------------
 ?>
 
     <div class="nav">
