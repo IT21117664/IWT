@@ -2,17 +2,6 @@
     require('Header.php');
     require('config.php');
 
-//-----------------------------------------------------------------------------
-
-    if (isset($_SESSION['userID'])){
-        $userID = $_SESSION['userID'];
-        $userType = $_SESSION['userType'];
-    }else{
-        //echo $_SESSION['userID'];
-        header("Location: ./index.php");
-    }
-//---------------------------------------------------------------------------------
-
     if (isset($_REQUEST['IID'])){
         $IID = $_REQUEST['IID'];
 
@@ -33,6 +22,19 @@
     }else{
         header("Location: ./index.php?error=bookView");
     }
+
+    //-----------------------------------------------------------------------------
+
+    if (isset($_SESSION['userID'])){
+        $userID = $_SESSION['userID'];
+        $userType = $_SESSION['userType'];
+    }elseif ($free == 1){
+        //
+    }else{
+        //echo $_SESSION['userID'];
+        header("Location: ./index.php");
+    }
+//---------------------------------------------------------------------------------
 
 ?>
 
