@@ -23,6 +23,13 @@
         header("Location: ./index.php?error=bookView");
     }
 
+    if (isset($_SESSION['userID'])){
+        $userName = $_SESSION['FName'];
+        logout();
+    }else{
+        logIn();
+    }
+
     //-----------------------------------------------------------------------------
 
     if (isset($_SESSION['userID'])){
