@@ -2,6 +2,51 @@
 
     <center><h2 p class="pop-titel">REQUEST NEW BOOKS</h2></center>
 
+    <div>  
+
+		<table class="pop-table Memdel">
+            <form  method="post">
+                <tr>
+					<td>
+						<label>Book Name</label>
+                    </td>
+                    <td colspan="3">
+                         <input type="text" class="pop-retbar membar"  name="Book_Name" size="93" value="">
+                    </td>
+                </tr>
+                
+                <tr>
+					<td>
+						<label>Auther</label>
+                    </td>
+                    <td>
+                        <input type="text" class="pop-retbar membar"  name="Author" size="30" value="">     
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Publisher</label> 
+                    </td>
+                    <td>
+                        <input type="text" class="pop-retbar membar"  name="Publisher" size="30" value="">
+                    </td>
+                </tr>
+                
+
+
+    
+
+     
+
+</body>
+</html>
+
+
+
+
+<!--<center><h2 p class="pop-titel">REQUEST NEW BOOKS</h2></center>
+
             <div>  
 
 					<table class="pop-table Memdel">
@@ -45,15 +90,4 @@
             
                         </div>
                     </form>
-            </div>  
-
-
-
-
-
-    
-
-     
-
-</body>
-</html>
+            </div> --> 
