@@ -8,7 +8,7 @@
             <li><a href="past_papers.php">Past Papers</a></li>
             <li><a href="reports.php">Reports</a></li>
             <li><a href="journals.php">Journals</a></li>
-            <li><a href="admin.php">Journals</a></li>
+            <li><a href="admin.php">Admin</a></li>
         </ul>
     </div>
 
