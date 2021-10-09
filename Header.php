@@ -22,8 +22,8 @@
         </div>
         
         <div class="topLeft">
-            <div>
-                <h2 id="date_time" style="color: white;background-color:black; padding:10px;"></h2>
+            <div style="background-color:black;opacity:0.8;">
+                <h2 id="date_time" style="color: white;padding:10px;"></h2>
                 
                 
             </div>

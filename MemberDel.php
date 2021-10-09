@@ -15,7 +15,7 @@ $memberdel=$_POST['Member_Details_Find_Id'];
 
 
 $sql="SELECT  i.FName,i.LName,i.Address,i.userID,i.email,i.NIC,i.phoneNumber
-FROM client i
+FROM user i
 WHERE userID = '$memberdel' OR NIC='$memberdel'";
 
 $memberDetails = $con->query($sql);
@@ -35,7 +35,7 @@ $mob=$row['phoneNumber'];
 
 if(isset($_POST['Member_Details_Button_Remove'])){
     $delID=$_POST['Member_Details_Table_RegNo'];
-    $sql_Delete="DELETE FROM client 
+    $sql_Delete="DELETE FROM user
     WHERE userID=$delID";
     $deleCon=$con->query($sql_Delete);
     if ($deleCon===TRUE){
@@ -68,7 +68,7 @@ if(isset($_POST['Member_Details_Button_Update'])){
     $memNIC=$_POST['Member_Details_Table_NIC'];
     $memMob=$_POST['Member_Details_Table_MobNo'];
 echo $memberID;
-    $sql_Update="UPDATE client 
+    $sql_Update="UPDATE user
     SET NIC='$memNIC',phoneNumber='$memMob',email='$memMail',FName='$memfname',LName='$memlname',Address='$memAddr'
     WHERE userID='$memberID'";
 
