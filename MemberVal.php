@@ -3,7 +3,7 @@ include 'Header.php';
 require 'config.php';
 
 $sql="SELECT NameWithInitial,userID,email
-FROM client 
+FROM user 
 WHERE memberValid=0";
 
 $validateResult = $con->query($sql);
@@ -28,7 +28,7 @@ else{
  if (isset($_REQUEST['action'])){
     if ($_REQUEST['action'] == 'rej'){
        $conf_rej=$_REQUEST['userID'];
-       $sql_reject="UPDATE client
+       $sql_reject="UPDATE user
        SET memberValid = -1
        WHERE userID='$conf_rej'";
        $contr=$con->query($sql_reject);
@@ -39,7 +39,7 @@ else{
 if (isset($_REQUEST['action'])){    
    if ($_REQUEST['action'] == 'conf'){
        $conf_n=$_REQUEST['userID'];
-       $sql_connect="UPDATE client 
+       $sql_connect="UPDATE user 
        SET memberValid=1 
        WHERE userID='$conf_n'";
    
