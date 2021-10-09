@@ -752,3 +752,13 @@ th {
     width: 100%;
     padding-right: 0px;
 }
+
+.button-card {
+    width: 20%;
+}
+
+.page_next {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
