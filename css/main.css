@@ -715,7 +715,7 @@
     .column_list li {
         padding-bottom: 10px;
     }
-    /* pasiya */
+    /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
     
     .btn_logout {
         margin-top: 10px;
@@ -733,31 +733,6 @@
         font-size: large;
         margin-right: 20px;
         font-weight: bold;
-    }
-    
-    .clearright {
-        float: right;
-        margin: 6px 3px;
-        padding: 10px 10px;
-        font-size: 15px;
-        background-color: #d38e0d;
-        ;
-    }
-    
-    .Previewright {
-        float: right;
-        padding: 10px 10px;
-        margin: 6px 3px;
-        font-size: 15px;
-        background-color: #36bcdd;
-    }
-    
-    .SPright {
-        float: right;
-        padding: 10px 10px;
-        margin: 6px 3px;
-        font-size: 15px;
-        background-color: #14bb30;
     }
     
     .card.set {
@@ -784,6 +759,7 @@
         font-weight: bold;
         color: black;
     }
+    /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
     
     .radio {
         padding-left: 35px;
@@ -797,4 +773,29 @@
         background-color: white;
         color: turquoise;
         border-radius: 5px;
+    }
+    
+    .clearright {
+        float: right;
+        margin: 6px 3px;
+        padding: 10px 10px;
+        font-size: 15px;
+        background-color: #d38e0d;
+        ;
+    }
+    
+    .Previewright {
+        float: right;
+        padding: 10px 10px;
+        margin: 6px 3px;
+        font-size: 15px;
+        background-color: #36bcdd;
+    }
+    
+    .SPright {
+        float: right;
+        padding: 10px 10px;
+        margin: 6px 3px;
+        font-size: 15px;
+        background-color: #14bb30;
     }
