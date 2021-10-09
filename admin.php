@@ -2,13 +2,13 @@
 
     <div class="nav">
         <ul>
-            <li><a class="logoL">Library</a></li>
-            <li><a href="#news">Home</a></li>
-            <li><a href="#contact">Articles</a></li>
-            <li><a href="#about">Past Papers</a></li>
-            <li><a href="#about">Reports</a></li>
-            <li><a href="#about">Journals</a></li>
-            <li><a href="#about" >Admin</a></li>
+            <li><a href="#Library">Library</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="articles.php">Articles</a></li>
+            <li><a href="past_papers.php">Past Papers</a></li>
+            <li><a href="reports.php">Reports</a></li>
+            <li><a href="journals.php">Journals</a></li>
+            <li><a href="admin.php">Journals</a></li>
         </ul>
     </div>
 
