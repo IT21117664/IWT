@@ -44,7 +44,8 @@
                             <input type="submit" id="Request_New_Book_Button" name="Request_New_Book_Button" class="btn-pop mem btn-request" value="Request">
             
                         </div>
-                    </form>    
+                    </form>
+            </div>  
 
 
 
