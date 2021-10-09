@@ -1,6 +1,13 @@
 <?php
     require('config.php');
     require('Header.php');
+
+    if (isset($_SESSION['userID'])){
+        $userName = $_SESSION['FName'];
+        logout();
+    }else{
+        logIn();
+    }
 //--------------------------------------------------------------------------
 
     if (isset($_SESSION['userID'])){

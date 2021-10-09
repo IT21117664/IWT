@@ -16,12 +16,12 @@ if (isset($_POST['Retrieve_Book_Member_Find_Id'])){
 $retmemID=$_POST['Retrieve_Book_Member_Find_Id'];
 
 $sql_memdel = "SELECT persion.userID,persion.FName,persion.LName,persion.email
-FROM barrow_returns LenRet, client persion 
+FROM barrowreturns LenRet, user persion 
 WHERE persion.userID=lenRet.userID AND LenRet.userID=$retmemID
 GROUP BY LenRet.userID";
 
 $sql_bk = "SELECT LenRet.issuedDate,inve.Name,LenRet.IID,lenRet.fine,LenRet.dueDate
-FROM barrow_returns LenRet, inventory inve 
+FROM barrowreturns LenRet, inventory inve 
 WHERE inve.IID=lenRet.IID AND LenRet.userID=$retmemID
 ORDER BY IID";
 //$lendBkTB = "";
@@ -84,7 +84,7 @@ else{
                     </div>
                     <div>
                         <table class="pop-table RetrieveMem">
-                            <form>
+                            <form >
                                 <tr>
                                     <td>
                                         <Label>First Name</Label>

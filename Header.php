@@ -22,8 +22,8 @@
         </div>
         
         <div class="topLeft">
-            <div>
-                <h2 id="date_time"></h2>
+            <div style="background-color:black;opacity:0.8;">
+                <h2 id="date_time" style="color: white;padding:10px;"></h2>
                 
                 
             </div>
@@ -41,6 +41,14 @@
                         <a id="fosrget_pwd_link" class="right" href="forget_password.php">forget password</a>
                     </form>
                 </div>';
+                }
+
+                function logout(){
+                    global $userName;
+                    echo "<div class=\"topRight\">
+                            <span class=\"username\">$userName</span>
+                            <button class=\"btn_logout\" onclick=\"logout();\">Logout</button> </br>
+                        </div>";
                 }
         ?>
 
