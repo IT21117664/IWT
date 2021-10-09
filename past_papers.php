@@ -168,8 +168,8 @@
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max = $number_of_data20 - 1;
-                        if ($pageno1 != $max) {
+                        $max1 = $number_of_data20 - 1;
+                        if ($pageno1 != $max1) {
                         ?>
                             <a href="past_papers.php?p1=<?php echo $pageno1 + 1; ?>" class="page_next"> ❯</a>
                         <?php
@@ -286,8 +286,8 @@
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max = $number_of_data19 - 1;
-                        if ($pageno2 != $max) {
+                        $max2 = $number_of_data19 - 1;
+                        if ($pageno2 != $max2) {
                         ?>
                             <a href="past_papers.php?p2=<?php echo $pageno2 + 1; ?>" class="page_next"> ❯</a>
                         <?php
@@ -404,8 +404,8 @@
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max = $number_of_data18 - 1;
-                        if ($pageno3 != $max) {
+                        $max3 = $number_of_data18 - 1;
+                        if ($pageno3 != $max3) {
                         ?>
                             <a href="past_papers.php?p3=<?php echo $pageno3 + 1; ?>" class="page_next"> ❯</a>
                         <?php
@@ -522,8 +522,8 @@
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max = $number_of_data17 - 1;
-                        if ($pageno4 != $max) {
+                        $max4 = $number_of_data17 - 1;
+                        if ($pageno4 != $max4) {
                         ?>
                             <a href="past_papers.php?p4=<?php echo $pageno4 + 1; ?>" class="page_next"> ❯</a>
                         <?php
@@ -640,8 +640,8 @@
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max = $number_of_data16 - 1;
-                        if ($pageno5 != $max) {
+                        $max5= $number_of_data16 - 1;
+                        if ($pageno5 != $max5) {
                         ?>
                             <a href="past_papers.php?p5=<?php echo $pageno5 + 1; ?>" class="page_next"> ❯</a>
                         <?php
