@@ -1,58 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require('Header.php'); ?>
 
-<head>
-    <link rel="stylesheet" href="css/main.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        
-    </style>
 
-    <title>Document</title>
-</head>
+    <h2 class="pop-titel"> BOOK DETAILS</h2>
 
-<body>
+                <div>
+                   <center>
+                   <form method="post">
+                        <input type="text" class="pop-search" name="Book_Details_Find_Id" size="50" placeholder="Search by Code no, Book Name" required>
 
-    <header>
+                        <input type="submit" id="Book_Details_Find_Submit" name="Book_Details_Find_Submit" class="btn-search" value="Search">
+                    </form>
+                   </center> 
+                </div>
+                <br><hr><br>
+    
+                <div>
+					<table class="pop-table Memdel">
+                    <form  method="post">
+                        <tr>
+							<td>
+								<label>Book Name</label>
+                            </td>
+                            <td colspan="3">
+                                <input type="text" class="pop-retbar membar"  name="Book_Name" size="93" value="">
+                            </td>
+                        </tr>
 
-        <H6>2021 - 08 - 25 | 10.32 AM
-            <button type="submit" p class="alignright">Log out</button>
-            <input type="text" placeholder="Username" id="username" name="username" p class="alignright">
-            <br><br>
-            <hr>
-            <h5><button type="submit">Library</button>
-                <button type="submit">Home</button>
-                <button type="submit">Articles</button>
-                <button type="submit">Past papers</button>
-                <button type="submit">Reports</button>
-                <button type="submit">Journals</button></h5>
 
-    </header>
+                        <tr>
+							<td>
+								<label>Auther</label>
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="Author" size="30" value="">     
+                            </td>
 
-    <form id="form">
-        <input type="search" id="query" name="q" img src="C:\Users\MSii\Desktop\search.jpg">
-        <button>Search</button>
-    </form>
+                            <td>
+                                <label>ISBN</label>
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="" size="30" value="">
+                            </td>
+                        </tr>
 
-    <h2> Book Name</h2>
+                        <tr>
+							<td>
+								<label> Catagory</label>
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="Publisher" size="30" value=""> 
+                            </td>
+                        
+                            <td>
+                                <label> Copies </label>
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="" size="30" value=""> 
+                            </td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>
+                                <label>Publisher</label> 
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="Publisher" size="30" value="">
+                            </td>
+                        
+                            <td>
+                                <label>Date</label>
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="Publisher" size="30" value="">
+								<!--<input type="date" class="pop-retbar membar">--> 
+                            </td>
+                        </tr>
 
-    <img src="C:\Users\MSii\Desktop\book.png">
-    <p>
-        <b>Language</b> - English <br>
-        <b>Author</b> - Author name <br>
-        <b>Publisher</b> - Publisher Name <br>
-        <b>ISBN</b> - xxxxxxxxxxx <br>
-        <b>Rating</b> - ( ) <br>
-    </p>
 
-    <button type="submit">Read</button> <br>
-    <button type="submit">Reserve</button> <br>
-    <button type="submit">Download</button> <br>
 
-    <textarea name="Book details" placeholder="Book details ....  " cols="80" rows="20"></textarea>
+                        <tr>
+                            <td>
+                                <label>Price</label>
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="" size="30" value="">
+                            </td>
+                        
+                            <td>
+                                <label>Published</label>
+                            </td>
+                            <td>
+                                <input type="text" class="pop-retbar membar"  name="Publisher" size="30" value="">
+                                <!--<input type="date" class="pop-retbar membar">-->
+                            </td>
+                        </tr>
+                        
+                    </table>
+
+                    <div class="Book_Details_Button">
+                        <input type="reset" id="Book_Details_Button" name="Book_Details_Button" class="btn-pop mem btn-clear" value="Clear">
+                        <input type="reset" id="Book_Details_Button" name="Book_Details_Button" class="btn-pop mem btn-remove" value="Delete">
+                        <input type="submit" id="Book_Details_Button" name="Book_Details_Button" class="btn-pop mem btn-update" value="update">
+                    </div>
+
+            </div>
 
 
 
