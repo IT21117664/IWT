@@ -796,3 +796,9 @@ th {
     padding-right: 0px;
 }
 
+.radio {
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}

@@ -32,7 +32,20 @@
                         <input type="text" class="pop-retbar membar"  name="Publisher" size="30" value="">
                     </td>
                 </tr>
-                
+
+                <tr>
+                    <td>
+                        E-Book <input type="radio" class="radio" name="yes" checked>Yes <input type="radio" class="radio" name="no">No
+                    </td>
+                </tr>
+
+        </table>            
+
+                <div class="Request_New_Book_Button">
+                    <input type="reset" id="Request_New_Book_Button" name="Request_New_Book_Button" class="btn-pop mem btn-clear" value="Clear">
+                    <input type="submit" id="Request_New_Book_Button" name="Request_New_Book_Button" class="btn-pop mem btn-request" value="Request">
+            
+                </div>
 
 
     
