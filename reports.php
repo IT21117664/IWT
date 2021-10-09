@@ -305,7 +305,7 @@
 
                         if ($pageno3 != 0) {
                         ?>
-                            <a href="reports.php?p2=<?php echo $pageno3 - 1; ?>" class="page_next">❮</a>
+                            <a href="reports.php?p3=<?php echo $pageno3 - 1; ?>" class="page_next">❮</a>
                         <?php
                         } else {
                         }

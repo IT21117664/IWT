@@ -64,10 +64,10 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-        <form action="searchResult.php" class="input-container center" method="post">
+            <form action="searchResult.php" class="input-container center" method="post">
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
                 <input type="submit" name="Search" value="Search" class="btn primary">
-        </form>
+            </form>
             <a href="#" class="topRighta">Advanced Search</a>
             <div style="width: 100%;"></div>
         </div>
@@ -75,7 +75,6 @@
 
 
     <!-- 2020 -->
-
 
     <div class="card set">
         <div class="card title">
@@ -172,7 +171,7 @@
                         $max = $number_of_data20 - 1;
                         if ($pageno1 != $max) {
                         ?>
-                            <a href="past_papers.php?p1=<?php echo $pageno1 + 1; ?>"  class="page_next"> ❯</a>
+                            <a href="past_papers.php?p1=<?php echo $pageno1 + 1; ?>" class="page_next"> ❯</a>
                         <?php
                         } else {
                         }
@@ -189,14 +188,11 @@
         </div>
     </div>
 
-
     <!-- 2020 -->
 
 
 
-    
     <!-- 2019 -->
-
 
     <div class="card set">
         <div class="card title">
@@ -293,7 +289,7 @@
                         $max = $number_of_data19 - 1;
                         if ($pageno2 != $max) {
                         ?>
-                            <a href="past_papers.php?p2=<?php echo $pageno2 + 1; ?>"  class="page_next"> ❯</a>
+                            <a href="past_papers.php?p2=<?php echo $pageno2 + 1; ?>" class="page_next"> ❯</a>
                         <?php
                         } else {
                         }
@@ -310,12 +306,11 @@
         </div>
     </div>
 
-
     <!-- 2019 -->
 
 
-    <!-- 2018 -->
 
+    <!-- 2018 -->
 
     <div class="card set">
         <div class="card title">
@@ -412,7 +407,7 @@
                         $max = $number_of_data18 - 1;
                         if ($pageno3 != $max) {
                         ?>
-                            <a href="past_papers.php?p3=<?php echo $pageno3 + 1; ?>"  class="page_next"> ❯</a>
+                            <a href="past_papers.php?p3=<?php echo $pageno3 + 1; ?>" class="page_next"> ❯</a>
                         <?php
                         } else {
                         }
@@ -429,12 +424,11 @@
         </div>
     </div>
 
-
     <!-- 2018 -->
 
-    
-    <!-- 2017 -->
 
+
+    <!-- 2017 -->
 
     <div class="card set">
         <div class="card title">
@@ -531,7 +525,7 @@
                         $max = $number_of_data17 - 1;
                         if ($pageno4 != $max) {
                         ?>
-                            <a href="past_papers.php?p4=<?php echo $pageno4 + 1; ?>"  class="page_next"> ❯</a>
+                            <a href="past_papers.php?p4=<?php echo $pageno4 + 1; ?>" class="page_next"> ❯</a>
                         <?php
                         } else {
                         }
@@ -548,12 +542,11 @@
         </div>
     </div>
 
-
     <!-- 2017 -->
 
-    
-    <!-- 2016 -->
 
+
+    <!-- 2016 -->
 
     <div class="card set">
         <div class="card title">
@@ -650,7 +643,7 @@
                         $max = $number_of_data16 - 1;
                         if ($pageno5 != $max) {
                         ?>
-                            <a href="past_papers.php?p5=<?php echo $pageno5 + 1; ?>"  class="page_next"> ❯</a>
+                            <a href="past_papers.php?p5=<?php echo $pageno5 + 1; ?>" class="page_next"> ❯</a>
                         <?php
                         } else {
                         }
@@ -667,12 +660,7 @@
         </div>
     </div>
 
-
     <!-- 2016 -->
-
-
-
-
 
 
     <?php
