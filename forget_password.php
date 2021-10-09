@@ -3,33 +3,46 @@
         logIn();
     ?> 
 
-    <h3>
+    <h2 class="pop-titel">
         <center>SLIIT DIGITAL LIBRARY - Forget Password </center>
-    </h3>
+    </h2>
     
     <hr>
 
-       
-
-    <!--<div class="right">
-        <input type="text" placeholder="Username" id="username" name="username" class="alignright">
-        <input type="password" placeholder="password" id="myInput" class="alignright">
-        <button type="submit" class="alignright">Login</button>
-    </div>-->
-    <img src="./img/logo.png" width="50" height="50" class="logo">
+    <!--<img src="./img/logo.png" width="50" height="50" class="logo">-->
     <br><br>
 
-    <center>
-        Username : <input type="text" id="username" name="username">
-        <button type="submit">Check</button><br> Sliit Email: <input type="text" id="Sliit Email" name="Sliit Email">
-        <button type="submit">Send Mail</button>
-    </center>
+        <div>  
 
-    <br><br>
-    <div class="footer">
-        <h5> E - book | Reports | Journals | Library Police | Contact Us </h5>
-        <h6> Copyright SLIIT 2021 - All right reserved</h6>
-    </div>
+		    <table class="pop-table Memdel">
+            <form  method="post">
+
+                <tr>
+                    <td>
+                    Username : <input type="text" class="pop-table Memdel" id="username" name="username">
+                    <button type="submit" class="check">Check</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    Sliit Email: <input type="text" class="pop-table Memde" id="Sliit Email" name="Sliit Email">
+                    <button type="submit" class="check">Send Mail</button>
+                    </td>
+                </tr>
+            </form>
+            </table>    
+
+        </div>
+
+        <footer>
+            <div class="footer">
+                <p><a href="#" class="footLink">E - book</a> | <a href="#" class="footLink">Reports</a> | <a href="#" class="footLink">Journals</a> | <a href="#" class="footLink">Library</a>Police</a> | <a href="#" class="footLink">Contact Us</a><br>Copyright SLIIT
+                    &copy; 2021 - All right reserved</p>
+            </div>
+        </footer>
+    
+
+    
 
 
 

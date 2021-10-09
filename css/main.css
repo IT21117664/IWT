@@ -802,3 +802,10 @@ th {
     cursor: pointer;
     font-size: 22px;
 }
+
+.check {
+    border-color: turquoise;
+    background-color: white;
+    color: turquoise;
+    border-radius: 5px;
+}
