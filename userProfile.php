@@ -40,43 +40,53 @@
             $dueDate = $rowHistory['dueDate'];
             $Name = $rowHistory['Name'];
 
-            if ($status == 0 && $dueDate <= $date){
+            if ($status == 0 && $dueDate >= $date){
                 $class =  'dataWarning';
                 $value = 'Open';
-            }else if ($status == 0 && $dueDate >= $date){
+            }else if ($status == 0 && $dueDate <= $date){
                 $class =  'dataDanger';
                 $value = 'Open';
             }
 
-            if ($status == 1 && $dueDate <= $submitedDate){
+            if ($status == 1 && $dueDate >= $submitedDate){
                 $class =  'dataSuccess';
                 $value = 'Completed';
-            }else if($status == 1 && $dueDate >= $submitedDate){
+            }else if($status == 1 && $dueDate <= $submitedDate){
                 $class =  'dataDanger';
                 $value = 'Completed';
             }
 
-            $outputHistory .= "<td>$issuedDate</td>
+            $outputHistory .= "<tr>
+                            <td>$issuedDate</td>
                             <td>$submitedDate</td>
                             <td>ABC</td>
-                            <td class=\"$class\">$value</td>";
+                            <td class=\"$class\">$value</td>
+                            </tr>";
 
         }
     }else{
         $outputHistory .= "<td colspan=\"4\">No any recode found</td>";
     }
 
-//--------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
+$adminShow = "";
+if (isset($_SESSION['userID'])){
+    if ($_SESSION['userType'] == 1){
+        $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
+    }
+}
+//---------------------------------------------------------------------------------
     ?>
 
     <div class="nav">
         <ul>
-            <li><a class="logoL">Library</a></li>
-            <li><a href="#news">Home</a></li>
-            <li><a href="#contact">Articles</a></li>
-            <li><a href="#about">Past Papers</a></li>
-            <li><a href="#about">Reports</a></li>
-            <li><a href="#about">Journals</a></li>
+            <li><a href="#Library">Library</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="articles.php">Articles</a></li>
+            <li><a href="past_papers.php">Past Papers</a></li>
+            <li><a href="reports.php">Reports</a></li>
+            <li><a href="journals.php">Journals</a></li>
+            <?php echo $adminShow; ?>
         </ul>
     </div><br>
 
@@ -137,10 +147,8 @@
                                         <th>Item Name</th>
                                         <th>Status</th>
                                     </tr>
-
-                                    <tr>
-                                        <?php echo $outputHistory; ?>
-                                    </tr>
+                                    <?php echo $outputHistory; ?>
+                                    
                                 </table>
                         </div>
                     </div>

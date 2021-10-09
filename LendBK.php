@@ -65,17 +65,29 @@ if (isset($_POST['Lend_Book_Member_Find_Submit'])){
          }
      }
 
-     //$lendDate=$_POST['Lend_Book_Member_Table_LendDate'];
-     //echo $lendDate;
-   //  $dueDate=$_POST['Lend_Book_Member_Table_DueDate'];
+    
 
 } 
 
 if (isset($_POST['lend_button'])){
-    $ldte=$_POST['Lend_Book_Member_Table_DueDate'];
-    echo $ldte;
+    $duedate=$_POST['Lend_Book_Member_Table_DueDate'];
+    $lenddate=$_POST['Lend_Book_Member_Table_LendDate'];
+    $memcode=$_POST['Lend_Book_Member_Table_RegNo'];
+    $bkcode=$_POST['bkcd'];
+
+    $sql_setLend ="INSERT INTO barrowreturns (status,issuedDate,dueDate,userID,IID,adminUserID)
+    VALUES (0,'$lenddate','$duedate','$memcode',$bkcode,2)";
     
-    
+    $setLend=$con->query($sql_setLend);
+
+    if ($setLend===TRUE){
+        $lendmsg = "<script>alert(\"BOOK LENDED TO MEMBER ! \");</script>";
+        echo $lendmsg;
+        }
+        else{
+        $errodelend="Not DELETED";
+        echo "<script>console.log($errodelend);</script>";
+        }   
 }
 
 
@@ -207,10 +219,7 @@ if (isset($_POST['lend_button'])){
 
                 <div>
 
-                    <input type="text" name="bkcd"  value="<?php echo $bkCode ?>">
-                    <input type="text" name="memcd"  value="<?php echo $memID ?>" >
-                    <input type="text" name="ledate"  value="<?php echo  $lendDate ?>">
-                    <input type="date" name="dudate"  min="Today">
+                    <input type="text" name="bkcd"  value="<?php echo $bkCode ?>" hidden>
 
                     <input type="submit" name="lend_button" name="lend_button" class="btn-pop popLend" value="Lend">
                     </form>
