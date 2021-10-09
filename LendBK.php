@@ -65,8 +65,8 @@ if (isset($_POST['Lend_Book_Member_Find_Submit'])){
          }
      }
 
-     $lendDate=$_POST['Lend_Book_Member_Table_LendDate'];
-     echo $lendDate;
+     //$lendDate=$_POST['Lend_Book_Member_Table_LendDate'];
+     //echo $lendDate;
    //  $dueDate=$_POST['Lend_Book_Member_Table_DueDate'];
 
 } 
