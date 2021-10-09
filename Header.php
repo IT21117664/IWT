@@ -23,7 +23,7 @@
         
         <div class="topLeft">
             <div>
-                <h2 id="date_time" style="color: white;"></h2>
+                <h2 id="date_time" style="color: white;background-color:black;"></h2>
                 
                 
             </div>
