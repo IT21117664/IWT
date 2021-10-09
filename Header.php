@@ -45,8 +45,8 @@
 
                 function logout(){
                     global $userName;
-                    echo "<div class=\"topRight\">
-                            <span class=\"username\">$userName</span>
+                    echo "<div class=\"topRight\"><a href=\"./userProfile.php\">
+                            <span class=\"username\">$userName</span></a>
                             <button class=\"btn_logout\" onclick=\"logout();\">Logout</button> </br>
                         </div>";
                 }
