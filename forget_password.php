@@ -1,15 +1,21 @@
-<?php require('Header.php'); ?>
+<?php
+        include "Header.php";
+        logIn();
+    ?> 
 
     <h3>
         <center>SLIIT DIGITAL LIBRARY - Forget Password </center>
     </h3>
     
     <hr>
-    <div class="right">
+
+       
+
+    <!--<div class="right">
         <input type="text" placeholder="Username" id="username" name="username" class="alignright">
         <input type="password" placeholder="password" id="myInput" class="alignright">
         <button type="submit" class="alignright">Login</button>
-    </div>
+    </div>-->
     <img src="./img/logo.png" width="50" height="50" class="logo">
     <br><br>
 
