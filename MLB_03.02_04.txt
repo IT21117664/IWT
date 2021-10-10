@@ -5,6 +5,18 @@ Project link:
 
 Group member details
 
+Member Id:IT21114526
+Member name: Mawjood M. S.
+contact no: 0717964149
+email address: it21114526@my.sliit.lk
+Implemented Functions: Home Page – Not Logged 
+
+                        Registration Page 
+
+                        Home Page – After Logging 
+
+                        Login  
+
 Member Id:IT21117664
 Member name: M. M. P. R. M. Bandara
 contact no: 0713501969
@@ -39,11 +51,4 @@ Implemented Functions: Forget Password
                        Add New Book
                        Request New Book   
 
-Member Id:IT21114526
-Member name: W. H. J. Buddhika
-contact no: 0715482923
-email address: it21104558@my.sliit.lk
-Implemented Functions: Forget Password
-                       Book details
-                       Add New Book
-                       Request New Book                     
+                    
