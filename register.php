@@ -82,8 +82,8 @@
                                             </td>
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="mail">SLIIT Mail</label>
-                                                    <input type="email" id="email" name="email" required class="txt input_box" />
+                                                    <label for="mail">SLIIT mail</label>
+                                                    <input type="email" id="email" name="email" onkeyup="mailtyping()" required class="txt input_box" />
                                                 </div>
                                             </td>
                                         </tr>
