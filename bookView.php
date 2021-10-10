@@ -23,12 +23,6 @@
         header("Location: ./index.php?error=bookView");
     }
 
-    if (isset($_SESSION['userID'])){
-        $userName = $_SESSION['FName'];
-        logout();
-    }else{
-        logIn();
-    }
 
     //-----------------------------------------------------------------------------
 
@@ -118,9 +112,8 @@ if (isset($_SESSION['userID'])){
                             $show = 1;
                         }
                         if ($show == 1){
-                            echo "<a href=\"$pdfPath\" class=\"btn primary\">Read</a>
-                            <a href=\"$pdfPath\" class=\"btn info\">Reserve</a>
-                            <a href=\"$pdfPath\" class=\"btn warning\">Download</a>";
+                            echo "<a href=\"./updatetotal.php?link=$pdfPath&IID=$IID\" class=\"btn primary\">Read</a>
+                            <a href=\"./updatetotal.php?link=$pdfPath&IID=$IID\" class=\"btn warning\">Download</a>";
                         }else{
                             echo "<a href=\"#\" class=\"btn primary\" disabled>Read</a>
                             <a href=\"#\" class=\"btn info\" disabled>Reserve</a>
