@@ -26,7 +26,7 @@ require 'config.php';
 if (isset($_POST['Lend_Book_Book_Find_Submit'])){
     $indID=$_POST['Lend_Book_Book_Find_Id'];
 
-    $sql_lend = "SELECT inve.IID,inve.Name,auth.authorName,bk.ISBN
+    $sql_lend = "SELECT inve.IID,inve.Name,auth.authorName,bk.ISBN,inve.itemImgLoc
     FROM inventory inve, author auth, book bk
     WHERE inve.CID=bk.IID AND inve.A_ID=auth.AID AND inve.IID=$indID";
 
@@ -38,6 +38,7 @@ if (isset($_POST['Lend_Book_Book_Find_Submit'])){
            $isbn=$row["ISBN"];
            $authName=$row["authorName"];
            $bkCode=$row["IID"];
+           $bkimg=$row["itemImgLoc"];
         }
     }
 }
@@ -108,13 +109,15 @@ if (isset($_POST['lend_button'])){
                                 <input type="submit" id="Lend_Book_Book_Find_Submit" name="Lend_Book_Book_Find_Submit" class="btn-search" value="Search">
                          </form>
                         </center>
+                        <form method="post">
                         <div class="Container">
                             <div class="imgDB">
-                                <img src="123.gif" alt="DB Pic" width="120px" height="170px">
+                            
+                                <img src="<?php $bkimg ?>" alt="DB Pic" width="120px" height="170px">
                             </div>
                             <div>
                                 <table class="pop-table LendBK">
-                                  <form method="post">
+                                  
                                         <tr>
                                             <td>
                                                 <label>Book Name</label>
@@ -147,10 +150,11 @@ if (isset($_POST['lend_button'])){
                                                 <input type="text"  name="Lend_Book_Tabel_Code" class="pop-retbar lendbar" placeholder="Book's Code" size="30" value="<?php echo $bkCode ?>"  readonly>
                                             </td>
                                         </tr>
-                                 </form> 
+                        
                                 </table>
                             </div>
                         </div>
+`                   </form>
                     </div>
                 </div>
 
