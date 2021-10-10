@@ -94,13 +94,9 @@ if (isset($_SESSION['userID'])){
                         </tr>
 
                         <tr>
-                            <td class="title">Ratings</td>
+                            <td class="title">Description</td>
                             <td class="data">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
+                                <?php echo $description; ?>
                             </td>
                         </tr>
                     </table>
@@ -122,10 +118,6 @@ if (isset($_SESSION['userID'])){
                     ?>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-                <p style="margin-left: 30px;"><?php echo $description; ?></p>
         </div>
         
 
