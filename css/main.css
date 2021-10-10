@@ -433,10 +433,11 @@
         margin: 0.5%;
         width: 15%;
         padding: 15px;
+        height: 200px;
     }
     
     .card_column img {
-        max-width: 100px;
+        height: 20px;
     }
     
     .input_item {

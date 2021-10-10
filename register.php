@@ -17,9 +17,9 @@
         if($password == $conform_password){
              $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\", \"$NIC\" )";
              if($con -> query($sqlLoadHistory)){
-                 //
+                header("Location: ./index.php?msg=success");
              }else{
-                 //
+                header("Location: ./index.php?msg=error");
              }
         }
 
@@ -58,7 +58,7 @@
                 <div class="card">
                     <div class="cardDetails">
                         <div class="row">
-                            <form action="index.php" method="post" class="form">
+                            <form method="post" class="form">
                                 <div class="personal">
                                     <div>
                                         <h2>Personal Information</h2>
@@ -176,6 +176,11 @@
                                                 </div>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="pwdCheck" id="pwdCheck"></label>
+                                            </td>
+                                        </tr>
                                     </table>
                                 </div>
 
@@ -191,6 +196,7 @@
 
         <script>
             email.addEventListener("keypress", mail_auto);
+            pwdCheck.addEventListener("keypress", passwordCheck)
         </script>
 
         <?php include "Footer.php" ?>
