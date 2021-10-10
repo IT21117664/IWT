@@ -1,4 +1,8 @@
-<?php require('Header.php'); ?>
+<?php 
+    require('Header.php'); 
+    require('config.php');
+    
+    ?>    
 
     <center><h2 p class="pop-titel">REQUEST NEW BOOKS</h2></center>
 

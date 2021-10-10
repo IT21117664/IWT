@@ -1,4 +1,9 @@
-<?php require('Header.php'); ?>        
+<?php 
+    require('Header.php'); 
+    require('config.php');
+
+
+?>        
 
     <center><h2 class="pop-titel">ADD NEW BOOKS</h2></center>
 
@@ -41,7 +46,19 @@
                             </td>
                             <td>
                                <select name="book" class="pop-retbar membar" name="book">
-									<option value="Dropdown">Dropdown</option>
+									<option value="Science Fiction (Sci-Fi)">Science Fiction (Sci-Fi)</option>
+                                    <option value="Computer Science">Computer Science</option>
+                                    <option value="Mathematics">Mathematics</option>
+                                    <option value="Programming/Scripting Books">Programming/Scripting Books</option>
+                                    <option value="Mid Exam">Mid Exam</option>
+                                    <option value="Civil Engineering">Civil Engineering</option>
+                                    <option value="Pleasure">Pleasure</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Neture">Neture</option>
+                                    <option value="Final Exam">Final Exam</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Novel">Novel</option>
+
 
 								</select> 
                             </td>

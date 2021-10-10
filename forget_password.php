@@ -19,14 +19,14 @@
 
                 <tr>
                     <td>
-                   <label class="" Username : <input type="text" class="pop-table Memdel" id="username" name="username">
+                   <label class="label"> Username : <input type="text" class="pop-table Memdel big" id="username" name="username"></label>
                     <button type="submit" class="check">Check</button>
                     </td>
                 </tr>
- 
+                
                 <tr>
                     <td>
-                    Sliit Email: <input type="text" class="pop-table Memde" id="Sliit Email" name="Sliit Email">
+                    <label class="label">Sliit Email: <input type="text" class="pop-table Memde big" id="Sliit Email" name="Sliit Email"></label>
                     <button type="submit" class="check">Send Mail</button>
                     </td>
                 </tr>

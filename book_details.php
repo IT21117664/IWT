@@ -1,4 +1,8 @@
-<?php require('Header.php'); ?>
+<?php 
+    require('Header.php'); 
+    require('config.php');
+
+?>
 
 
 
