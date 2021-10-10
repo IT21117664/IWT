@@ -17,9 +17,10 @@
         if($password == $conform_password){ $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\", \"$NIC\" )";}
 
         else{
+            echo "
             <script>
             alert('Password does not match');
-            </script>
+            </script>";
 
         }
 
