@@ -20,15 +20,15 @@ function time() {
     var date_time = new Date();
     var month = date_time.getMonth();
     var date = date_time.getDate();
-    if (month > 10) {
-        month = 0 + month;
+    if (month < 10) {
+        month = '0' + month;
     }
 
-    if (day > 10) {
-        day = 0 + day;
+    if (date < 10) {
+        date = '0' + date;
     }
 
-    var Current_date = day + " - " + month + " - " + date_time.getFullYear();
+    var Current_date = date + " - " + month + " - " + date_time.getFullYear();
     //alert(date_time);
     var Current_time = date_time.getHours() + ":" + date_time.getMinutes() + ":" + date_time.getSeconds();
     document.getElementById("date_time").innerHTML = Current_date + " | " + Current_time;
@@ -78,8 +78,6 @@ function passwordCheck() {
     }
 }
 
-
-/* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
 
 function logout() {
     var r = new XMLHttpRequest();
