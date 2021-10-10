@@ -25,7 +25,6 @@ if (isset($_POST['fname'])) {
     if($avatar['size'] > 0) {
         move_uploaded_file($_FILES["avatar"]["tmp_name"],$target_file);
     }
-
     else{
         $img = NULL;
     }
@@ -33,10 +32,12 @@ if (isset($_POST['fname'])) {
         $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$firstName\", \"$lastName\",\"$nwi\", \"$regNO\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$password\", \"$NIC\" )";
         if ($con->query($regSql)) {
             header("Location: ./index.php?msg=success");
-        } else {
+        }
+         else {
             header("Location: ./index.php?msg=error");
         }
-    } else {
+    } 
+    else {
         echo "
             <script>
             alert('Password does not match');
@@ -217,7 +218,7 @@ if (isset($_SESSION['userID'])) {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <label for="pwdCheck" id="pwdCheck" onkeyup="passwordCheck()"></label>
+                                            <label for="pwdCheck" id="pwdCheck"></label>
                                         </td>
                                     </tr>
                                 </table>
