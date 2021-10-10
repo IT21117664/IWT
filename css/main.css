@@ -431,17 +431,17 @@
     .card_column {
         float: left;
         margin: 0.5%;
-        width: 14%;
+        width: 12%;
         padding: 15px;
     }
     
     .card_column .card {
         padding: 20px;
-        height: 200px;
+        height: 300px;
     }
     
     .card_column img {
-        height: 120px;
+        height: 150px;
     }
     
     .input_item {
