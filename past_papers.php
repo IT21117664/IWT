@@ -113,7 +113,7 @@
                 require('config.php');
 
 
-                $alldata20 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
+                $alldata20 = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata20 = $con->query($alldata20);
                 $n_all20 = $alldata20->num_rows;
                 $data20 = $alldata20->fetch_assoc();
@@ -125,7 +125,7 @@
 
                 $offset1 = (int)$pageno1 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2020-01-01' AND '2020-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2020-01-01' AND '2020-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -137,6 +137,7 @@
 
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -146,10 +147,10 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                           <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                            </div></a>
                         </div>
 
 
@@ -224,7 +225,7 @@
                 require('config.php');
 
 
-                $alldata19 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
+                $alldata19 = "SELECT i.Name, i.itemImgLoc, i.IID FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata19 = $con->query($alldata19);
                 $n_all19 = $alldata19->num_rows;
                 $data19 = $alldata19->fetch_assoc();
@@ -236,7 +237,7 @@
 
                 $offset2 = (int)$pageno2 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2019-01-01' AND '2019-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset2 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2019-01-01' AND '2019-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset2 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -257,7 +258,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -335,7 +336,7 @@
                 require('config.php');
 
 
-                $alldata18 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
+                $alldata18 = "SELECT i.Name, i.itemImgLoc, i.IID   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata18 = $con->query($alldata18);
                 $n_all18 = $alldata18->num_rows;
                 $data18 = $alldata18->fetch_assoc();
@@ -347,7 +348,7 @@
 
                 $offset3 = (int)$pageno3 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2018-01-01' AND '2018-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset3 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2018-01-01' AND '2018-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset3 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -368,7 +369,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -447,7 +448,7 @@
 
 
 
-                $alldata17 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
+                $alldata17 = "SELECT i.Name, i.itemImgLoc, i.IID   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata17 = $con->query($alldata17);
                 $n_all17 = $alldata17->num_rows;
                 $data17 = $alldata17->fetch_assoc();
@@ -459,7 +460,7 @@
 
                 $offset4 = (int)$pageno4 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2017-01-01' AND '2017-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset4 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2017-01-01' AND '2017-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset4 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -480,7 +481,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -559,7 +560,7 @@
 
 
 
-                $alldata16 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
+                $alldata16 = "SELECT i.Name, i.itemImgLoc, i.IID   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata16 = $con->query($alldata16);
                 $n_all16 = $alldata16->num_rows;
                 $data16 = $alldata16->fetch_assoc();
@@ -571,7 +572,7 @@
 
                 $offset5 = (int)$pageno5 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2016-01-01' AND '2016-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset5 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2016-01-01' AND '2016-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset5 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -592,7 +593,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>

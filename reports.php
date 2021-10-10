@@ -102,7 +102,7 @@
                 require('config.php');
 
 
-                $alldatana = "SELECT i.Name, i.itemImgLoc   FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
+                $alldatana = "SELECT i.Name, i.itemImgLoc, i.IID   FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
                 $alldata = $con->query($alldatana);
                 $n_all = $alldata->num_rows;
                 $dataar = $alldata->fetch_assoc();
@@ -114,7 +114,7 @@
 
                 $offset1 = (int)$pageno1 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -135,7 +135,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -210,7 +210,7 @@
                 require('config.php');
 
 
-                $alldatatrending = "SELECT i.Name, i.itemImgLoc  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
+                $alldatatrending = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
                 $alldatatrendings = $con->query($alldatatrending);
                 $n_alltr = $alldatatrendings->num_rows;
                 $datajrnl = $alldatatrendings->fetch_assoc();
@@ -223,7 +223,7 @@
                 $offset2 = (int)$pageno2 * $resultset_per_new_arrivals;
 
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -240,7 +240,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -310,7 +310,7 @@
 
 
 
-                $alldatasuges = "SELECT i.Name, i.itemImgLoc  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalDownload` ;";
+                $alldatasuges = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalDownload` ;";
                 $alldatasgs = $con->query($alldatasuges);
                 $n_allsgs = $alldatasgs->num_rows;
                 $datasgs = $alldatasgs->fetch_assoc();
@@ -324,7 +324,7 @@
 
 
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -346,7 +346,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
