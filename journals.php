@@ -18,12 +18,6 @@
     <?php
     require('Header.php');
 
-    if (isset($_SESSION['userID'])) {
-        $userName = $_SESSION['FName'];
-        logout();
-    } else {
-        logIn();
-    }
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
