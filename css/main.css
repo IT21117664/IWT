@@ -433,7 +433,8 @@
         margin: 0.5%;
         width: 15%;
         padding: 15px;
-        height: 200px;
+        max-height: 200px;
+        height: 100%;
     }
     
     .card_column img {
