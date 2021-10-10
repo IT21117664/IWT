@@ -436,11 +436,12 @@
     }
     
     .card_column .card {
+        padding: 20px;
         height: 200px;
     }
     
     .card_column img {
-        height: 100px;
+        height: 120px;
     }
     
     .input_item {
