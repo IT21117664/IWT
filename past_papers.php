@@ -242,6 +242,7 @@
 
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -353,6 +354,7 @@
 
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -465,6 +467,7 @@
 
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -577,6 +580,7 @@
 
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 

@@ -120,6 +120,7 @@
 
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -224,6 +225,7 @@
                     while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -328,6 +330,7 @@
                     while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
