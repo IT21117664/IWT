@@ -3,16 +3,23 @@
     require('config.php');
 
     if(isset($_POST['bname'])){
-        $BookName = $_POST['bname'];
-        $Auther = $_POST['auther'];
-        $Publisher = $_POST['publisher'];
-        $ISBN = $_POST['isbn'];
-        $Catagory = $_POST['catagory'];
-        $Copies = $_POST['copies'];
-        $Published = $_POST['published'];
-        $Date = $_POST['date'];
-        $Price = $_POST['price'];
+        $bookName = $_POST['bname'];
+        $auther = $_POST['auther'];
+        $publisher = $_POST['publisher'];
+        $isbn = $_POST['isbn'];
+        $catagory = $_POST['catagory'];
+        $copies = $_POST['copies'];
+        $published = $_POST['published'];
+        $date = $_POST['date'];
+        $price = $_POST['price'];
         
+    
+        $addnewbook = "INSERT INTO `book` (`BookName`, `Auther` , `Publisher` , `isbn` , `catagory` , `copies` , `published` , `date` , `price` ) VALUES ('$bookname', '$auther', '$publisher' , '$isbn' , '$catagory' , '$copies' , '$published' , '$date' , '$price' )";
+        if ($con->query($addnewbook)) {
+            header("Location: ./admin.php?msg=success");
+        } else {
+            header("Location: ./Add_new_book.php?msg=error");
+        }
     }
 
 
