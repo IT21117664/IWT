@@ -30,7 +30,7 @@ function time() {
 
     var Current_date = date + " - " + month + " - " + date_time.getFullYear();
     //alert(date_time);
-    var Current_time = date_time.getHours() + ":" + date_time.getMinutes() + ":" + date_time.getSeconds();
+    var Current_time = date_time.getHours() + " : " + date_time.getMinutes() + " : " + date_time.getSeconds();
     document.getElementById("date_time").innerHTML = Current_date + " | " + Current_time;
 }
 

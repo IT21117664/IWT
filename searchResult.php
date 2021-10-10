@@ -4,7 +4,7 @@
     if (isset($_POST['keyWord'])){
         $keyWord = $_POST['keyWord']; 
         
-        $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i , journal AS j , pastpaper AS pp , book AS b , report AS r , author AS a , publisher AS p WHERE i.Name LIKE '%$keyWord%' OR p.publisherName LIKE '%$keyWord%' OR pp.module LIKE '%$keyWord%' OR pp.Semester LIKE '%$keyWord%' OR pp.Year LIKE '%$keyWord%' OR a.authorName LIKE '%$keyWord%' GROUP BY i.Name ORDER BY i.IID ASC LIMIT 20;";
+        $sqlSearch = "SELECT i.Name, i.free, i.itemImgLoc,  i.IID FROM inventory AS i WHERE i.Name LIKE '%$keyWord%' GROUP BY i.Name ORDER BY i.IID ASC LIMIT 20;";
         $resultSearch = $con -> query($sqlSearch);
         if ($resultSearch -> num_rows > 0){
             while ($rowSearch = $resultSearch -> fetch_assoc()){
@@ -13,7 +13,7 @@
                 $bookImg = $rowSearch['itemImgLoc'];
                 $bookID = $rowSearch['IID'];
 
-                $output .= "<div class=\"column mini\"><div class=\"card\"><img src=\"$bookImg\" class=\"searchimg\" alt=\"$bookName\" id=\"$bookName\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">$bookName<br></p></div></div></div></div>";
+                $output .= "<a href=\"bookView.php?IID=$bookID\"><div class=\"column mini\"><div class=\"card\"><img src=\"$bookImg\" class=\"searchimg\" alt=\"$bookName\" id=\"$bookName\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">$bookName<br></p></div></div></div></div></a>";
             }
         }else{
             $output .= "<div class=\"column side\"></div><div class=\"column middle\"><div class=\"card\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">No any result found</p></div></div></div></div>";
@@ -22,7 +22,7 @@
         header("Location: ./index.php?error=search");
     }
 
-    $con -> close();
+    //$con -> close();
 
     require('Header.php');
 

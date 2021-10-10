@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Books</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/main.js"></script>
@@ -17,6 +17,7 @@
 
     <?php
     require('Header.php');
+    
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -35,14 +36,14 @@
     } else {
         $pageno3 = $_GET["p3"];
     }
-//---------------------------------------------------------------------------------
+    
+
     $adminShow = "";
     if (isset($_SESSION['userID'])){
         if ($_SESSION['userType'] == 1){
             $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
         }
     }
-//---------------------------------------------------------------------------------
 
 
     ?>
@@ -62,7 +63,6 @@
 
 
     <div class="row">
-        <div class="column side"></div>
         <div class="column middle">
             <form action="searchResult.php" class="input-container center" method="post">
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
@@ -81,7 +81,7 @@
         </div>
 
         <div class="row">
-            <div class="column micro"></div>
+
             <div class="column large">
 
                 <div class="card_column" style="width: 2%;">
@@ -192,7 +192,6 @@
         </div>
 
         <div class="row">
-            <div class="column micro"></div>
             <div class="column large">
 
                 <div class="card_column" style="width: 2%;">
@@ -291,7 +290,6 @@
         </div>
 
         <div class="row">
-            <div class="column micro"></div>
             <div class="column large">
 
                 <div class="card_column" style="width:2%;">
