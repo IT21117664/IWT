@@ -17,7 +17,7 @@
 
     {
         $addnewbook = "INSERT INTO `book` (`BookName`, `Auther` , `Publisher` , `isbn` , `catagory` , `copies` , `published` , `date` , `price` ) VALUES ('$bookname', '$auther', '$publisher' , '$isbn' , '$catagory' , '$copies' , '$published' , '$date' , '$price' )";
-        if ($con->query($reqnewbookSql)) {
+        if ($con->query($addnewbook)) {
             header("Location: ./admin.php?msg=success");
         } else {
             header("Location: ./Add_new_book.php?msg=error");
