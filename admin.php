@@ -2,15 +2,6 @@
     require('Header.php');
 
 //---------------------------------------------------------------------------------
-
-    if (isset($_SESSION['userID'])){
-        $userName = $_SESSION['FName'];
-        logout();
-    }else{
-        logIn();
-    }
-
-//---------------------------------------------------------------------------------
 $adminShow = "";
 if (isset($_SESSION['userID'])){
     if ($_SESSION['userType'] == 1){

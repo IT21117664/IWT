@@ -58,3 +58,13 @@
         </script>
 
     </header>
+
+    <?php
+
+    if (isset($_SESSION['userID'])){
+        $userName = $_SESSION['NWI'];
+        logout();
+    }else{
+        logIn();
+    }
+    ?>
