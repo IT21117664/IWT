@@ -15,39 +15,21 @@ function carousel() {
 
 //------------------------------ /Slider ---------------------------------------------
 
-//------------------------------ Books preview----------------------------------------
-
-/*
-var bookIMG = 0;
-
-function bookpreview() {
-    var i;
-    var x = document.getElementsByClassName("bookView");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    bookIMG++;
-    if (bookIMG > x.length) { bookIMG = 1 }
-    x[bookIMG - 1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-<<<<<<< HEAD
-
-//------------------------------ /Books preview----------------------------------------
-
-
-=======
-*/
-//------------------------------ /Books preview--------------------------------
-
-
-
-
-
 //------------------------------Time---------------------------------------------------
 function time() {
     var date_time = new Date();
-    var Current_date = date_time.getDay() + "-" + date_time.getMonth() + "-" + date_time.getFullYear();
+    var month = date_time.getMonth();
+    var date = date_time.getDate();
+    if (month > 10) {
+        month = 0 + month;
+    }
+
+    if (day > 10) {
+        day = 0 + day;
+    }
+
+    var Current_date = day + " - " + month + " - " + date_time.getFullYear();
+    //alert(date_time);
     var Current_time = date_time.getHours() + ":" + date_time.getMinutes() + ":" + date_time.getSeconds();
     document.getElementById("date_time").innerHTML = Current_date + " | " + Current_time;
 }
@@ -85,6 +67,18 @@ function closeWindow() {
 }
 
 
+function passwordCheck() {
+    var password = document.getElementById(pwd);
+    var confpassword = document.getElementById(confirmPwd);
+
+    if (password === confpassword) {
+        document.getElementById(pwdCheck) = "Password Matched";
+    } else {
+        document.getElementById(pwdCheck) = "Password does not Match";
+    }
+}
+
+
 /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
 
 function logout() {
@@ -104,15 +98,13 @@ function logout() {
 
 }
 
+
+function mailtyping() {
+    var tpMail = document.getElementById("email");
+    var autoMail = document.getElementById("sliitMail");
+
+    autoMail.value = tpMail.value;
+
+}
+
 /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
-
-
-
-// function() {
-//     document.getElementById("email").value;
-//     document.getElementById("email").value;
-
-//     function mail_auto(ev) {
-//         ev.target.value = ev.target.value.toUpperCase();
-//         document.getElementById('sliitMail').target.value = ev.target.value;
-//     }

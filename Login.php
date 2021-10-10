@@ -22,14 +22,14 @@
                     $_SESSION['DOB']=$row_login['DateOfBirth'];
                     $_SESSION['ProfileImg']=$row_login['profileImg'];
                     $_SESSION['userType'] = $row_login['userType'];
-                    header("Location: ./index.php?msg=success"); //uba page name eka daganin
+                    header("Location: ./user_page.php?msg=success");
                             
                 }else{
                     header("Location: ./index.php?msg=error");
                 }
 			}
 		}else{
-            header("Location: ./login.php?msg=error");
+            header("Location: ./index.php?msg=error");
         }
     }
 

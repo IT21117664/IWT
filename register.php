@@ -1,3 +1,41 @@
+<?php
+ if(isset($_POST['fname'])){
+        $firstName = $_POST['fname'];
+        $lastName = $_POST['lname'];
+        $nameWithInitials = $_POST['nwi'];
+        $sliitID = $_POST['regNO'];
+        $email = $_POST['email'];
+        $dateOfBorth = $_POST['dob'];
+        $mobile = $_POST['mobile'];
+        $address = $_POST['address'];
+        $imgLink = $_POST['imgLink'];
+        $sliitMail = $_POST['sliitMail'];
+        $password = $_POST['pwd'];
+        $conform_password = $_POST['conformPwd'];
+        $NIC = $_POST['NIC'];
+
+        if($password == $conform_password){
+             $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\", \"$NIC\" )";
+             if($con -> query($sqlLoadHistory)){
+                header("Location: ./index.php?msg=success");
+             }else{
+                header("Location: ./index.php?msg=error");
+             }
+        }
+
+        else{
+            echo"
+            <script>
+            alert('Password does not match');
+            </script>";
+
+        }
+
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +54,11 @@
         logIn();
     ?>
 
-        <div class="wrapper">
-            <div class="column mini"></div>
-            <div class="column middle">
+            <div class="wrapper">
                 <div class="card">
                     <div class="cardDetails">
                         <div class="row">
-                            <form action="#" method="post" class="form">
+                            <form method="post" class="form">
                                 <div class="personal">
                                     <div>
                                         <h2>Personal Information</h2>
@@ -47,32 +83,42 @@
                                         <tr>
                                             <td colspan="2">
                                                 <div class="input_item">
-                                                    <label for="nwi">Name With Initial</label>
+                                                    <label for="nwi">Name With Initials</label>
                                                     <input type="text" id="nwi" name="nwi" required class="txt input_box" />
                                                 </div>
                                             </td>
                                         </tr>
 
+                                        <tr colspan = '2'>
+                                            <td>
+                                            <div class="input_item">
+                                                    <label for="mail">E-mail</label>
+                                                    <input type="email" id="email" name="email" onkeyup="mailtyping()" required class="txt input_box" />
+                                                </div>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="regNO">SLIIT reg No.</label>
+                                                    <label for="regNO">SLIIT Reg No.</label>
                                                     <input type="text" id="regNO" name="regNO" required class="txt input_box" />
                                                 </div>
                                             </td>
+
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="mail">E-mail</label>
-                                                    <input type="email" id="email" name="email" required class="txt input_box" />
+                                                    <label for="NIC">NIC No.</label>
+                                                    <input type="text" id="NIC" name="NIC" required class="txt input_box" />
                                                 </div>
                                             </td>
+                                           
                                         </tr>
 
                                         <tr>
                                             <td>
                                                 <div class="input_item">
                                                     <label for="dob">Date Of Birth</label>
-                                                    <input type="text" id="dob" name="dob" required class="txt input_box" />
+                                                    <input type="date" id="dob" name="dob" required class="txt input_box" value="Today">
                                                 </div>
                                             </td>
                                             <td>
@@ -93,8 +139,8 @@
                                         <tr>
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="image-link">Upload Image</label>
-                                                    <input type="file" id="image-link" name="image-link" />
+                                                    <label for="imgLink">Upload Image</label>
+                                                    <input type="file" id="imgLink" name="imgLink" />
                                                 </div>
                                             </td>
                                         </tr>
@@ -125,9 +171,14 @@
 
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="conformpwd">Conform Password</label>
-                                                    <input type="password" name="conformpwd" id="conformpwd" required class="txt input_box" min="8" max="64" />
+                                                    <label for="conformPwd">Conform Password</label>
+                                                    <input type="password" name="conformPwd" id="conformPwd" required class="txt input_box" min="8" max="64" />
                                                 </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="pwdCheck" id="pwdCheck"></label>
                                             </td>
                                         </tr>
                                     </table>
@@ -142,10 +193,10 @@
                     </div>
                 </div>
             </div>
-        </div>
 
         <script>
             email.addEventListener("keypress", mail_auto);
+            pwdCheck.addEventListener("keypress", passwordCheck)
         </script>
 
         <?php include "Footer.php" ?>

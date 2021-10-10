@@ -16,7 +16,8 @@
 <body>
 
     <?php
-    require('header1.php');
+    require('Header.php');
+
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -45,18 +46,17 @@
             <li><a href="articles.php">Articles</a></li>
             <li><a href="past_papers.php">Past Papers</a></li>
             <li><a href="reports.php">Reports</a></li>
-            <li><a href="journals.php">Journals</a></li>
+            <li><a href="journals.php" class="active" >Journals</a></li>
         </ul>
     </div><br>
 
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-        <form action="searchResult.php" class="input-container center" method="post">
+            <form action="searchResult.php" class="input-container center" method="post">
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
                 <input type="submit" name="Search" value="Search" class="btn primary">
-        </form>
-            <a href="#" class="topRighta">Advanced Search</a>
+            </form>
             <div style="width: 100%;"></div>
         </div>
     </div>
@@ -95,10 +95,7 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
-
-                $alldatajournls = "SELECT i.Name, i.itemImgLoc   FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ;";
+                $alldatajournls = "SELECT i.Name, i.itemImgLoc, i.IID   FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ;";
                 $alldata = $con->query($alldatajournls);
                 $n_all = $alldata->num_rows;
                 $datajrnl = $alldata->fetch_assoc();
@@ -110,7 +107,7 @@
 
                 $offset1 = (int)$pageno1 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -122,6 +119,7 @@
 
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -130,8 +128,8 @@
 
 
 
-                        <div class="card_column">
-                            <div id="book1" class="card">
+                        <div class="card_column fixed">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -145,11 +143,6 @@
                     }
                 }
 
-                //}
-
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
@@ -177,7 +170,6 @@
     </div>
 
     <!-- New Arrivals -->
-
 
 
     <!-- trending -->
@@ -210,11 +202,7 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
-
-
-                $alldatatrending = "SELECT i.Name, i.itemImgLoc  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ;";
+                $alldatatrending = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ;";
                 $alldatatrendings = $con->query($alldatatrending);
                 $n_alltr = $alldatatrendings->num_rows;
                 $datajrnl = $alldatatrendings->fetch_assoc();
@@ -227,7 +215,7 @@
                 $offset2 = (int)$pageno2 * $resultset_per_new_arrivals;
 
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -235,6 +223,7 @@
                     while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -244,7 +233,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -258,11 +247,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width:2%;">
                     <div style="margin-top: 62px;">
@@ -304,7 +289,7 @@
 
                         if ($pageno3 != 0) {
                         ?>
-                            <a href="journals.php?p2=<?php echo $pageno3 - 1; ?>" class="page_next">❮</a>
+                            <a href="journals.php?p3=<?php echo $pageno3 - 1; ?>" class="page_next">❮</a>
                         <?php
                         } else {
                         }
@@ -317,10 +302,8 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
-                $alldatasuges = "SELECT i.Name, i.itemImgLoc  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalDownload` ;";
+                $alldatasuges = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalDownload` ;";
                 $alldatasgs = $con->query($alldatasuges);
                 $n_allsgs = $alldatasgs->num_rows;
                 $datasgs = $alldatasgs->fetch_assoc();
@@ -334,7 +317,7 @@
 
 
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -347,6 +330,7 @@
                     while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
 
                         $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
 
@@ -356,7 +340,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -370,11 +354,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 

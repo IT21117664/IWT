@@ -329,7 +329,7 @@
     }
     
     .bookView {
-        width: 100%;
+        width: 60%;
         margin-left: 30px;
     }
     
@@ -341,6 +341,10 @@
     
     .searchResult {
         font-weight: bold;
+    }
+    
+    .fixed {
+        min-height: 200px;
     }
     
     .bookData {
@@ -425,14 +429,15 @@
     }
     
     .card_column {
-        margin: 0.5%;
         float: left;
+        margin: 0.5%;
         width: 15%;
         padding: 15px;
+        height: 200px;
     }
     
     .card_column img {
-        max-width: 100px;
+        height: 20px;
     }
     
     .input_item {
@@ -443,20 +448,26 @@
     }
     
     .input_item label {
-        width: 200px;
+        max-width: 100px;
+        width: 100%;
     }
     
     .input_box {
-        margin-right: 10px;
         width: 100%;
     }
     
     .wrapper {
-        max-width: 100opx;
-        width: 100%;
+        margin: 5% 25%;
+        width: 50%;
     }
     
-    .form {
+    .wrapper tr {
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .wrapper td {
         width: 100%;
     }
     
@@ -715,6 +726,21 @@
     .column_list li {
         padding-bottom: 10px;
     }
+    
+    .card.set {
+        margin-left: 5%;
+        width: 90%;
+        padding-top: 0;
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+    
+    .card.title {
+        background-color: #fff;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+        padding-right: 0px;
+    }
     /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
     
     .btn_logout {
@@ -735,21 +761,6 @@
         font-weight: bold;
     }
     
-    .card.set {
-        margin-left: 5%;
-        width: 90%;
-        padding-top: 0;
-        padding-left: 0;
-        margin-bottom: 30px;
-    }
-    
-    .card.title {
-        background-color: #fff;
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-        width: 100%;
-        padding-right: 0px;
-    }
-    
     .button-card {
         width: 20%;
     }
@@ -759,7 +770,6 @@
         font-weight: bold;
         color: black;
     }
-    /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
     
     .radio {
         padding-left: 35px;

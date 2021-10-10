@@ -1,6 +1,5 @@
 <?php
         include "Header.php";
-        logIn();
     ?> 
 
     <h2 class="pop-titel">

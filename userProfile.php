@@ -1,13 +1,6 @@
 <?php
     require('config.php');
     require('Header.php');
-
-    if (isset($_SESSION['userID'])){
-        $userName = $_SESSION['FName'];
-        logout();
-    }else{
-        logIn();
-    }
 //--------------------------------------------------------------------------
 
     if (isset($_SESSION['userID'])){
@@ -80,7 +73,7 @@ if (isset($_SESSION['userID'])){
 
     <div class="nav">
         <ul>
-            <li><a href="#Library">Library</a></li>
+            <li><a class="logoL">Library</a></li>
             <li><a href="index.php">Home</a></li>
             <li><a href="articles.php">Articles</a></li>
             <li><a href="past_papers.php">Past Papers</a></li>
