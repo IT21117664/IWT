@@ -48,6 +48,13 @@
         $pageno5 = $_GET["p5"];
     }
 
+    $adminShow = "";
+    if (isset($_SESSION['userID'])) {
+        if ($_SESSION['userType'] == 1) {
+            $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
+        }
+    }
+
     ?>
 
     <div class="nav">
@@ -58,6 +65,7 @@
             <li><a href="past_papers.php" class="active">Past Papers</a></li>
             <li><a href="reports.php">Reports</a></li>
             <li><a href="journals.php">Journals</a></li>
+            <?php echo $adminShow; ?>
         </ul>
     </div><br>
 
@@ -140,10 +148,12 @@
 
 
                         <div class="card_column">
-                           <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div></a>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
+                            </a>
                         </div>
 
 
@@ -252,10 +262,11 @@
 
 
                         <div class="card_column">
-                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
 
@@ -364,10 +375,11 @@
 
 
                         <div class="card_column">
-                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
 
@@ -477,10 +489,11 @@
 
 
                         <div class="card_column">
-                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
 
@@ -590,10 +603,11 @@
 
 
                         <div class="card_column">
-                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
 
