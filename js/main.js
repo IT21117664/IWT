@@ -105,6 +105,14 @@ function logout() {
 
 }
 
+
+function mailtyping() {
+    var tpMail = document.getElementById("email");
+    var autoMail = document.getElementById("sliitMail");
+
+    autoMail.value = tpMail.value;
+}
+
 /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
 
 
