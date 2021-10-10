@@ -21,13 +21,13 @@ Implemented Functions: Book viewing
 Member name: J. A. D. S. K Nanayakkara
 contact no: 0729843041
 email address: it21119194@my.sliit.lk
-Implemented Functions: Lend Book  
+Implemented Functions:  Lend Book  (Admin Page)
 
-                        Retrieve Book 
+                        Retrieve Book  (Admin Page)
 
-                        New Member Validation
+                        New Member Validation (Admin Page)
 
-                        Member details
+                        Member details (Admin Page)
 
 
 Member Id:IT21104558
