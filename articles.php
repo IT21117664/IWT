@@ -65,7 +65,6 @@
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
                 <input type="submit" name="Search" value="Search" class="btn primary">
             </form>
-            <a href="#" class="topRighta">Advanced Search</a>
             <div style="width: 100%;"></div>
         </div>
     </div>
