@@ -436,12 +436,16 @@
     }
     
     .card_column .card {
-        padding: 20px;
+        padding-top: 20px;
         height: 300px;
     }
     
     .card_column img {
         height: 150px;
+    }
+    
+    .card_column label {
+        margin-bottom: 20px;
     }
     
     .input_item {
