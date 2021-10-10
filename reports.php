@@ -16,7 +16,14 @@
 <body>
 
     <?php
-    require('header1.php');
+    require('Header.php');
+
+    if (isset($_SESSION['userID'])) {
+        $userName = $_SESSION['FName'];
+        logout();
+    } else {
+        logIn();
+    }
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -53,10 +60,10 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-        <form action="searchResult.php" class="input-container center" method="post">
+            <form action="searchResult.php" class="input-container center" method="post">
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
                 <input type="submit" name="Search" value="Search" class="btn primary">
-        </form>
+            </form>
             <a href="#" class="topRighta">Advanced Search</a>
             <div style="width: 100%;"></div>
         </div>
@@ -95,9 +102,6 @@
                 <?php
                 require('config.php');
 
-
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
                 $alldatana = "SELECT i.Name, i.itemImgLoc   FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
                 $alldata = $con->query($alldatana);
@@ -146,11 +150,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
@@ -160,7 +160,7 @@
                         $max = $number_of_data - 1;
                         if ($pageno1 != $max) {
                         ?>
-                            <a href="reports.php?p1=<?php echo $pageno1 + 1; ?>"  class="page_next"> ❯</a>
+                            <a href="reports.php?p1=<?php echo $pageno1 + 1; ?>" class="page_next"> ❯</a>
                         <?php
                         } else {
                         }
@@ -211,10 +211,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
-
-
                 $alldatatrending = "SELECT i.Name, i.itemImgLoc  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
                 $alldatatrendings = $con->query($alldatatrending);
                 $n_alltr = $alldatatrendings->num_rows;
@@ -259,11 +255,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width:2%;">
                     <div style="margin-top: 62px;">
@@ -318,8 +310,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
                 $alldatasuges = "SELECT i.Name, i.itemImgLoc  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalDownload` ;";
                 $alldatasgs = $con->query($alldatasuges);
@@ -371,11 +361,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 

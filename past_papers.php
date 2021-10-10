@@ -16,7 +16,14 @@
 <body>
 
     <?php
-    require('header1.php');
+    require('Header.php');
+
+    if (isset($_SESSION['userID'])) {
+        $userName = $_SESSION['FName'];
+        logout();
+    } else {
+        logIn();
+    }
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -107,9 +114,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
-
                 $alldata20 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata20 = $con->query($alldata20);
                 $n_all20 = $alldata20->num_rows;
@@ -157,11 +161,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
@@ -225,9 +225,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
-
                 $alldata19 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata19 = $con->query($alldata19);
                 $n_all19 = $alldata19->num_rows;
@@ -275,11 +272,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
@@ -343,9 +336,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
-
                 $alldata18 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata18 = $con->query($alldata18);
                 $n_all18 = $alldata18->num_rows;
@@ -393,11 +383,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
@@ -461,8 +447,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
                 $alldata17 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata17 = $con->query($alldata17);
@@ -511,11 +495,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
@@ -579,8 +559,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
                 $alldata16 = "SELECT i.Name, i.itemImgLoc   FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID ;";
                 $alldata16 = $con->query($alldata16);
@@ -629,18 +607,14 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max5= $number_of_data16 - 1;
+                        $max5 = $number_of_data16 - 1;
                         if ($pageno5 != $max5) {
                         ?>
                             <a href="past_papers.php?p5=<?php echo $pageno5 + 1; ?>" class="page_next"> ❯</a>

@@ -16,7 +16,14 @@
 <body>
 
     <?php
-    require('header1.php');
+    require('Header.php');
+
+    if (isset($_SESSION['userID'])) {
+        $userName = $_SESSION['FName'];
+        logout();
+    } else {
+        logIn();
+    }
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -52,10 +59,10 @@
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-        <form action="searchResult.php" class="input-container center" method="post">
+            <form action="searchResult.php" class="input-container center" method="post">
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
                 <input type="submit" name="Search" value="Search" class="btn primary">
-        </form>
+            </form>
             <a href="#" class="topRighta">Advanced Search</a>
             <div style="width: 100%;"></div>
         </div>
@@ -94,9 +101,6 @@
                 <?php
                 require('config.php');
 
-
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
                 $alldatajournls = "SELECT i.Name, i.itemImgLoc   FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ;";
                 $alldata = $con->query($alldatajournls);
@@ -145,11 +149,6 @@
                     }
                 }
 
-                //}
-
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
@@ -177,7 +176,6 @@
     </div>
 
     <!-- New Arrivals -->
-
 
 
     <!-- trending -->
@@ -208,10 +206,6 @@
 
                 <?php
                 require('config.php');
-
-
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
 
                 $alldatatrending = "SELECT i.Name, i.itemImgLoc  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ;";
@@ -258,11 +252,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width:2%;">
                     <div style="margin-top: 62px;">
@@ -317,8 +307,6 @@
                 require('config.php');
 
 
-                //if (isset($_REQUEST['IID'])) {
-                //$IID = $_REQUEST['IID'];
 
                 $alldatasuges = "SELECT i.Name, i.itemImgLoc  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalDownload` ;";
                 $alldatasgs = $con->query($alldatasuges);
@@ -370,11 +358,7 @@
                     }
                 }
 
-                //}
 
-                //else {
-                //  header("Location: ./index.php?error=bookView");
-                // }
                 ?>
                 <div class="card_column" style="width: 2%;">
 
