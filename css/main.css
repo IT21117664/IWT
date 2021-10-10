@@ -343,6 +343,10 @@
         font-weight: bold;
     }
     
+    .fixed {
+        min-height: 200px;
+    }
+    
     .bookData {
         margin-left: 200px;
         text-align: left;
