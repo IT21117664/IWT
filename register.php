@@ -1,4 +1,6 @@
 <?php
+
+require('config.php');
 if (isset($_POST['fname'])) {
     $firstName = $_POST['fname'];
     $lastName = $_POST['lname'];
@@ -16,7 +18,7 @@ if (isset($_POST['fname'])) {
 
     if ($password == $conform_password) {
         $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\", \"$NIC\" )";
-        if ($con->query($sqlLoadHistory)) {
+        if ($con->query($regSql)) {
             header("Location: ./index.php?msg=success");
         } else {
             header("Location: ./index.php?msg=error");
