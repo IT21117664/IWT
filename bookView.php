@@ -96,13 +96,6 @@ if (isset($_SESSION['userID'])){
                         </tr>
 
                         <tr>
-                            <td class="title">Description</td>
-                            <td class="data">
-                                <?php echo $description; ?>
-                            </td>
-                        </tr>
-
-                        <tr>
                             <td class="title">Total Views</td>
                             <td class="data">
                                 <?php echo $totalView; ?>
@@ -113,6 +106,13 @@ if (isset($_SESSION['userID'])){
                             <td class="title">Total Downloads</td>
                             <td class="data">
                                 <?php echo $totalDownload; ?>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Description</td>
+                            <td class="data">
+                                <?php echo $description; ?>
                             </td>
                         </tr>
                     </table>
