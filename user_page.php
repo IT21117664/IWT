@@ -35,6 +35,14 @@
     } else {
         $pageno3 = $_GET["p3"];
     }
+//---------------------------------------------------------------------------------
+    $adminShow = "";
+    if (isset($_SESSION['userID'])){
+        if ($_SESSION['userType'] == 1){
+            $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
+        }
+    }
+//---------------------------------------------------------------------------------
 
 
     ?>
@@ -47,6 +55,7 @@
             <li><a href="past_papers.php">Past Papers</a></li>
             <li><a href="reports.php">Reports</a></li>
             <li><a href="journals.php">Journals</a></li>
+            <?php echo $adminShow; ?>
             
         </ul>
     </div><br>
