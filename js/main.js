@@ -68,18 +68,16 @@ function closeWindow() {
 
 
 function passwordCheck() {
-    var password = document.getElementById(pwd);
-    var confpassword = document.getElementById(confirmPwd);
+    var password = document.getElementById('pwd');
+    var confpassword = document.getElementById('confirmPwd');
 
     if (password === confpassword) {
-        document.getElementById(pwdCheck).innerHTML = "Password Matched";
+        document.getElementById('pwdCheck') = "Password Matched";
     } else {
-        document.getElementById(pwdCheck).innerHTML = "Password does not Match";
+        document.getElementById('pwdCheck') = "Password does not Match";
     }
 }
 
-
-/* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
 
 function logout() {
     var r = new XMLHttpRequest();
@@ -106,5 +104,3 @@ function mailtyping() {
     autoMail.value = tpMail.value;
 
 }
-
-/* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
