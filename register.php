@@ -38,13 +38,11 @@
         logIn();
     ?>
 
-        <div class="wrapper">
-            <div class="column mini"></div>
-            <div class="column middle">
+            <div class="wrapper">
                 <div class="card">
                     <div class="cardDetails">
                         <div class="row">
-                            <form action="#" method="post" class="form">
+                            <form action="index.php" method="post" class="form">
                                 <div class="personal">
                                     <div>
                                         <h2>Personal Information</h2>
@@ -69,7 +67,7 @@
                                         <tr>
                                             <td colspan="2">
                                                 <div class="input_item">
-                                                    <label for="nwi">Name With Initial</label>
+                                                    <label for="nwi">Name With Initials</label>
                                                     <input type="text" id="nwi" name="nwi" required class="txt input_box" />
                                                 </div>
                                             </td>
@@ -78,13 +76,13 @@
                                         <tr>
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="regNO">SLIIT reg No.</label>
+                                                    <label for="regNO">SLIIT Reg No.</label>
                                                     <input type="text" id="regNO" name="regNO" required class="txt input_box" />
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="mail">E-mail</label>
+                                                    <label for="mail">SLIIT mail</label>
                                                     <input type="email" id="email" name="email" onkeyup="mailtyping()" required class="txt input_box" />
                                                 </div>
                                             </td>
@@ -94,7 +92,7 @@
                                             <td>
                                                 <div class="input_item">
                                                     <label for="dob">Date Of Birth</label>
-                                                    <input type="text" id="dob" name="dob" required class="txt input_box" />
+                                                    <input type="date" id="dob" name="dob" required class="txt input_box" value="Today">
                                                 </div>
                                             </td>
                                             <td>
@@ -164,7 +162,6 @@
                     </div>
                 </div>
             </div>
-        </div>
 
         <script>
             email.addEventListener("keypress", mail_auto);
