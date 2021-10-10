@@ -63,8 +63,8 @@ if (isset($_SESSION['userID'])){
             <div class="column side"></div>
             <div class="column middle">
                 <form action="searchResult.php" method="post">
-                    <input type="text" class="txtSearch" placeholder="Search...">
-                    <input type="button" value="Search" class="btn primary">
+                    <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
+                    <input type="submit" value="Search" class="btn primary">
                 </form>
             </div>
         </div>
