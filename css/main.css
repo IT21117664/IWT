@@ -318,8 +318,8 @@
     }
     
     .column.large {
-        margin: 0%;
-        width: 100%;
+        margin: 0% 10%;
+        width: 80%;
         text-align: center;
     }
     
@@ -437,12 +437,13 @@
     }
     
     .card_column .card {
+        padding-right: 15px;
         padding-top: 20px;
         height: 300px;
     }
     
     .card_column img {
-        height: 150px;
+        height: 140px;
     }
     
     .card_column label {
