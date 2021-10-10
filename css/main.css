@@ -437,7 +437,7 @@
     }
     
     .card_column img {
-        height: 20px;
+        height: 300px;
     }
     
     .input_item {
@@ -785,7 +785,7 @@
         border-radius: 5px;
         font-size: 20px;
     }
-
+    
     .clearright {
         float: right;
         margin: 6px 3px;
@@ -810,15 +810,15 @@
         font-size: 15px;
         background-color: #14bb30;
     }
-
-    .label{
-        background-color:#ffffff;
-        border-radius:4px;
-        font-size:20px;
-        padding:15px;
-        margin:5px;
+    
+    .label {
+        background-color: #ffffff;
+        border-radius: 4px;
+        font-size: 20px;
+        padding: 15px;
+        margin: 5px;
     }
-
+    
     .big {
         font-size: 30px;
     }
