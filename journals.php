@@ -52,7 +52,7 @@
             <li><a href="articles.php">Articles</a></li>
             <li><a href="past_papers.php">Past Papers</a></li>
             <li><a href="reports.php">Reports</a></li>
-            <li><a href="journals.php">Journals</a></li>
+            <li><a href="journals.php" class="active" >Journals</a></li>
         </ul>
     </div><br>
 

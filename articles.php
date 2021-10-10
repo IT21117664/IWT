@@ -50,7 +50,7 @@
         <ul>
             <li><a class="logoL">Library</a></li>
             <li><a href="index.php">Home</a></li>
-            <li><a href="articles.php">Articles</a></li>
+            <li><a href="articles.php" class="active">Articles</a></li>
             <li><a href="past_papers.php">Past Papers</a></li>
             <li><a href="reports.php">Reports</a></li>
             <li><a href="journals.php">Journals</a></li>
