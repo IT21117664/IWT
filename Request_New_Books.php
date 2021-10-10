@@ -1,6 +1,13 @@
 <?php 
     require('Header.php'); 
     require('config.php');
+
+    if(isset($_POST['bname'])){
+        $BookName = $_POST['bname'];
+        $Auther = $_POST['auther'];
+        $Publisher = $_POST['publisher'];
+        
+    }
     
     ?>    
 
