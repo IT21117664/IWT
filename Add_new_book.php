@@ -2,6 +2,19 @@
     require('Header.php'); 
     require('config.php');
 
+    if(isset($_POST['bname'])){
+        $BookName = $_POST['bname'];
+        $Auther = $_POST['auther'];
+        $Publisher = $_POST['publisher'];
+        $ISBN = $_POST['isbn'];
+        $Catagory = $_POST['catagory'];
+        $Copies = $_POST['copies'];
+        $Published = $_POST['published'];
+        $Date = $_POST['date'];
+        $Price = $_POST['price'];
+        
+    }
+
 
 ?>        
 
@@ -108,9 +121,9 @@
                         </tr>
                         <tr>
                             <td colspan="3">
-                            <form action="/action_page.php">
+                            
                                 E-Book <input type="file" class="pop-retbar membar" id="myFile" name="filename" size="30" value="">
-                             </form>
+                             
                             </td> 
                         </tr>
                     </table>
