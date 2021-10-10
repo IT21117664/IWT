@@ -14,15 +14,7 @@
         <div>  
 
 		    <table class="pop-table Memdel">
-            <form  method="post">
-
-                <tr>
-                    <td>
-                   <label class="label"> Username : <input type="text" class="pop-table Memdel big" id="username" name="username"></label>
-                    <button type="submit" class="check">Check</button>
-                    </td>
-                </tr>
-                
+            <form  method="post" action="checkmail.php">
                 <tr>
                     <td>
                     <label class="label">Sliit Email: <input type="text" class="pop-table Memde big" id="Sliit Email" name="Sliit Email"></label>
