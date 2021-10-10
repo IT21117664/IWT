@@ -54,6 +54,7 @@ if (isset($_POST['fname'])) {
             exit();
             echo "Error while uploading your file."; 
         }
+    }
 }
 
 $adminShow = "";
