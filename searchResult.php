@@ -13,7 +13,7 @@
                 $bookImg = $rowSearch['itemImgLoc'];
                 $bookID = $rowSearch['IID'];
 
-                $output .= "<div class=\"column mini\"><div class=\"card\"><img src=\"$bookImg\" class=\"searchimg\" alt=\"$bookName\" id=\"$bookName\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">$bookName<br></p></div></div></div></div>";
+                $output .= "<a href=\"bookView.php?IID=$bookID\"><div class=\"column mini\"><div class=\"card\"><img src=\"$bookImg\" class=\"searchimg\" alt=\"$bookName\" id=\"$bookName\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">$bookName<br></p></div></div></div></div></a>";
             }
         }else{
             $output .= "<div class=\"column side\"></div><div class=\"column middle\"><div class=\"card\"><div class=\"cardDetails\"><div class=\"row\"><p class=\"searchResult\">No any result found</p></div></div></div></div>";
