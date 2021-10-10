@@ -5,12 +5,14 @@
     if (isset($_REQUEST['IID'])){
         $IID = $_REQUEST['IID'];
 
-        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description, p.publisherName, a.authorName, c.catName FROM inventory AS i , publisher AS p ,author AS a, category AS c WHERE i.pubID = p.pubID AND i.A_ID = a.AID AND i.CID = c.CID AND i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
+        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description, p.publisherName, a.authorName, c.catName, i.totalView, i.totalDownload FROM inventory AS i , publisher AS p ,author AS a, category AS c WHERE i.pubID = p.pubID AND i.A_ID = a.AID AND i.CID = c.CID AND i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
         $resultSelectBook = $con -> query($sqlSelectBook);
         if ($resultSelectBook -> num_rows > 0){
             while ($rowSelectBook = $resultSelectBook -> fetch_assoc()){
                 $Name = $rowSelectBook['Name'];
                 $free = $rowSelectBook['free'];
+                $totalView = $rowSelectBook['totalView'];
+                $totalDownload = $rowSelectBook['totalDownload'];
                 $publisherName = $rowSelectBook['publisherName'];
                 $authorName = $rowSelectBook['authorName'];
                 $pdfPath = $rowSelectBook['pdfPath'];
@@ -97,6 +99,20 @@ if (isset($_SESSION['userID'])){
                             <td class="title">Description</td>
                             <td class="data">
                                 <?php echo $description; ?>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Total Views</td>
+                            <td class="data">
+                                <?php echo $totalView; ?>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Total Downloads</td>
+                            <td class="data">
+                                <?php echo $totalDownload; ?>
                             </td>
                         </tr>
                     </table>
