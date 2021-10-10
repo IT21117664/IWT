@@ -9,3 +9,10 @@ Member Id:IT21117664
 Member name: M. M. P. R. M. Bandara
 contact no: 0713501969
 email address: it21117664@my.sliit.lk
+Implemented Functions: Book viewing  
+
+                        User details and history 
+
+                        Admin page 
+
+                        Search 
