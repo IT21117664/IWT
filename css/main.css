@@ -305,7 +305,7 @@
     }
     
     .column.micro {
-        width: 10%;
+        width: 15%;
     }
     
     .column.side {
@@ -318,7 +318,8 @@
     }
     
     .column.large {
-        width: 80%;
+        margin: 0%;
+        width: 100%;
         text-align: center;
     }
     
@@ -445,6 +446,7 @@
     }
     
     .card_column label {
+        color: #14bb30;
         margin-bottom: 20px;
     }
     

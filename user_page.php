@@ -37,7 +37,7 @@
         $pageno3 = $_GET["p3"];
     }
     
-    
+
     $adminShow = "";
     if (isset($_SESSION['userID'])){
         if ($_SESSION['userType'] == 1){
@@ -63,7 +63,6 @@
 
 
     <div class="row">
-        <div class="column side"></div>
         <div class="column middle">
             <form action="searchResult.php" class="input-container center" method="post">
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
@@ -82,7 +81,7 @@
         </div>
 
         <div class="row">
-            <div class="column micro"></div>
+
             <div class="column large">
 
                 <div class="card_column" style="width: 2%;">
@@ -193,7 +192,6 @@
         </div>
 
         <div class="row">
-            <div class="column micro"></div>
             <div class="column large">
 
                 <div class="card_column" style="width: 2%;">
@@ -292,7 +290,6 @@
         </div>
 
         <div class="row">
-            <div class="column micro"></div>
             <div class="column large">
 
                 <div class="card_column" style="width:2%;">
