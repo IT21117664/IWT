@@ -89,7 +89,7 @@ if (!isset($_GET["p1"])) {
 
             <div class="column large">
 
-                <div class="card_column" style="width: 2%;">
+
 
                     <div style="margin-top: 62px;">
 
@@ -105,7 +105,7 @@ if (!isset($_GET["p1"])) {
                         ?>
 
                     </div>
-                </div>
+            
 
                 <?php
                 require('config.php');
@@ -199,7 +199,6 @@ if (!isset($_GET["p1"])) {
         <div class="row">
             <div class="column large">
 
-                <div class="card_column" style="width: 2%;">
                     <div style="margin-top: 62px;">
                         <?php
 
@@ -212,7 +211,6 @@ if (!isset($_GET["p1"])) {
 
                         ?>
                     </div>
-                </div>
 
                 <?php
                 require('config.php');
@@ -297,7 +295,6 @@ if (!isset($_GET["p1"])) {
         <div class="row">
             <div class="column large">
 
-                <div class="card_column" style="width:2%;">
                     <div style="margin-top: 62px;">
                         <?php
 
@@ -310,7 +307,6 @@ if (!isset($_GET["p1"])) {
 
                         ?>
                     </div>
-                </div>
 
                 <?php
                 require('config.php');
