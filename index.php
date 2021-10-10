@@ -8,7 +8,7 @@
 
     require('config.php');
         $output = "";
-        $sqlBook = "SELECT i.Name, A.authorName, i.itemImgLoc,  i.IID FROM inventory AS i , book AS b , author AS a , publisher AS p WHERE i.IID = b.IID ORDER BY i.totalDownload ASC LIMIT 5;";
+        $sqlBook = "SELECT i.Name, A.authorName, i.itemImgLoc,  i.IID FROM inventory AS i , book AS b , author AS a WHERE i.IID = b.IID ORDER BY i.totalDownload ASC LIMIT 5;";
         $bookQuery = mysqli_query($con, $sqlBook);
         $bookData = mysqli_num_rows($bookQuery);
         if ($bookData > 0){

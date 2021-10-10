@@ -47,7 +47,17 @@ function bookpreview() {
 //------------------------------Time---------------------------------------------------
 function time() {
     var date_time = new Date();
-    var Current_date = date_time.getDate() + "-" + date_time.getMonth() + "-" + date_time.getFullYear();
+    var month = date_time.getMonth();
+    var date = date_time.getDate();
+    if (month > 10) {
+        month = 0 + month;
+    }
+
+    if (day > 10) {
+        day = 0 + day;
+    }
+
+    var Current_date = day + " - " + month + " - " + date_time.getFullYear();
     //alert(date_time);
     var Current_time = date_time.getHours() + ":" + date_time.getMinutes() + ":" + date_time.getSeconds();
     document.getElementById("date_time").innerHTML = Current_date + " | " + Current_time;
@@ -115,14 +125,3 @@ function mailtyping() {
 }
 
 /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
-
-
-
-// function() {
-//     document.getElementById("email").value;
-//     document.getElementById("email").value;
-
-//     function mail_auto(ev) {
-//         ev.target.value = ev.target.value.toUpperCase();
-//         document.getElementById('sliitMail').target.value = ev.target.value;
-//     }

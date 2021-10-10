@@ -12,8 +12,24 @@
         $sliitMail = $_POST['sliitMail'];
         $password = $_POST['pwd'];
         $conform_password = $_POST['confirmPwd'];
+        $NIC = $_POST['NIC'];
 
-    $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\" )";
+        if($password == $conform_password){
+             $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\", \"$NIC\" )";
+             if($con -> query($sqlLoadHistory)){
+                 //
+             }else{
+                 //
+             }
+        }
+
+        else{
+            echo"
+            <script>
+            alert('Password does not match');
+            </script>";
+
+        }
 
     }
 
