@@ -3,10 +3,19 @@
     require('config.php');
 
     if(isset($_POST['bname'])){
-        $BookName = $_POST['bname'];
-        $Auther = $_POST['auther'];
-        $Publisher = $_POST['publisher'];
-        
+        $bookname = $_POST['bname'];
+        $auther = $_POST['auther'];
+        $publisher = $_POST['publisher'];
+
+    }
+
+    {
+        $reqnewbookSql = "INSERT INTO `inventory` (`BookName`, `Auther` , `Publisher`) VALUES ('$bookname', '$auther', '$publisher')";
+        if ($con->query($reqnewbookSql)) {
+            header("Location: ./admin.php?msg=success");
+        } else {
+            header("Location: ./Request_New_Book.php?msg=error");
+        }
     }
     
     ?>    
