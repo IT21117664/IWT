@@ -136,7 +136,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -240,7 +240,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
@@ -344,7 +344,7 @@
 
 
                         <div class="card_column">
-                            <div id="book1" class="card">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
                                 <img src="<?php echo $itemImgLoc; ?>" alt="book img">
                                 <div><label><?php echo $Name; ?></label></div>
                             </div>
