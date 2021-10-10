@@ -4,8 +4,8 @@ require('config.php');
 if (isset($_POST['fname'])) {
     $firstName = $_POST['fname'];
     $lastName = $_POST['lname'];
-    $nameWithInitials = $_POST['nwi'];
-    $sliitID = $_POST['regNO'];
+    $nwi = $_POST['nwi'];
+    $regNO = $_POST['regNO'];
     $email = $_POST['email'];
     $dateOfBorth = $_POST['dob'];
     $mobile = $_POST['mobile'];
@@ -17,9 +17,9 @@ if (isset($_POST['fname'])) {
     $NIC = $_POST['NIC'];
 
     if ($password == $conform_password) {
-        $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\", \"$NIC\" )";
+        $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$firstName\", \"$lastName\",\"$nwi\", \"$regNO\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$password\", \"$NIC\" )";
         if ($con->query($regSql)) {
-            header("Location: ./index.php?msg=success");
+            //header("Location: ./index.php?msg=success");
         } else {
             header("Location: ./index.php?msg=error");
         }
