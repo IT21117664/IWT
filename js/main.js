@@ -20,11 +20,11 @@ function time() {
     var date_time = new Date();
     var month = date_time.getMonth();
     var date = date_time.getDate();
-    if (month > 10) {
+    if (month < 10) {
         month = 0 + month;
     }
 
-    if (day > 10) {
+    if (day < 10) {
         day = 0 + day;
     }
 
@@ -72,9 +72,9 @@ function passwordCheck() {
     var confpassword = document.getElementById(confirmPwd);
 
     if (password === confpassword) {
-        document.getElementById(pwdCheck) = "Password Matched";
+        document.getElementById(pwdCheck).innerHTML = "Password Matched";
     } else {
-        document.getElementById(pwdCheck) = "Password does not Match";
+        document.getElementById(pwdCheck).innerHTML = "Password does not Match";
     }
 }
 

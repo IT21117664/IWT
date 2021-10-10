@@ -178,7 +178,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label for="pwdCheck" id="pwdCheck"></label>
+                                                <label for="pwdCheck" id="pwdCheck" onkeyup="passwordCheck()"></label>
                                             </td>
                                         </tr>
                                     </table>
