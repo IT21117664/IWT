@@ -62,7 +62,7 @@
                                             <td>
                                                 <div class="input_item">
                                                     <label for="mail">E-mail</label>
-                                                    <input type="email" id="email" name="email" required class="txt input_box" />
+                                                    <input type="email" id="email" name="email" onkeyup="mailtyping()" required class="txt input_box" />
                                                 </div>
                                             </td>
                                         </tr>
