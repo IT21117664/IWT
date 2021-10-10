@@ -3,7 +3,7 @@
         $firstName = $_POST['fname'];
         $lastName = $_POST['lname'];
         $nameWithInitials = $_POST['nwi'];
-        $sliitID = $_POST['regNo'];
+        $sliitID = $_POST['regNO'];
         $email = $_POST['email'];
         $dateOfBorth = $_POST['dob'];
         $mobile = $_POST['mobile'];
@@ -11,7 +11,7 @@
         $imgLink = $_POST['imgLink'];
         $sliitMail = $_POST['sliitMail'];
         $password = $_POST['pwd'];
-        $conform_password = $_POST['confirmPwd'];
+        $conform_password = $_POST['conformPwd'];
         $NIC = $_POST['NIC'];
 
         if($password == $conform_password){
