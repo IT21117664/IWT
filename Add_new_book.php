@@ -85,7 +85,7 @@
                                 <label>Date</label>
                             </td>
                             <td>
-								<input type="date" class="pop-retbar membar"> 
+								<input type="date" class="pop-retbar membar" value="Today"> 
                             </td>
                         </tr>
 
