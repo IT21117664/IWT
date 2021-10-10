@@ -112,8 +112,8 @@ if (isset($_SESSION['userID'])){
                             $show = 1;
                         }
                         if ($show == 1){
-                            echo "<a href=\"./updatetotal.php?link=$pdfPath&IID=$IID\" class=\"btn primary\">Read</a>
-                            <a href=\"./updatetotal.php?link=$pdfPath&IID=$IID\" class=\"btn warning\">Download</a>";
+                            echo "<a href=\"./updatetotal.php?link=$pdfPath&IID=$IID&type=read\" class=\"btn primary\">Read</a>
+                            <a href=\"./updatetotal.php?link=$pdfPath&IID=$IID&type=download\" class=\"btn warning\">Download</a>";
                         }else{
                             echo "<a href=\"#\" class=\"btn primary\" disabled>Read</a>
                             <a href=\"#\" class=\"btn info\" disabled>Reserve</a>
