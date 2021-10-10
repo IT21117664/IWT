@@ -17,6 +17,7 @@
 
     <?php
     require('Header.php');
+    
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -35,14 +36,14 @@
     } else {
         $pageno3 = $_GET["p3"];
     }
-//---------------------------------------------------------------------------------
+
+    
     $adminShow = "";
     if (isset($_SESSION['userID'])){
         if ($_SESSION['userType'] == 1){
             $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
         }
     }
-//---------------------------------------------------------------------------------
 
 
     ?>
