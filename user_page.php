@@ -63,6 +63,7 @@
 
 
     <div class="row">
+        <div class="column side"></div>
         <div class="column middle">
             <form action="searchResult.php" class="input-container center" method="post">
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
