@@ -51,7 +51,6 @@
 <body>
     <?php
         include "Header.php";
-        logIn();
     ?>
 
             <div class="wrapper">
