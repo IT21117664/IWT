@@ -235,7 +235,6 @@ if (isset($_SESSION['userID'])) {
 
         <script>
             email.addEventListener("keypress", mail_auto);
-            pwdCheck.addEventListener("keypress", passwordCheck)
         </script>
 
         <?php include "Footer.php" ?>
