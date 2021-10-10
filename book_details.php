@@ -15,6 +15,15 @@
         $Price = $_POST['price'];
         
     }
+
+    {
+        $bookdetails = "INSERT INTO `inventory` (`BookName`, `Auther` , `Publisher` , `isbn` , `catagory` , `copies` , `published` , `date` , `price` ) VALUES ('$bookname', '$auther', '$publisher' , '$isbn' , '$catagory' , '$copies' , '$published' , '$date' , '$price' )";
+        if ($con->query($reqnewbookSql)) {
+            header("Location: ./admin.php?msg=success");
+        } else {
+            header("Location: ./book_details.php?msg=error");
+        }
+    }
 ?>
 
 
