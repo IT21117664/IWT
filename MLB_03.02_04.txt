@@ -51,4 +51,20 @@ Implemented Functions: Forget Password
                        Add New Book
                        Request New Book   
 
+Member Id:IT21106156
+Member name: U. D. P. S. Divyanjana
+contact no: 0763995297
+email address: it21106156@my.sliit.lk
+Implemented Functions: articles page
+
+
+                        journals page
+
+
+
+                        past_papers page
+
+
+
+                        reports page
                     
