@@ -10,24 +10,50 @@ if (isset($_POST['fname'])) {
     $dateOfBorth = $_POST['dob'];
     $mobile = $_POST['mobile'];
     $address = $_POST['address'];
-    $imgLink = $_POST['imgLink'];
+    $img = $_FILE['imgLink'];
     $sliitMail = $_POST['sliitMail'];
     $password = $_POST['pwd'];
     $conform_password = $_POST['conformPwd'];
     $NIC = $_POST['NIC'];
 
     if ($password == $conform_password) {
+        
+    $target_dir = "./img/avatar/";
+    $target_file = $target_dir . basename($_FILES["avatar"]["name"]);
+
+
+    if($avatar['size'] > 0) {
+        move_uploaded_file($_FILES["avatar"]["tmp_name"],$target_file);
+    }
+    else{
+        $img = NULL;
+    }
+
         $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$firstName\", \"$lastName\",\"$nwi\", \"$regNO\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$password\", \"$NIC\" )";
         if ($con->query($regSql)) {
             header("Location: ./index.php?msg=success");
-        } else {
+        }
+         else {
             header("Location: ./index.php?msg=error");
         }
-    } else {
+    } 
+    else {
         echo "
             <script>
             alert('Password does not match');
             </script>";
+    }
+
+
+    if($avatar['size'] > 0) {
+        if (move_uploaded_file($_FILES["avatar"]["tmp_name"],$target_file)){
+            $sqlUpdateProfile = "UPDATE `user` SET `phoneNumber`='$mob',`profileImg`='$target_file',`Address`='$address' WHERE `userID` = $userID;";
+            //echo "The file ". basename( $_FILES["avatar"]["name"]). " is uploaded.";
+        } 
+        else {
+            exit();
+            echo "Error while uploading your file."; 
+        }
     }
 }
 
@@ -193,7 +219,7 @@ if (isset($_SESSION['userID'])) {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <label for="pwdCheck" id="pwdCheck" onkeyup="passwordCheck()"></label>
+                                            <label for="pwdCheck" id="pwdCheck"></label>
                                         </td>
                                     </tr>
                                 </table>
@@ -211,7 +237,6 @@ if (isset($_SESSION['userID'])) {
 
         <script>
             email.addEventListener("keypress", mail_auto);
-            pwdCheck.addEventListener("keypress", passwordCheck)
         </script>
 
         <?php include "Footer.php" ?>
