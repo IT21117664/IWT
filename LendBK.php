@@ -65,14 +65,29 @@ if (isset($_POST['Lend_Book_Member_Find_Submit'])){
          }
      }
 
-
+    
 
 } 
 
 if (isset($_POST['lend_button'])){
-    $ldte=$_POST['Lend_Book_Member_Table_DueDate'];
-    echo $ldte;
+    $duedate=$_POST['Lend_Book_Member_Table_DueDate'];
+    $lenddate=$_POST['Lend_Book_Member_Table_LendDate'];
+    $memcode=$_POST['Lend_Book_Member_Table_RegNo'];
+    $bkcode=$_POST['bkcd'];
+
+    $sql_setLend ="INSERT INTO barrowreturns (status,issuedDate,dueDate,userID,IID,adminUserID)
+    VALUES (0,'$lenddate','$duedate','$memcode',$bkcode,2)";
     
+    $setLend=$con->query($sql_setLend);
+
+    if ($setLend===TRUE){
+        $lendmsg = "<script>alert(\"BOOK LENDED TO MEMBER ! \");</script>";
+        echo $lendmsg;
+        }
+        else{
+        $errodelend="Not DELETED";
+        echo "<script>console.log($errodelend);</script>";
+        }   
 }
 
 
@@ -195,8 +210,6 @@ if (isset($_POST['lend_button'])){
                                     </td>
                                     <td><input type="date" id="Lend_Book_Member_Table_DueDate"  name="Lend_Book_Member_Table_DueDate" class="pop-retbar membar" min="Today" required></td>
                                 </tr>
-                                
-                          </form>
                      </table> 
 
                     </div>
@@ -205,7 +218,9 @@ if (isset($_POST['lend_button'])){
                 <!-----------------------------Lend Button----------------------------------------------------------------------------------------------->
 
                 <div>
-                <form method="post"> 
+
+                    <input type="text" name="bkcd"  value="<?php echo $bkCode ?>" hidden>
+
                     <input type="submit" name="lend_button" name="lend_button" class="btn-pop popLend" value="Lend">
                     </form>
                     

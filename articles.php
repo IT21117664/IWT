@@ -51,17 +51,21 @@
         </ul>
     </div><br>
 
+
     <div class="row">
         <div class="column side"></div>
         <div class="column middle">
-            <input type="text" class="txtSearch" placeholder="Search...">
-            <input type="button" value="Search" class="btn primary">
+            <form action="searchResult.php" class="input-container center" method="post">
+                    <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
+                    <input type="submit" name="Search" value="Search" class="btn primary">
+            </form>
             <a href="#" class="topRighta">Advanced Search</a>
             <div style="width: 100%;"></div>
         </div>
     </div>
 
 
+    <!-- New Arrivals -->
 
     <div class="card set">
         <div class="card title">
@@ -175,10 +179,11 @@
         </div>
     </div>
 
+    <!-- New Arrivals -->
+
+
 
     <!-- trending -->
-
-
 
     <div class="card set">
         <div class="card title">
@@ -281,16 +286,11 @@
         </div>
     </div>
 
-
-
-
     <!-- trending -->
 
 
 
     <!-- Suggestions -->
-
-
 
     <div class="card set">
         <div class="card title">
@@ -398,7 +398,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Suggestions -->
 
