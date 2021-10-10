@@ -18,8 +18,8 @@
         $sqlupdateinventry = "INSERT INTO `user_inventry` (`IID`, `date`) VALUES ('$IID', '$dt')";
         $con -> query($sqlupdateinventry);
 
-
-        header("Location: $link");
+        echo $sqlupdateinventry;
+        //header("Location: $link");
 
 
     }
