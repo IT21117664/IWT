@@ -62,8 +62,10 @@ if (isset($_SESSION['userID'])){
         <div class="row">
             <div class="column side"></div>
             <div class="column middle">
-                <input type="text" class="txtSearch" placeholder="Search...">
-                <input type="button" value="Search" class="btn primary">
+                <form action="searchResult.php" method="post">
+                    <input type="text" class="txtSearch" placeholder="Search...">
+                    <input type="button" value="Search" class="btn primary">
+                </form>
             </div>
         </div>
 
