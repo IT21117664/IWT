@@ -14,7 +14,12 @@
             $con -> query($sqlupdatedownloads);
         }
 
-        header("Location: $link");
+        $dt = date("Y-m-d");
+        $sqlupdateinventry = "INSERT INTO `user_inventry` (`IID`, `date`) VALUES ('$IID', '$dt')";
+        $con -> query($sqlupdateinventry);
+
+        echo $sqlupdateinventry;
+        //header("Location: $link");
 
 
     }
