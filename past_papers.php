@@ -161,7 +161,7 @@
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max1 = $number_of_data20 - 1;
+                        $max1 = $number_of_data20 - 4;
                         if ($pageno1 != $max1) {
                         ?>
                             <a href="past_papers.php?p1=<?php echo $pageno1 + 1; ?>" class="page_next"> ❯</a>
@@ -273,7 +273,7 @@
                     <div style="margin-top: 62px;">
 
                         <?php
-                        $max2 = $number_of_data19 - 1;
+                        $max2 = $number_of_data19 - 4;
                         if ($pageno2 != $max2) {
                         ?>
                             <a href="past_papers.php?p2=<?php echo $pageno2 + 1; ?>" class="page_next"> ❯</a>
