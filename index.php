@@ -2,6 +2,10 @@
 <?php
     require('header.php');
 
+    if (isset($_SESSION['userID'])){
+        header("Location: user_page.php");
+    }
+
     require('config.php');
         $output = "";
         $sqlBook = "SELECT i.Name, A.authorName, i.itemImgLoc,  i.IID FROM inventory AS i , book AS b , author AS a , publisher AS p WHERE i.IID = b.IID ORDER BY i.totalDownload ASC LIMIT 5;";
