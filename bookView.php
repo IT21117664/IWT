@@ -35,6 +35,7 @@
         //
     }else{
         //echo $_SESSION['userID'];
+        echo "<script>alert('This is not a free book')</script>";
         header("Location: ./index.php");
     }
 //---------------------------------------------------------------------------------
