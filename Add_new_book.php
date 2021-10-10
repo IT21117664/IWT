@@ -105,7 +105,7 @@
                                 <label>Date</label>
                             </td>
                             <td>
-								<input type="date" class="pop-retbar membar" value="Today"> 
+								<input type="date" id="Add_New_Book" name="Add_New_Book" class="pop-retbar membar" value="Today" readonly> 
                             </td>
                         </tr>
 

@@ -60,6 +60,7 @@ today = yyyy + '-' + mm + '-' + dd;
 document.getElementById("Lend_Book_Member_Table_DueDate").setAttribute("min", today);
 document.getElementById("Lend_Book_Member_Table_LendDate").setAttribute("value", today);
 document.getElementById("Retrieve_Book_Table_DueDate").setAttribute("value", today);
+document.getElementById("Add_New_Book").setAttribute("value", today);
 
 function closeWindow() {
     window.opener;
