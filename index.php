@@ -1,7 +1,6 @@
 
 <?php
     require('header.php');
-    logIn();
 
     require('config.php');
         

@@ -5,12 +5,14 @@
     if (isset($_REQUEST['IID'])){
         $IID = $_REQUEST['IID'];
 
-        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description, p.publisherName, a.authorName, c.catName FROM inventory AS i , publisher AS p ,author AS a, category AS c WHERE i.pubID = p.pubID AND i.A_ID = a.AID AND i.CID = c.CID AND i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
+        $sqlSelectBook = "SELECT i.Name, i.free, i.itemImgLoc, i.pdfPath, i.Description, p.publisherName, a.authorName, c.catName, i.totalView, i.totalDownload FROM inventory AS i , publisher AS p ,author AS a, category AS c WHERE i.pubID = p.pubID AND i.A_ID = a.AID AND i.CID = c.CID AND i.IID = '$IID' ORDER BY i.IID ASC LIMIT 1;";
         $resultSelectBook = $con -> query($sqlSelectBook);
         if ($resultSelectBook -> num_rows > 0){
             while ($rowSelectBook = $resultSelectBook -> fetch_assoc()){
                 $Name = $rowSelectBook['Name'];
                 $free = $rowSelectBook['free'];
+                $totalView = $rowSelectBook['totalView'];
+                $totalDownload = $rowSelectBook['totalDownload'];
                 $publisherName = $rowSelectBook['publisherName'];
                 $authorName = $rowSelectBook['authorName'];
                 $pdfPath = $rowSelectBook['pdfPath'];
@@ -23,12 +25,6 @@
         header("Location: ./index.php?error=bookView");
     }
 
-    if (isset($_SESSION['userID'])){
-        $userName = $_SESSION['FName'];
-        logout();
-    }else{
-        logIn();
-    }
 
     //-----------------------------------------------------------------------------
 
@@ -100,13 +96,23 @@ if (isset($_SESSION['userID'])){
                         </tr>
 
                         <tr>
-                            <td class="title">Ratings</td>
+                            <td class="title">Total Views</td>
                             <td class="data">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
+                                <?php echo $totalView; ?>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Total Downloads</td>
+                            <td class="data">
+                                <?php echo $totalDownload; ?>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="title">Description</td>
+                            <td class="data">
+                                <?php echo $description; ?>
                             </td>
                         </tr>
                     </table>
@@ -118,9 +124,8 @@ if (isset($_SESSION['userID'])){
                             $show = 1;
                         }
                         if ($show == 1){
-                            echo "<a href=\"$pdfPath\" class=\"btn primary\">Read</a>
-                            <a href=\"$pdfPath\" class=\"btn info\">Reserve</a>
-                            <a href=\"$pdfPath\" class=\"btn warning\">Download</a>";
+                            echo "<a href=\"./updatetotal.php?link=$pdfPath&IID=$IID&type=read\" class=\"btn primary\">Read</a>
+                            <a href=\"./updatetotal.php?link=$pdfPath&IID=$IID&type=download\" class=\"btn warning\">Download</a>";
                         }else{
                             echo "<a href=\"#\" class=\"btn primary\" disabled>Read</a>
                             <a href=\"#\" class=\"btn info\" disabled>Reserve</a>
@@ -129,10 +134,6 @@ if (isset($_SESSION['userID'])){
                     ?>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-                <p style="margin-left: 30px;"><?php echo $description; ?></p>
         </div>
         
 
