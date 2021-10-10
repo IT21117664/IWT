@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Books</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/main.js"></script>
@@ -17,6 +17,7 @@
 
     <?php
     require('Header.php');
+    
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -35,14 +36,14 @@
     } else {
         $pageno3 = $_GET["p3"];
     }
-//---------------------------------------------------------------------------------
+    
+    
     $adminShow = "";
     if (isset($_SESSION['userID'])){
         if ($_SESSION['userType'] == 1){
             $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
         }
     }
-//---------------------------------------------------------------------------------
 
 
     ?>
