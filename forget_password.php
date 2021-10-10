@@ -14,7 +14,7 @@
         <div>  
 
 		    <table class="pop-table Memdel">
-            <form  method="post" action="checkmail.php">
+            <form  method="post" action="forget_password.php">
                 <tr>
                     <td>
                     <label class="label">Sliit Email: <input type="text" class="pop-table Memde big" id="Sliit Email" name="Sliit Email"></label>
