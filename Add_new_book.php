@@ -52,7 +52,7 @@
                                     <option value="Programming/Scripting Books">Programming/Scripting Books</option>
                                     <option value="Mid Exam">Mid Exam</option>
                                     <option value="Civil Engineering">Civil Engineering</option>
-                                    <option value="Pleasure">Pleasure</option>
+                                    <option value="Pleasure">Entertainment</option>
                                     <option value="Business">Business</option>
                                     <option value="Neture">Neture</option>
                                     <option value="Final Exam">Final Exam</option>
