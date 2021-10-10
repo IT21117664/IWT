@@ -51,9 +51,9 @@ if (isset($_SESSION['userID'])){
     <div class="row">
         <div class="column">
             <h3 align="left">Books</h3>
-            <input type="button" value="Add New Books" class="btn border colorprimary">
-            <input type="button" value="Book Detail" class="btn border colorprimary">
-            <input type="button" value="Request New Books" class="btn border colorprimary">
+            <a href="Add_new_book.php" target="blank" class="btn border colorprimary">Add New Books</a>
+            <a href="book_details.php" target="blank" class="btn border colorprimary">Book Details</a>
+            <a href="Request_New_Books.php" target="blank" class="btn border colorprimary">Request New Books</a>
         </div>
     </div>
 
@@ -65,9 +65,7 @@ if (isset($_SESSION['userID'])){
         </div>
     </div>
 
-    <div class="footer">
-        <p>E - book | Reports | Journals | Library Police | Contact Us<br>Copyright SLIIT &copy; 2021 - All right reserved</p>
-    </div>
+    <?php require('Footer.php'); ?>
     <script> carousel();</script>
 
 
