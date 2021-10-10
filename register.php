@@ -19,7 +19,7 @@ if (isset($_POST['fname'])) {
     if ($password == $conform_password) {
         $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$firstName\", \"$lastName\",\"$nwi\", \"$regNO\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$password\", \"$NIC\" )";
         if ($con->query($regSql)) {
-            //header("Location: ./index.php?msg=success");
+            header("Location: ./index.php?msg=success");
         } else {
             header("Location: ./index.php?msg=error");
         }
