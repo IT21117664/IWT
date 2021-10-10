@@ -51,6 +51,7 @@
 <body>
     <?php
         include "Header.php";
+        
     ?>
 
             <div class="wrapper">
