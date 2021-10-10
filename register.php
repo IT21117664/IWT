@@ -73,6 +73,14 @@
                                             </td>
                                         </tr>
 
+                                        <tr colspan = '2'>
+                                            <td>
+                                            <div class="input_item">
+                                                    <label for="mail">E-mail</label>
+                                                    <input type="email" id="email" name="email" onkeyup="mailtyping()" required class="txt input_box" />
+                                                </div>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <div class="input_item">
@@ -80,12 +88,14 @@
                                                     <input type="text" id="regNO" name="regNO" required class="txt input_box" />
                                                 </div>
                                             </td>
+
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="mail">SLIIT mail</label>
-                                                    <input type="email" id="email" name="email" onkeyup="mailtyping()" required class="txt input_box" />
+                                                    <label for="NIC">NIC No.</label>
+                                                    <input type="text" id="NIC" name="NIC" required class="txt input_box" />
                                                 </div>
                                             </td>
+                                           
                                         </tr>
 
                                         <tr>
