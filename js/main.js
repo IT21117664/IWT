@@ -111,6 +111,7 @@ function mailtyping() {
     var autoMail = document.getElementById("sliitMail");
 
     autoMail.value = tpMail.value;
+
 }
 
 /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
