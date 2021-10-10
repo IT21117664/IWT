@@ -443,6 +443,7 @@
     }
     
     .card_column img {
+        margin-bottom: 15px;
         height: 140px;
     }
     
