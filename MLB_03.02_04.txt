@@ -37,4 +37,13 @@ email address: it21104558@my.sliit.lk
 Implemented Functions: Forget Password
                        Book details
                        Add New Book
-                       Request New Book                       
+                       Request New Book   
+
+Member Id:IT21114526
+Member name: W. H. J. Buddhika
+contact no: 0715482923
+email address: it21104558@my.sliit.lk
+Implemented Functions: Forget Password
+                       Book details
+                       Add New Book
+                       Request New Book                     
