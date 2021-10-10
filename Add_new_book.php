@@ -13,9 +13,7 @@
         $date = $_POST['date'];
         $price = $_POST['price'];
         
-    }
-
-    {
+    
         $addnewbook = "INSERT INTO `book` (`BookName`, `Auther` , `Publisher` , `isbn` , `catagory` , `copies` , `published` , `date` , `price` ) VALUES ('$bookname', '$auther', '$publisher' , '$isbn' , '$catagory' , '$copies' , '$published' , '$date' , '$price' )";
         if ($con->query($addnewbook)) {
             header("Location: ./admin.php?msg=success");

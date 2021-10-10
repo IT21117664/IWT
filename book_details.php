@@ -14,9 +14,7 @@
         $Date = $_POST['date'];
         $Price = $_POST['price'];
         
-    }
-
-    {
+    
         $bookdetails = "INSERT INTO `inventory` (`BookName`, `Auther` , `Publisher` , `isbn` , `catagory` , `copies` , `published` , `date` , `price` ) VALUES ('$bookname', '$auther', '$publisher' , '$isbn' , '$catagory' , '$copies' , '$published' , '$date' , '$price' )";
         if ($con->query($bookdetails)) {
             header("Location: ./admin.php?msg=success");

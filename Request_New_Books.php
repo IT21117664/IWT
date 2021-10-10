@@ -6,15 +6,11 @@
         $bookname = $_POST['bname'];
         $auther = $_POST['auther'];
         $publisher = $_POST['publisher'];
-
-    }
-
-    {
         $reqnewbookSql = "INSERT INTO `inventory` (`BookName`, `Auther` , `Publisher`) VALUES ('$bookname', '$auther', '$publisher')";
         if ($con->query($reqnewbookSql)) {
             header("Location: ./admin.php?msg=success");
         } else {
-            header("Location: ./Request_New_Book.php?msg=error");
+            header("Location: ./Request_New_Books.php?msg=error");
         }
     }
     
