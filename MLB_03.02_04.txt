@@ -16,3 +16,12 @@ Implemented Functions: Book viewing
                         Admin page 
 
                         Search 
+
+Member Id:IT21104558
+Member name: W. H. J. Buddhika
+contact no: 0715482923
+email address: it21104558@my.sliit.lk
+Implemented Functions: Forget Password
+                       Book details
+                       Add New Book
+                       Request New Book                       
