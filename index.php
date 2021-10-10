@@ -3,6 +3,7 @@
     require('header.php');
 
     require('config.php');
+        $output = "";
         
         $sqlBook = "SELECT i.Name, A.authorName, i.itemImgLoc,  i.IID FROM inventory AS i , book AS b , author AS a , publisher AS p WHERE i.IID = b.IID ORDER BY i.totalDownload ASC LIMIT 5;";
         $bookQuery = mysqli_query($con, $sqlBook);
@@ -26,7 +27,7 @@
                         <div id=\"book1\" class=\"card\">
                             <img src=\"$bookImg\" alt=\"$bookName\">
                             <div><label>$booName</label></div>
-                            <div><label></label></div>
+                            <div><label>$bookAuthor</label></div>
                         </div>
                     </div>
                     </div>

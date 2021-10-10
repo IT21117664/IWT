@@ -1,3 +1,25 @@
+<?php
+ if(isset($_POST['fname'])){
+        $firstName = $_POST['fname'];
+        $lastName = $_POST['lname'];
+        $nameWithInitials = $_POST['nwi'];
+        $sliitID = $_POST['regNo'];
+        $email = $_POST['email'];
+        $dateOfBorth = $_POST['dob'];
+        $mobile = $_POST['mobile'];
+        $address = $_POST['address'];
+        $imgLink = $_POST['imgLink'];
+        $sliitMail = $_POST['sliitMail'];
+        $password = $_POST['pwd'];
+        $conform_password = $_POST['confirmPwd'];
+
+    $regSql = "INSERT INTO `user`( `FName`, `LName`, `NameWithInitial`, `userID`, `email`, `DateOfBirth`, `phoneNumber`, `Address`, `profileImg`, `Password`, `NIC`) VALUES (\"$fname\", \"$lname\",\"$nwi\", \"$regNo\", \"$email\", \"$dateOfBorth\", \"$mobile\", \"$address\", \"$imgLink\", \"$pwd\" )";
+
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +35,7 @@
 <body>
     <?php
         include "Header.php";
+        logIn();
     ?>
 
         <div class="wrapper">
@@ -92,8 +115,8 @@
                                         <tr>
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="image-link">Upload Image</label>
-                                                    <input type="file" id="image-link" name="image-link" />
+                                                    <label for="imgLink">Upload Image</label>
+                                                    <input type="file" id="imgLink" name="imgLink" />
                                                 </div>
                                             </td>
                                         </tr>
@@ -124,8 +147,8 @@
 
                                             <td>
                                                 <div class="input_item">
-                                                    <label for="conformpwd">Conform Password</label>
-                                                    <input type="password" name="conformpwd" id="conformpwd" required class="txt input_box" min="8" max="64" />
+                                                    <label for="conformPwd">Conform Password</label>
+                                                    <input type="password" name="conformPwd" id="conformPwd" required class="txt input_box" min="8" max="64" />
                                                 </div>
                                             </td>
                                         </tr>
