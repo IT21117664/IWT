@@ -27,6 +27,8 @@
                             <img src=\"$bookImg\" alt=\"$bookName\">
                             <div><label>$bookName</label></div>
                             <div><label></label></div>
+                            <div><label>$booName</label></div>
+                            <div><label>$bookAuthor</label></div>
                         </div>
                     </div>
                     </div>
