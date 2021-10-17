@@ -344,6 +344,108 @@
 
 
 
+    <!-- Recent -->
+
+      <div class="card set">
+        <div class="card title">
+            <h1>Recent</h1>
+        </div>
+
+        <div class="row">
+            <div class="column large">
+
+                    <div style="margin-top: 62px;">
+                        <?php
+
+                        if ($pageno4 != 0) {
+                        ?>
+                            <a href="user_page.php?p4=<?php echo $pageno4 - 1; ?>" class="page_next">❮</a>
+                        <?php
+                        } else {
+                        }
+
+                        ?>
+                    </div>
+
+                <?php
+                require('config.php');
+
+                $userId = $_SESSION["userID"];
+
+
+                $alldatasuges = "SELECT ui.IID, ui.`date` FROM user_inventry AS ui , inventory AS i WHERE i.IID = ui.IID AND ui.userID = '$userid' ORDER BY ui.`date`;";
+                $alldatasgs = $con->query($alldatasuges);
+                $n_allsgs = $alldatasgs->num_rows;
+                $datasgs = $alldatasgs->fetch_assoc();
+
+                $resultset_per_new_arrivals = 5;
+                $number_of_datasgs = ceil($n_allsgs / $resultset_per_new_arrivals);
+
+
+
+                $offset4 = (int)$pageno4 * $resultset_per_new_arrivals;
+
+
+
+                $sqlSelectBook = "SELECT ui.IID, ui.`date` FROM user_inventry AS ui , inventory AS i WHERE i.IID = ui.IID AND ui.userID = '$userId' ORDER BY ui.`date` DESC LIMIT 5 OFFSET " . $offset4 . ";";
+                $resultSelectBook = $con->query($sqlSelectBook);
+                if ($resultSelectBook->num_rows > 0) {
+                    $numberofrows = $resultSelectBook->num_rows;
+
+
+                    $resultset_per_new_arrivals = 5;
+                    $number_of_datasgs = ceil($numberofrows / $resultset_per_new_arrivals);
+
+
+                    while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
+
+                        $Name = $rowSelectBook['Name'];
+                        $IID = $rowSelectBook['IID'];
+                        $itemImgLoc = $rowSelectBook['itemImgLoc'];
+
+
+                ?>
+
+
+
+
+                        <div class="card_column">
+                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
+                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                <div><label><?php echo $Name; ?></label></div>
+                            </div>
+                        </div>
+
+
+
+
+
+                <?php
+                    }
+                }
+
+                ?>
+                <div class="card_column" style="width: 2%;">
+
+                    <div style="margin-top: 62px;">
+                        <?php
+                        $max4 = $number_of_datasgs - 1;
+                        if ($pageno4 != $max4) {
+                        ?>
+                            <a href="user_page.php?p3=<?php echo $pageno4 + 1; ?>" class="page_next"> ❯</a>
+                        <?php
+                        } else {
+                        }
+
+                        ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <?php
     require "Footer.php";
