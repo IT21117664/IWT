@@ -439,7 +439,7 @@
     .card_column .card {
         padding-right: 15px;
         padding-top: 20px;
-        height: 250px;
+        height: 275px;
     }
     
     .card_column img {
@@ -753,7 +753,6 @@
         width: 100%;
         padding-right: 0px;
     }
-    /* ---------------------------------------------------------------pasiya ----------------------------------------------------------------------*/
     
     .btn_logout {
         margin-top: 10px;
@@ -833,4 +832,8 @@
     
     .big {
         font-size: 30px;
+    }
+    
+    .cardnext {
+        margin-top: 120px;
     }

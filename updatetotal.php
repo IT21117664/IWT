@@ -19,7 +19,7 @@
         $con -> query($sqlupdateinventry);
 
         echo $sqlupdateinventry;
-        //header("Location: $link");
+        header("Location: $link");
 
 
     }

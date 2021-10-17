@@ -17,7 +17,7 @@
 
     <?php
     require('Header.php');
-
+    require('config.php');
 
     if (!isset($_GET["p1"])) {
         $pageno1 = 0;
@@ -65,7 +65,7 @@
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
                 <input type="submit" name="Search" value="Search" class="btn primary">
             </form>
-            <div style="width: 100%;"></div>
+            <!-- <div style="width: 100%;"></div> -->
         </div>
     </div>
 
@@ -83,7 +83,7 @@
 
                 <div class="card_column" style="width: 2%;">
 
-                    <div style="margin-top: 62px;">
+                    <div class="cardnext">
 
                         <?php
 
@@ -100,52 +100,35 @@
                 </div>
 
                 <?php
-                require('config.php');
-
 
                 $alldatana = "SELECT i.Name, i.itemImgLoc, i.IID   FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
                 $alldata = $con->query($alldatana);
                 $n_all = $alldata->num_rows;
-                $dataar = $alldata->fetch_assoc();
 
                 $resultset_per_new_arrivals = 5;
                 $number_of_data = ceil($n_all / $resultset_per_new_arrivals);
-
-
 
                 $offset1 = (int)$pageno1 * $resultset_per_new_arrivals;
 
                 $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
-                    $numberofrows = $resultSelectBook->num_rows;
-
-
 
                     while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
-
-
 
                         $Name = $rowSelectBook['Name'];
                         $IID = $rowSelectBook['IID'];
                         $itemImgLoc = $rowSelectBook['itemImgLoc'];
 
-
                 ?>
 
-
-
-
                         <div class="card_column">
-                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
-                                <div id="book1" class="card">
-                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                    <div><label><?php echo $Name; ?></label></div>
-                                </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>"></a>
+                            <div id="book1" class="card">
+                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                <div><label><?php echo $Name; ?></label></div>
+                            </div>
                         </div>
-
-
-
 
 
                 <?php
@@ -156,7 +139,7 @@
                 ?>
                 <div class="card_column" style="width: 2%;">
 
-                    <div style="margin-top: 62px;">
+                    <div class="cardnext">
 
                         <?php
                         $max = $number_of_data - 1;
@@ -195,7 +178,7 @@
             <div class="column large">
 
                 <div class="card_column" style="width: 2%;">
-                    <div style="margin-top: 62px;">
+                    <div class="cardnext">
                         <?php
 
                         if ($pageno2 != 0) {
@@ -210,18 +193,13 @@
                 </div>
 
                 <?php
-                require('config.php');
-
 
                 $alldatatrending = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ;";
                 $alldatatrendings = $con->query($alldatatrending);
                 $n_alltr = $alldatatrendings->num_rows;
-                $datajrnl = $alldatatrendings->fetch_assoc();
 
                 $resultset_per_new_arrivals = 5;
                 $number_of_datatr = ceil($n_alltr / $resultset_per_new_arrivals);
-
-
 
                 $offset2 = (int)$pageno2 * $resultset_per_new_arrivals;
 
@@ -229,7 +207,6 @@
                 $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
-                    $numberofrows = $resultSelectBook->num_rows;
 
                     while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
 
@@ -240,15 +217,12 @@
 
                 ?>
 
-
-
-
                         <div class="card_column">
-                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
-                                <div id="book1" class="card">
-                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                    <div><label><?php echo $Name; ?></label></div>
-                                </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>"></a>
+                            <div id="book1" class="card">
+                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                <div><label><?php echo $Name; ?></label></div>
+                            </div>
                         </div>
 
 
@@ -262,7 +236,7 @@
 
                 ?>
                 <div class="card_column" style="width:2%;">
-                    <div style="margin-top: 62px;">
+                    <div class="cardnext">
                         <?php
                         $max2 = $number_of_datatr - 1;
                         if ($pageno2 != $max2) {
@@ -296,7 +270,7 @@
             <div class="column large">
 
                 <div class="card_column" style="width:2%;">
-                    <div style="margin-top: 62px;">
+                    <div class="cardnext">
                         <?php
 
                         if ($pageno3 != 0) {
@@ -311,33 +285,19 @@
                 </div>
 
                 <?php
-                require('config.php');
-
-
 
                 $alldatasuges = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalDownload` ;";
                 $alldatasgs = $con->query($alldatasuges);
                 $n_allsgs = $alldatasgs->num_rows;
-                $datasgs = $alldatasgs->fetch_assoc();
 
                 $resultset_per_new_arrivals = 5;
                 $number_of_datasgs = ceil($n_allsgs / $resultset_per_new_arrivals);
 
-
-
                 $offset3 = (int)$pageno3 * $resultset_per_new_arrivals;
-
-
 
                 $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `report` AS r , `inventory` AS i WHERE i.IID = r.IID ORDER BY `totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
-                    $numberofrows = $resultSelectBook->num_rows;
-
-
-                    $resultset_per_new_arrivals = 5;
-                    $number_of_datasgs = ceil($numberofrows / $resultset_per_new_arrivals);
-
 
                     while ($rowSelectBook = $resultSelectBook->fetch_assoc()) {
 
@@ -347,34 +307,25 @@
 
 
                 ?>
-
-
-
-
                         <div class="card_column">
-                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
-                                <div id="book1" class="card">
-                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                    <div><label><?php echo $Name; ?></label></div>
-                                </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>"></a>
+                            <div id="book1" class="card">
+                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                <div><label><?php echo $Name; ?></label></div>
+                            </div>
                         </div>
-
-
-
-
 
                 <?php
                     }
                 }
 
-
                 ?>
                 <div class="card_column" style="width: 2%;">
 
-                    <div style="margin-top: 62px;">
+                    <div class="cardnext">
                         <?php
                         $max3 = $number_of_datasgs - 1;
-                        if ($pageno3 != $max2) {
+                        if ($pageno3 != $max3) {
                         ?>
                             <a href="reports.php?p3=<?php echo $pageno3 + 1; ?>" class="page_next"> ❯</a>
                         <?php
