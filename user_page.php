@@ -131,10 +131,10 @@
 
                         <div class="card_column">
                             <a href="./bookView.php?IID=<?php echo $IID; ?>">
-                            <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
                 <?php
@@ -225,10 +225,10 @@
 
                         <div class="card_column">
                             <a href="./bookView.php?IID=<?php echo $IID; ?>">
-                            <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
 
@@ -311,10 +311,10 @@
                 ?>
                         <div class="card_column">
                             <a href="./bookView.php?IID=<?php echo $IID; ?>">
-                            <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
                 <?php
@@ -342,11 +342,11 @@
         </div>
     </div>
 
-<!-- Suggestions -->
+    <!-- Suggestions -->
 
     <!-- Recent -->
 
-      <div class="card set">
+    <div class="card set">
         <div class="card title">
             <h1>Recent</h1>
         </div>
@@ -354,18 +354,18 @@
         <div class="row">
             <div class="column large">
 
-                    <div style="margin-top: 62px;">
-                        <?php
+                <div style="margin-top: 62px;">
+                    <?php
 
-                        if ($pageno4 != 0) {
-                        ?>
-                            <a href="user_page.php?p4=<?php echo $pageno4 - 1; ?>" class="page_next">❮</a>
-                        <?php
-                        } else {
-                        }
+                    if ($pageno4 != 0) {
+                    ?>
+                        <a href="user_page.php?p4=<?php echo $pageno4 - 1; ?>" class="page_next">❮</a>
+                    <?php
+                    } else {
+                    }
 
-                        ?>
-                    </div>
+                    ?>
+                </div>
 
                 <?php
                 require('config.php');
@@ -410,10 +410,11 @@
 
 
                         <div class="card_column">
-                        <a href="./bookView.php?IID=<?php echo $IID; ?>"> <div id="book1" class="card">
-                                <img src="<?php echo $itemImgLoc; ?>" alt="book img">
-                                <div><label><?php echo $Name; ?></label></div>
-                            </div>
+                            <a href="./bookView.php?IID=<?php echo $IID; ?>">
+                                <div id="book1" class="card">
+                                    <img src="<?php echo $itemImgLoc; ?>" alt="book img">
+                                    <div><label><?php echo $Name; ?></label></div>
+                                </div>
                         </div>
 
 
