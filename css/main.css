@@ -673,6 +673,10 @@
         cursor: pointer;
     }
     
+    #lend_button {
+        margin-top: -10px;
+    }
+    
     .mem {
         padding: 10px 20px;
         margin-right: 7px;
