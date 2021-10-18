@@ -6,7 +6,11 @@ $adminShow = "";
 if (isset($_SESSION['userID'])){
     if ($_SESSION['userType'] == 1){
         $adminShow = "<li><a href=\"admin.php\">Admin</a></li>";
+    }else{
+        header("Location: ./index.php");
     }
+}else{
+    header("Location: ./index.php");
 }
 //---------------------------------------------------------------------------------
 ?>
