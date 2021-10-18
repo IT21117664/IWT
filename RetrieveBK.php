@@ -68,6 +68,7 @@ else{
 }
 
 if(isset($_POST['retrieve_button'])){
+
 $checkBK = array($_POST['Retrieve_Book_Table_Report_Status']);
 foreach($checkBK as $index => $ids){
     $sql_retrieve = "UPDATE barrowreturns
@@ -76,6 +77,17 @@ foreach($checkBK as $index => $ids){
 
     $ret = $con->query($sql_retrieve);
 }
+
+    $userID = $_POST['userID'];
+    $checkBK = $_POST['Retrieve_Book_Table_Report_Status'];
+    foreach($checkBK as $index => $ids){
+        $sql_retrieve = "UPDATE barrowreturns
+        SET submitedDate='',status=1
+        WHERE IID=$ids AND userID = '$userID'";
+
+        $ret = $con->query($sql_retrieve);
+    }
+
 
 if ($ret === TRUE){
     $retmsg = "<script>alert(\"Book Retreived by Member ! \");</script>";
@@ -172,6 +184,7 @@ if ($ret === TRUE){
                             <form action="./RetrieveBK.php" method="POST">
                             <?php echo $lendBkTB; ?>
                             <input type="hidden" name="checkedField" value="" id="checkedField">
+                            <input type="hidden" name="userID" value="<?php echo $retmemID; ?>">
                         </table>
                     </div>
                 </div>
