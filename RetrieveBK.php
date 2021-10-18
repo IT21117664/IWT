@@ -10,6 +10,9 @@ $regno="";
 $email="";
 $lendDate="";
 
+if (isset($_POST['retrieve_button'])){
+    print_r($_POST['Retrieve_Book_Table_Report_Status']);
+}
 
 if (isset($_POST['Retrieve_Book_Member_Find_Id'])){
 
@@ -22,14 +25,14 @@ GROUP BY LenRet.userID";
 
 $sql_bk = "SELECT LenRet.issuedDate,inve.Name,LenRet.IID,lenRet.fine,LenRet.dueDate
 FROM barrowreturns LenRet, inventory inve 
-WHERE inve.IID=lenRet.IID AND LenRet.userID=$retmemID
+WHERE inve.IID=lenRet.IID AND LenRet.userID=$retmemID AND status=0
 ORDER BY IID";
 //$lendBkTB = "";
 
 $resultMem= $con->query($sql_memdel);
 if ($resultMem->num_rows>0){
     while($row2=$resultMem->fetch_assoc()){
-        echo "Code No :    ".$row2["userID"]."  Book Name :  ".$row2["FName"]."   Author Name  ".$row2["LName"]." ISBN  :  ".$row2["email"]."<br><br>";
+       // echo "Code No :    ".$row2["userID"]."  Book Name :  ".$row2["FName"]."   Author Name  ".$row2["LName"]." ISBN  :  ".$row2["email"]."<br><br>";
         $fname.=$row2["FName"];
         $lname.=$row2["LName"];
         $regno.=$row2["userID"];
@@ -43,13 +46,13 @@ $resultBk = $con->query($sql_bk);
 if ($resultBk->num_rows>0){
     while($row1=$resultBk->fetch_assoc()){
         //echo "Code No :    ".$row1["IID"]."  Book Name :  ".$row1["Name"]."   Author Name  ".$row1["fine"]." ISBN  :  ".$row1["issuedDate"]."<br><br>";
-        $userID=$row1["IID"];
+        $itemID=$row1["IID"];
         $BKname=$row1["Name"];
         $fine=$row1["fine"];
         $lendDate=$row1["issuedDate"];
-        $dueDate.=$row1["dueDate"];
+        $dueDate=$row1["dueDate"];
 
-        $lendBkTB .= " <tr><td>$userID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" name=\"Retrieve_Book_Table_Report_Status\"></td></tr>";
+        $lendBkTB .= " <tr><td>$itemID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" value=\"$itemID\" name=\"Retrieve_Book_Table_Report_Status[]\"></td></tr>";
     }
 }
 
@@ -117,13 +120,10 @@ else{
                                 </tr>
                                 <tr>
                                     <td>
-                                        <Label>Lend Date</Label>
-                                    </td>
-                                    <td><input type="tex" class="pop-retbar membar"  id="Retrieve_Book_Table_LendDate" name="Retrieve_Book_Table_LendDate" value="<?php echo$lendDate; ?>" autocomplete="" readonly></td>
-                                    <td>
                                         <Label>Date</Label>
                                     </td>
-                                    <td><input type="date" class="pop-retbar membar"  id="Retrieve_Book_Table_DueDate" name="Retrieve_Book_Table_DueDate" value="Today" readonly></td>
+                                    <td><input type="date" class="pop-retbar membar"  id="Retrieve_Book_Table_submitDate" name="Retrieve_Book_Table_submitDate" value="Today"  readonly></td>
+                                   
                                 </tr>
 
 
@@ -146,14 +146,15 @@ else{
                                 <th>Fine</th>
                                 <th>Retrieve</th>
                             </tr>
+                            <form action="./RetrieveBK.php" method="POST">
                             <?php echo $lendBkTB; ?>
+                            <input type="hidden" name="checkedField" value="" id="checkedField">
                         </table>
                     </div>
                 </div>
                 <!-----------------------------Retrieve Button----------------------------------------------------------------------------------------------->
 
                 <div>
-                    <form>
                     <input type="submit" id="retrieve_button" name="retrieve_button" class="btn-pop" value="Retrieve">
                     </form>
                     

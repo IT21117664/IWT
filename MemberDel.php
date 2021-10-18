@@ -16,7 +16,7 @@ $memberdel=$_POST['Member_Details_Find_Id'];
 
 $sql="SELECT  i.FName,i.LName,i.Address,i.userID,i.email,i.NIC,i.phoneNumber
 FROM user i
-WHERE userID = '$memberdel' OR NIC='$memberdel'";
+WHERE (userID = '$memberdel' OR NIC='$memberdel') AND memberValid=1";
 
 $memberDetails = $con->query($sql);
 

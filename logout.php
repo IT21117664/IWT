@@ -5,4 +5,6 @@ session_destroy();
 
 echo "Logout Successfully.";
 
+header("Location: ./index.php");
+
 ?>

@@ -47,7 +47,7 @@
                     global $userName;
                     echo "<div class=\"topRight\"><a href=\"./userProfile.php\">
                             <span class=\"username\">$userName</span></a>
-                            <button class=\"btn_logout\" onclick=\"logout();\">Logout</button> </br>
+                            <a href=\"logout.php\" class=\"btn primary\">Logout</a> </br>
                         </div>";
                 }
         ?>
