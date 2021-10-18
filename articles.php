@@ -68,7 +68,6 @@
                 <input type="submit" name="Search" value="Search" class="btn primary">
 
             </form>
-            <!-- <div style="width: 100%;"></div> -->
         </div>
     </div>
 
