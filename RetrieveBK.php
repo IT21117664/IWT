@@ -47,9 +47,9 @@ if ($resultBk->num_rows>0){
         $BKname=$row1["Name"];
         $fine=$row1["fine"];
         $lendDate=$row1["issuedDate"];
-        $dueDate.=$row1["dueDate"];
+        $dueDate=$row1["dueDate"];
 
-        $lendBkTB .= " <tr><td>$userID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" name=\"Retrieve_Book_Table_Report_Status\"></td></tr>";
+        $lendBkTB .= " <tr><td>$userID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" value=\"$userID\" name=\"Retrieve_Book_Table_Report_Status\"></td></tr>";
     }
 }
 
