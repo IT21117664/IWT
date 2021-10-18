@@ -229,7 +229,7 @@ if (!isset($_GET["p1"])) {
                 $offset2 = (int)$pageno2 * $resultset_per_new_arrivals;
 
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `book` AS b , `inventory` AS i WHERE i.IID = b.IID ORDER BY `totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `book` AS b , `inventory` AS i WHERE i.IID = b.IID ORDER BY i.totalView DESC LIMIT 5 OFFSET " . $offset2 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
