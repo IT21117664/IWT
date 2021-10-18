@@ -392,7 +392,8 @@
                 $sqlSelectBook = "SELECT ui.IID, ui.date, i.Name, i.itemImgLoc FROM user_inventry AS ui , inventory AS i WHERE i.IID = ui.IID AND ui.userID = '$userId' ORDER BY ui.date DESC LIMIT 5 OFFSET " . $offset4 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
-                
+                    
+                    $numberofrows = $resultSelectBook->num_rows;
                     $resultset_per_new_arrivals = 5;
                     $number_of_datasgs = ceil($numberofrows / $resultset_per_new_arrivals);
 
