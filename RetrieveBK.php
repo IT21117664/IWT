@@ -68,12 +68,12 @@ else{
 }
 
 if(isset($_POST['retrieve_button'])){
-
+    $todateBK = $_POST['Retrieve_Book_Table_submitDate'];
     $userID = $_POST['userID'];
     $checkBK = $_POST['Retrieve_Book_Table_Report_Status'];
     foreach($checkBK as $index => $ids){
         $sql_retrieve = "UPDATE barrowreturns
-        SET submitedDate='',status=1
+        SET submitedDate='$todateBK' ,status=1
         WHERE IID=$ids AND userID = '$userID'";
 
         $ret = $con->query($sql_retrieve);
@@ -148,7 +148,7 @@ if ($ret === TRUE){
                                     <td>
                                         <Label>Date</Label>
                                     </td>
-                                    <td><input type="date" class="pop-retbar membar"  id="Retrieve_Book_Table_submitDate" name="Retrieve_Book_Table_submitDate" value="Today"  readonly></td>
+                                    <td><input type="date" class="pop-retbar membar"  id="Retrieve_Book_Table_submitDate" name="Retrieve_Book_Table_submitDate" ></td>
                                    
                                 </tr>
 
