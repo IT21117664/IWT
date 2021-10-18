@@ -56,7 +56,7 @@ if (isset($_POST['Lend_Book_Member_Find_Submit'])){
    
      $sql_mem="SELECT userID, FName, LName, email
      FROM user
-     WHERE userID=$memInput";
+     WHERE userID='$memInput'";
 
      $resultMem=$con->query($sql_mem);
 
