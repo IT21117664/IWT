@@ -120,13 +120,10 @@ else{
                                 </tr>
                                 <tr>
                                     <td>
-                                        <Label>Lend Date</Label>
-                                    </td>
-                                    <td><input type="tex" class="pop-retbar membar"  id="Retrieve_Book_Table_LendDate" name="Retrieve_Book_Table_LendDate" value="<?php echo$lendDate; ?>" autocomplete="" readonly></td>
-                                    <td>
                                         <Label>Date</Label>
                                     </td>
-                                    <td><input type="date" class="pop-retbar membar"  id="Retrieve_Book_Table_DueDate" name="Retrieve_Book_Table_DueDate" value="Today" readonly></td>
+                                    <td><input type="date" class="pop-retbar membar"  id="Retrieve_Book_Table_submitDate" name="Retrieve_Book_Table_submitDate" value="Today"  readonly></td>
+                                   
                                 </tr>
 
 
