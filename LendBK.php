@@ -6,18 +6,22 @@ require 'config.php';
     $isbn="";
     $authName="";
     $bkname="";
+    $bkimg="";
 
     $memFname="";
     $memLname="";
     $memEmail="";
     $memID="";
 
+    $admintp = $_SESSION['userType'];
 
     if (isset($_POST['Lend_Book_Member_Find_Id'])){
         $bkCode= $_REQUEST['bkCode'];
         $isbn=$_REQUEST['isbn'];
         $authName=$_REQUEST['authName'];
         $bkname=$_REQUEST['bkname'];
+        $bkimg=$_REQUEST['itemImgLoc'];
+
     }
 
     //$slk=$_POST['Lend_Book_Member_Find_Id'];
@@ -26,9 +30,9 @@ require 'config.php';
 if (isset($_POST['Lend_Book_Book_Find_Submit'])){
     $indID=$_POST['Lend_Book_Book_Find_Id'];
 
-    $sql_lend = "SELECT inve.IID,inve.Name,auth.authorName,bk.ISBN,inve.itemImgLoc
-    FROM inventory inve, author auth, book bk
-    WHERE inve.CID=bk.IID AND inve.A_ID=auth.AID AND inve.IID=$indID";
+    $sql_lend = "SELECT inve.IID,inve.Name,auth.authorName,bk.ISBN,inve.itemImgLoc 
+    FROM inventory inve, author auth, book bk 
+    WHERE inve.IID=bk.IID AND inve.A_ID=auth.AID AND inve.IID=$indID";
 
     $resultBK= $con->query($sql_lend);
 
@@ -69,7 +73,6 @@ if (isset($_POST['Lend_Book_Member_Find_Submit'])){
     
 
 } 
-
 if (isset($_POST['lend_button'])){
     $duedate=$_POST['Lend_Book_Member_Table_DueDate'];
     $lenddate=$_POST['Lend_Book_Member_Table_LendDate'];
@@ -77,7 +80,7 @@ if (isset($_POST['lend_button'])){
     $bkcode=$_POST['bkcd'];
 
     $sql_setLend ="INSERT INTO barrowreturns (status,issuedDate,dueDate,userID,IID,adminUserID)
-    VALUES (0,'$lenddate','$duedate','$memcode',$bkcode,2)";
+    VALUES (0,'$lenddate','$duedate','$memcode',$bkcode,$admintp)";
     
     $setLend=$con->query($sql_setLend);
 
@@ -113,7 +116,7 @@ if (isset($_POST['lend_button'])){
                         <div class="Container">
                             <div class="imgDB">
                             
-                                <img src="<?php $bkimg ?>" alt="DB Pic" width="120px" height="170px">
+                                <img src="<?php echo $bkimg ?>"  width="120px" height="170px">
                             </div>
                             <div>
                                 <table class="pop-table LendBK">

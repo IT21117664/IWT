@@ -22,14 +22,14 @@ GROUP BY LenRet.userID";
 
 $sql_bk = "SELECT LenRet.issuedDate,inve.Name,LenRet.IID,lenRet.fine,LenRet.dueDate
 FROM barrowreturns LenRet, inventory inve 
-WHERE inve.IID=lenRet.IID AND LenRet.userID=$retmemID
+WHERE inve.IID=lenRet.IID AND LenRet.userID=$retmemID AND status=0
 ORDER BY IID";
 //$lendBkTB = "";
 
 $resultMem= $con->query($sql_memdel);
 if ($resultMem->num_rows>0){
     while($row2=$resultMem->fetch_assoc()){
-        echo "Code No :    ".$row2["userID"]."  Book Name :  ".$row2["FName"]."   Author Name  ".$row2["LName"]." ISBN  :  ".$row2["email"]."<br><br>";
+       // echo "Code No :    ".$row2["userID"]."  Book Name :  ".$row2["FName"]."   Author Name  ".$row2["LName"]." ISBN  :  ".$row2["email"]."<br><br>";
         $fname.=$row2["FName"];
         $lname.=$row2["LName"];
         $regno.=$row2["userID"];
