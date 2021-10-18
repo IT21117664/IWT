@@ -109,7 +109,7 @@
 
                 $offset1 = (int)$pageno1 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `i.Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
@@ -199,7 +199,7 @@
 
                 $offset2 = (int)$pageno2 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `i.totalView` DESC LIMIT 5 OFFSET " . $offset2 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
@@ -283,7 +283,7 @@
 
                 $offset3 = (int)$pageno3 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `journal` AS j , `inventory` AS i WHERE i.IID = j.IID ORDER BY `i.totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
