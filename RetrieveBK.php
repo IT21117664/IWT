@@ -10,6 +10,9 @@ $regno="";
 $email="";
 $lendDate="";
 
+if (isset($_POST['retrieve_button'])){
+    print_r($_POST['Retrieve_Book_Table_Report_Status']);
+}
 
 if (isset($_POST['Retrieve_Book_Member_Find_Id'])){
 
@@ -49,7 +52,7 @@ if ($resultBk->num_rows>0){
         $lendDate=$row1["issuedDate"];
         $dueDate=$row1["dueDate"];
 
-        $lendBkTB .= " <tr><td>$userID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" value=\"$userID\" name=\"Retrieve_Book_Table_Report_Status\"></td></tr>";
+        $lendBkTB .= " <tr><td>$userID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" value=\"$userID\" name=\"Retrieve_Book_Table_Report_Status[]\"></td></tr>";
     }
 }
 
@@ -146,14 +149,15 @@ else{
                                 <th>Fine</th>
                                 <th>Retrieve</th>
                             </tr>
+                            <form action="./RetrieveBK.php" method="POST">
                             <?php echo $lendBkTB; ?>
+                            <input type="hidden" name="checkedField" value="" id="checkedField">
                         </table>
                     </div>
                 </div>
                 <!-----------------------------Retrieve Button----------------------------------------------------------------------------------------------->
 
                 <div>
-                    <form>
                     <input type="submit" id="retrieve_button" name="retrieve_button" class="btn-pop" value="Retrieve">
                     </form>
                     
