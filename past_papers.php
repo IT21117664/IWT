@@ -125,7 +125,7 @@
 
                 $offset1 = (int)$pageno1 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2020-01-01' AND '2020-12-31' ORDER BY `i.Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2020-01-01' AND '2020-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
@@ -222,7 +222,7 @@
 
                 $offset2 = (int)$pageno2 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2019-01-01' AND '2019-12-31' ORDER BY `i.Published_Date` DESC LIMIT 5 OFFSET " . $offset2 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2019-01-01' AND '2019-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset2 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
@@ -326,7 +326,7 @@
 
                 $offset3 = (int)$pageno3 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2018-01-01' AND '2018-12-31' ORDER BY `i.Published_Date` DESC LIMIT 5 OFFSET " . $offset3 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2018-01-01' AND '2018-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset3 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
@@ -420,7 +420,7 @@
 
                 $offset4 = (int)$pageno4 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2017-01-01' AND '2017-12-31' ORDER BY `i.Published_Date` DESC LIMIT 5 OFFSET " . $offset4 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2017-01-01' AND '2017-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset4 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
@@ -512,7 +512,7 @@
 
                 $offset5 = (int)$pageno5 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2016-01-01' AND '2016-12-31' ORDER BY `i.Published_Date` DESC LIMIT 5 OFFSET " . $offset5 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `pastpaper` AS p , `inventory` AS i WHERE i.IID = p.IID AND i.Published_Date BETWEEN '2016-01-01' AND '2016-12-31' ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset5 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
 
