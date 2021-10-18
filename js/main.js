@@ -80,23 +80,6 @@ function passwordCheck() {
 }
 
 
-function logout() {
-    var r = new XMLHttpRequest();
-
-    r.onreadystatechange = function() {
-        if (r.readyState == 4) {
-            var text = r.responseText;
-            alert(text);
-            window.location = "index.php";
-        }
-    };
-
-    r.open("GET", "logout.php?php=", true);
-    r.send();
-
-
-}
-
 
 function mailtyping() {
     var tpMail = document.getElementById("email");
