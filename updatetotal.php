@@ -18,7 +18,6 @@
         $dt = date("Y-m-d");
         $sqlupdateinventry = "INSERT INTO `user_inventry` (`userID`, `IID`, `date`) VALUES ('$userID','$IID', '$dt')";
         echo $con -> query($sqlupdateinventry);
-
         echo $sqlupdateinventry;
         header("Location: $link");
 
