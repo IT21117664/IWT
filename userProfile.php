@@ -52,7 +52,7 @@
             $outputHistory .= "<tr>
                             <td>$issuedDate</td>
                             <td>$submitedDate</td>
-                            <td>ABC</td>
+                            <td>$Name</td>
                             <td class=\"$class\">$value</td>
                             </tr>";
 
