@@ -37,6 +37,12 @@
         $pageno3 = $_GET["p3"];
     }
 
+    if (!isset($_GET["p4"])) {
+        $pageno4 = 0;
+    } else {
+        $pageno4 = $_GET["p4"];
+    }
+
 
     $adminShow = "";
     if (isset($_SESSION['userID'])) {
@@ -69,7 +75,6 @@
                 <input type="text" class="txtSearch" name="keyWord" placeholder="Search...">
                 <input type="submit" name="Search" value="Search" class="btn primary">
             </form>
-            <!-- <div style="width: 100%;"></div> -->
         </div>
     </div>
 
@@ -373,7 +378,7 @@
                 $userId = $_SESSION["userID"];
 
 
-                $alldatasuges = "SELECT ui.IID, ui.`date` FROM user_inventry AS ui , inventory AS i WHERE i.IID = ui.IID AND ui.userID = '$userid' ORDER BY ui.`date`;";
+                $alldatasuges = "SELECT ui.IID, ui.date, i.Name, i.itemImgLoc FROM user_inventry AS ui , inventory AS i WHERE i.IID = ui.IID AND ui.userID = '$userId' ORDER BY ui.`date`;";
                 $alldatasgs = $con->query($alldatasuges);
                 $n_allsgs = $alldatasgs->num_rows;
                
@@ -383,7 +388,8 @@
                 $offset4 = (int)$pageno4 * $resultset_per_new_arrivals;
 
 
-                $sqlSelectBook = "SELECT ui.IID, ui.`date` FROM user_inventry AS ui , inventory AS i WHERE i.IID = ui.IID AND ui.userID = '$userId' ORDER BY ui.`date` DESC LIMIT 5 OFFSET " . $offset4 . ";";
+
+                $sqlSelectBook = "SELECT ui.IID, ui.date, i.Name, i.itemImgLoc FROM user_inventry AS ui , inventory AS i WHERE i.IID = ui.IID AND ui.userID = '$userId' ORDER BY ui.`date` DESC LIMIT 5 OFFSET " . $offset4 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                 
