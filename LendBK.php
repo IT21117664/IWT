@@ -228,7 +228,7 @@ if (isset($_POST['lend_button'])){
 
                     <input type="text" name="bkcd"  value="<?php echo $bkCode ?>" hidden>
 
-                    <input type="submit" name="lend_button" name="lend_button" class="btn-pop popLend" value="Lend">
+                    <input type="submit" name="lend_button" id="lend_button" class="btn-pop popLend" value="Lend">
                     </form>
                     
                 </div>

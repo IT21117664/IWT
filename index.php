@@ -123,7 +123,7 @@ if (!isset($_GET["p1"])) {
 
                 $offset1 = (int)$pageno1 * $resultset_per_new_arrivals;
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `book` AS b , `inventory` AS i WHERE i.IID = b.IID ORDER BY `Published_Date` DESC LIMIT 5 OFFSET " . $offset1 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `book` AS b , `inventory` AS i WHERE i.IID = b.IID ORDER BY i.Published_Date DESC LIMIT 5 OFFSET " . $offset1 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -326,7 +326,7 @@ if (!isset($_GET["p1"])) {
 
 
 
-                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `book` AS b , `inventory` AS i WHERE i.IID = b.IID ORDER BY `totalDownload` DESC LIMIT 5 OFFSET " . $offset3 . ";";
+                $sqlSelectBook = "SELECT i.Name, i.itemImgLoc, i.IID  FROM `book` AS b , `inventory` AS i WHERE i.IID = b.IID ORDER BY i.totalDownload DESC LIMIT 5 OFFSET " . $offset3 . ";";
                 $resultSelectBook = $con->query($sqlSelectBook);
                 if ($resultSelectBook->num_rows > 0) {
                     $numberofrows = $resultSelectBook->num_rows;
@@ -369,7 +369,7 @@ if (!isset($_GET["p1"])) {
                     <div style="margin-top: 62px;">
                         <?php
                         $max3 = $number_of_datasgs - 1;
-                        if ($pageno3 != $max2) {
+                        if ($pageno3 != $max3) {
                         ?>
                             <a href="user_page.php?p3=<?php echo $pageno3 + 1; ?>" class="page_next"> ❯</a>
                         <?php
