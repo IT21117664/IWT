@@ -43,13 +43,13 @@ $resultBk = $con->query($sql_bk);
 if ($resultBk->num_rows>0){
     while($row1=$resultBk->fetch_assoc()){
         //echo "Code No :    ".$row1["IID"]."  Book Name :  ".$row1["Name"]."   Author Name  ".$row1["fine"]." ISBN  :  ".$row1["issuedDate"]."<br><br>";
-        $userID=$row1["IID"];
+        $itemID=$row1["IID"];
         $BKname=$row1["Name"];
         $fine=$row1["fine"];
         $lendDate=$row1["issuedDate"];
         $dueDate=$row1["dueDate"];
 
-        $lendBkTB .= " <tr><td>$userID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" value=\"$userID\" name=\"Retrieve_Book_Table_Report_Status\"></td></tr>";
+        $lendBkTB .= " <tr><td>$itemID</td><td>$BKname</td><td>$lendDate</td><td>$dueDate</td><td>$fine</td><td><input type=\"checkbox\" id=\"Retrieve_Book_Table_Report_Status\" value=\"$itemID\" name=\"Retrieve_Book_Table_Report_Status\"></td></tr>";
     }
 }
 
