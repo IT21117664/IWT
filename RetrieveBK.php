@@ -69,15 +69,6 @@ else{
 
 if(isset($_POST['retrieve_button'])){
 
-$checkBK = array($_POST['Retrieve_Book_Table_Report_Status']);
-foreach($checkBK as $index => $ids){
-    $sql_retrieve = "UPDATE barrowreturns
-    SET submitedDate='',status=1
-    WHERE IID=$ids and ";
-
-    $ret = $con->query($sql_retrieve);
-}
-
     $userID = $_POST['userID'];
     $checkBK = $_POST['Retrieve_Book_Table_Report_Status'];
     foreach($checkBK as $index => $ids){
@@ -202,4 +193,5 @@ if ($ret === TRUE){
     </div>
 </div>
 </body>
+<script src="./js/main.js"></script>
 </html>
