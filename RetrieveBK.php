@@ -10,6 +10,9 @@ $regno="";
 $email="";
 $lendDate="";
 
+if (isset($_POST['retrieve_button'])){
+    print_r($_POST['Retrieve_Book_Table_Report_Status']);
+}
 
 if (isset($_POST['Retrieve_Book_Member_Find_Id'])){
 
@@ -143,14 +146,15 @@ else{
                                 <th>Fine</th>
                                 <th>Retrieve</th>
                             </tr>
+                            <form action="./RetrieveBK.php" method="POST">
                             <?php echo $lendBkTB; ?>
+                            <input type="hidden" name="checkedField" value="" id="checkedField">
                         </table>
                     </div>
                 </div>
                 <!-----------------------------Retrieve Button----------------------------------------------------------------------------------------------->
 
                 <div>
-                    <form>
                     <input type="submit" id="retrieve_button" name="retrieve_button" class="btn-pop" value="Retrieve">
                     </form>
                     
