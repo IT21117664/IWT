@@ -27,6 +27,9 @@ $sql_bk = "SELECT LenRet.issuedDate,inve.Name,LenRet.IID,lenRet.fine,LenRet.dueD
 FROM barrowreturns LenRet, inventory inve 
 WHERE inve.IID=lenRet.IID AND LenRet.userID=$retmemID AND status=0
 ORDER BY IID";
+
+
+
 //$lendBkTB = "";
 
 $resultMem= $con->query($sql_memdel);
@@ -64,6 +67,26 @@ else{
 
 }
 
+if(isset($_POST['retrieve_button'])){
+$checkBK = array($_POST['Retrieve_Book_Table_Report_Status']);
+foreach($checkBK as $index => $ids){
+    $sql_retrieve = "UPDATE barrowreturns
+    SET submitedDate='',status=1
+    WHERE IID=$ids";
+
+    $ret = $con->query($sql_retrieve);
+}
+
+if ($ret === TRUE){
+    $retmsg = "<script>alert(\"Book Retreived by Member ! \");</script>";
+        echo $retmsg;
+        }
+        else{
+        $errodelend="Not DELETED";
+        echo "<script>console.log($errodelend);</script>";
+        }   
+}
+    
 
 ?>
 
