@@ -10,10 +10,6 @@ $regno="";
 $email="";
 $lendDate="";
 
-if (isset($_POST['retrieve_button'])){
-    print_r($_POST['Retrieve_Book_Table_Report_Status']);
-}
-
 if (isset($_POST['Retrieve_Book_Member_Find_Id'])){
 
 $retmemID=$_POST['Retrieve_Book_Member_Find_Id'];
